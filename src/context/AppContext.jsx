@@ -6,7 +6,24 @@ import { safeSetLocal, normalize } from '../utils/format';
 const AppContext = createContext(null);
 
 const SEED_ACCOUNTS = [
-  { id: 'business-checking', name: 'PNC Business Checking', type: 'cash', institution: 'PNC', lastSynced: '2026-03-31' },
+  { id: 'operating-account---0714', name: 'Operating Account (...0714)', type: 'cash', institution: 'PNC', lastSynced: '2026-04-13' },
+  { id: 'savings', name: 'Savings', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'emergency-fund---6910', name: 'Emergency Fund (...6910)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'sal--nicole-joint-account', name: 'Sal & Nicole Joint (...6020)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'house---2158', name: 'House (...2158)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'nicole-savings---6143', name: 'Nicole Savings (...6143)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'ava--sebastian-school---21', name: 'Kids School (...2119)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'tax-liability-account-2026', name: 'Tax Liability (...4337)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'travel---3958', name: 'Travel (...3958)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'car-reserve-account---382', name: 'Car Reserve (...3824)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'apple-cash', name: 'Apple Cash', type: 'cash', institution: 'Apple', lastSynced: '2026-04-13' },
+  { id: 'apple-card', name: 'Apple Card', type: 'credit', institution: 'Apple', lastSynced: '2026-04-13' },
+  { id: 'target-circle-card---5435', name: 'Target Circle Card (...5435)', type: 'credit', institution: 'Target', lastSynced: '2026-04-13' },
+  { id: 'discover-it-card---9066', name: 'Discover it Card (...9066)', type: 'credit', institution: 'Discover', lastSynced: '2026-04-13' },
+  { id: 'quicksilverone---7983', name: 'QuicksilverOne (...7983)', type: 'credit', institution: 'Capital One', lastSynced: '2026-04-13' },
+  { id: 'american-express---8797', name: 'American Express (...8797)', type: 'credit', institution: 'Amex', lastSynced: '2026-04-13' },
+  { id: 'visa---5054', name: 'Visa (...5054)', type: 'credit', institution: 'Visa', lastSynced: '2026-04-13' },
+  { id: 'mortgage-0067---0067', name: 'Mortgage (...0067)', type: 'loan', institution: 'Mortgage', lastSynced: '2026-04-13' },
 ];
 
 function detectRecurring(transactions) {

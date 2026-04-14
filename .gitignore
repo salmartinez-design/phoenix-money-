@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Personal financial data — never push to GitHub
+src/data/transactions.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

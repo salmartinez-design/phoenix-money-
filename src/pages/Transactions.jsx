@@ -3,6 +3,7 @@ import { useApp } from '../context/AppContext';
 import { useT } from '../i18n';
 import { formatCurrency, formatDateShort, formatDate, normalize } from '../utils/format';
 import { getCategoryById, getParentCategory, getTopCategories, getSubCategories, isTransferCategory } from '../data/categories';
+import { TransactionDetail } from '../components/TransactionDetail';
 
 const PER_PAGE = 30;
 
@@ -36,7 +37,7 @@ function getDateRange(presetId) {
 }
 
 export function Transactions() {
-  const { transactions, updateCategory, lang } = useApp();
+  const { transactions, updateCategory, lang, accountFilter } = useApp();
   const t = useT(lang);
   const $ = (n,d=0) => formatCurrency(n,lang,d);
   const [search, setSearch] = useState('');
@@ -48,6 +49,7 @@ export function Transactions() {
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [editId, setEditId] = useState(null);
+  const [selectedTxn, setSelectedTxn] = useState(null);
   const [page, setPage] = useState(1);
 
   const presets = lang === 'es' ? DATE_PRESETS_ES : DATE_PRESETS_EN;
@@ -244,7 +246,7 @@ export function Transactions() {
               const cat = getCategoryById(txn.categoryId);
               const isTransfer = isTransferCategory(txn.categoryId);
               return (
-                <tr key={txn.id} className="txn-row" style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(245,158,11,0.03)':'transparent' }}>
+                <tr key={txn.id} className="txn-row" onClick={() => setSelectedTxn(txn)} style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(245,158,11,0.03)':'transparent', cursor:'pointer' }}>
                   <td style={{ padding:'11px 18px', fontSize:12, color:'var(--text-muted)', fontFamily:"'DM Mono',monospace", whiteSpace:'nowrap' }}>{formatDateShort(txn.date, lang)}</td>
                   <td style={{ padding:'11px 18px' }}>
                     <div style={{ display:'flex', alignItems:'center', gap:11 }}>
@@ -260,9 +262,9 @@ export function Transactions() {
                   <td style={{ padding:'11px 18px' }}>
                     {editId === txn.id ? (
                       <select value={txn.categoryId} onChange={e => { updateCategory(txn.id, e.target.value); setEditId(null); }} style={{ fontSize:12, padding:'5px 10px', minHeight:36 }} autoFocus onBlur={() => setEditId(null)}>
-                        {getTopCategories().map(parent => (
+                        {getTopCategories(accountFilter).map(parent => (
                           <optgroup key={parent.id} label={parent.name}>
-                            {getSubCategories(parent.id).map(sub => <option key={sub.id} value={sub.id}>{sub.name}</option>)}
+                            {getSubCategories(parent.id, accountFilter).map(sub => <option key={sub.id} value={sub.id}>{sub.name}</option>)}
                           </optgroup>
                         ))}
                       </select>
@@ -277,7 +279,7 @@ export function Transactions() {
                     {txn.amount > 0 ? '+' : ''}{$(txn.amount, 2)}
                   </td>
                   <td style={{ textAlign:'right', padding:'11px 18px' }}>
-                    <button onClick={() => setEditId(txn.id)} style={{ background:'none', border:'none', cursor:'pointer', color:'var(--text-muted)', fontSize:14, padding:'4px 8px', borderRadius:6, minHeight:36, minWidth:36 }}>✏️</button>
+                    <button onClick={(e) => { e.stopPropagation(); setSelectedTxn(txn); }} style={{ background:'none', border:'none', cursor:'pointer', color:'var(--text-muted)', fontSize:14, padding:'4px 8px', borderRadius:6, minHeight:36, minWidth:36 }}>→</button>
                   </td>
                 </tr>
               );
@@ -301,6 +303,14 @@ export function Transactions() {
 
       {/* Click outside to close dropdowns */}
       {(showDatePicker || showSortMenu) && <div onClick={() => { setShowDatePicker(false); setShowSortMenu(false); }} style={{ position:'fixed', inset:0, zIndex:50 }}/>}
+
+      {/* Transaction detail panel */}
+      {selectedTxn && (
+        <>
+          <div onClick={() => setSelectedTxn(null)} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.3)', zIndex:998 }}/>
+          <TransactionDetail txn={selectedTxn} onClose={() => setSelectedTxn(null)}/>
+        </>
+      )}
     </div>
   );
 }

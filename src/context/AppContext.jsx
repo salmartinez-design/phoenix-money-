@@ -93,7 +93,7 @@ export function AppProvider({ children }) {
   const [theme, setThemeState] = useState(() => localStorage.getItem('phoenix-theme') || 'light');
   const [lang, setLangState] = useState(() => localStorage.getItem('phoenix-lang') || 'en');
   const [aiOpen, setAiOpen] = useState(false);
-  const [accountFilter, setAccountFilter] = useState('all');
+  const [accountFilter, setAccountFilter] = useState(() => localStorage.getItem('phoenix-account-filter') || 'personal');
   const [budgets, setBudgets] = useState(() => {
     try { return JSON.parse(localStorage.getItem('phoenix-budgets')) || {}; }
     catch { return {}; }
@@ -128,6 +128,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => { safeSetLocal('phoenix-transactions', transactions); }, [transactions]);
   useEffect(() => { safeSetLocal('phoenix-rules', rules); }, [rules]);
+  useEffect(() => { localStorage.setItem('phoenix-account-filter', accountFilter); }, [accountFilter]);
   useEffect(() => { safeSetLocal('phoenix-budgets', budgets); }, [budgets]);
   useEffect(() => { safeSetLocal('phoenix-accounts', accounts); }, [accounts]);
 
@@ -153,6 +154,10 @@ export function AppProvider({ children }) {
 
   const updateCategory = useCallback((txnId, categoryId) => {
     setTransactions(prev => prev.map(t => t.id === txnId ? { ...t, categoryId, flagged: false } : t));
+  }, []);
+
+  const updateTransaction = useCallback((txnId, updates) => {
+    setTransactions(prev => prev.map(t => t.id === txnId ? { ...t, ...updates } : t));
   }, []);
 
   const addRule = useCallback((rule) => {
@@ -249,7 +254,7 @@ export function AppProvider({ children }) {
   }, [transactions, accountFilter]);
 
   return (
-    <AppContext.Provider value={{ transactions, rules, theme, lang, aiOpen, accountFilter, notifPrefs, budgets, accounts, setTheme, setLang, setAiOpen, setAccountFilter, updateNotifPref, updateCategory, addRule, updateRule, deleteRule, setBudget, copyBudgetFromMonth, financialData }}>
+    <AppContext.Provider value={{ transactions, rules, theme, lang, aiOpen, accountFilter, notifPrefs, budgets, accounts, setTheme, setLang, setAiOpen, setAccountFilter, updateNotifPref, updateCategory, updateTransaction, addRule, updateRule, deleteRule, setBudget, copyBudgetFromMonth, financialData }}>
       {children}
     </AppContext.Provider>
   );

@@ -7,12 +7,18 @@ import { getCategoryById } from '../data/categories';
 import { useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
-  const { financialData, lang, budgets } = useApp();
+  const { financialData, lang, budgets, accountFilter, setAccountFilter } = useApp();
   const t = useT(lang);
   const navigate = useNavigate();
   const { monthly, totalIncome, totalExpenses, totalNet, savingsRate, burnRate, runway, latestMonth, prevMonth, allTransactions, flaggedCount, recurringDetected, accountBalances } = financialData;
   useEffect(() => { document.title = lang === 'es' ? 'Panel — Phoenix Money' : 'Dashboard — Phoenix Money'; }, [lang]);
   const $ = (n, d=0) => formatCurrency(n, lang, d);
+
+  // Filter transactions by current account toggle
+  const filteredTxns = useMemo(() => {
+    if (accountFilter === 'all') return allTransactions;
+    return allTransactions.filter(t => t.accountType === accountFilter);
+  }, [allTransactions, accountFilter]);
 
   // Use latest month with data, not "today"
   const dataMonth = latestMonth || { key:'2026-03', label:'Mar 2026', income:0, expenses:0, net:0, savingsRate:0, short:'Mar' };
@@ -33,8 +39,8 @@ export function Dashboard() {
   // Spending comparison: latest month vs previous month (cumulative by day)
   const spendingComparison = useMemo(() => {
     if (!dataMonth || !dataPrevMonth) return [];
-    const thisMonthTxns = allTransactions.filter(t => t.date.startsWith(dataMonth.key) && t.amount < 0);
-    const prevMonthTxns = allTransactions.filter(t => t.date.startsWith(dataPrevMonth.key) && t.amount < 0);
+    const thisMonthTxns = filteredTxns.filter(t => t.date.startsWith(dataMonth.key) && t.amount < 0);
+    const prevMonthTxns = filteredTxns.filter(t => t.date.startsWith(dataPrevMonth.key) && t.amount < 0);
     const cumulate = (txns) => {
       const byDay = {};
       txns.forEach(t => { const d = parseInt(t.date.split('-')[2]); byDay[d] = (byDay[d]||0) + Math.abs(t.amount); });
@@ -46,10 +52,10 @@ export function Dashboard() {
     const thisData = cumulate(thisMonthTxns);
     const prevData = cumulate(prevMonthTxns);
     return thisData.map((d,i) => ({ day: `Day ${d.day}`, thisMonth: d.total, lastMonth: prevData[i]?.total || 0 }));
-  }, [allTransactions, dataMonth, dataPrevMonth]);
+  }, [filteredTxns, dataMonth, dataPrevMonth]);
 
   // Weekly recap using the last 7 days of actual data (not calendar "this week")
-  const sortedTxns = useMemo(() => [...allTransactions].sort((a,b) => b.date.localeCompare(a.date)), [allTransactions]);
+  const sortedTxns = useMemo(() => [...filteredTxns].sort((a,b) => b.date.localeCompare(a.date)), [filteredTxns]);
   const latestDate = sortedTxns[0]?.date || '2026-03-31';
   const weekAgoDate = new Date(latestDate + 'T12:00:00');
   weekAgoDate.setDate(weekAgoDate.getDate() - 7);
@@ -58,8 +64,8 @@ export function Dashboard() {
   twoWeeksAgoDate.setDate(twoWeeksAgoDate.getDate() - 14);
   const twoWeeksStr = twoWeeksAgoDate.toISOString().slice(0,10);
 
-  const thisWeekTxns = allTransactions.filter(t => t.date > weekAgoStr && t.date <= latestDate);
-  const lastWeekTxns = allTransactions.filter(t => t.date > twoWeeksStr && t.date <= weekAgoStr);
+  const thisWeekTxns = filteredTxns.filter(t => t.date > weekAgoStr && t.date <= latestDate);
+  const lastWeekTxns = filteredTxns.filter(t => t.date > twoWeeksStr && t.date <= weekAgoStr);
   const thisWeekSpent = thisWeekTxns.filter(t => t.amount < 0).reduce((s,t) => s + Math.abs(t.amount), 0);
   const lastWeekSpent = lastWeekTxns.filter(t => t.amount < 0).reduce((s,t) => s + Math.abs(t.amount), 0);
   const thisWeekIncome = thisWeekTxns.filter(t => t.amount > 0).reduce((s,t) => s + t.amount, 0);
@@ -74,7 +80,7 @@ export function Dashboard() {
   const upcoming = (recurringDetected || []).filter(r => !r.isIncome).slice(0, 5);
 
   // Top spending categories for the latest month
-  const monthTxns = allTransactions.filter(t => t.date.startsWith(dataMonth.key) && t.amount < 0);
+  const monthTxns = filteredTxns.filter(t => t.date.startsWith(dataMonth.key) && t.amount < 0);
   const catSpend = {};
   monthTxns.forEach(t => {
     const cat = getCategoryById(t.categoryId);
@@ -94,9 +100,16 @@ export function Dashboard() {
 
   return (
     <div style={{ padding:'28px 36px' }}>
-      {/* Greeting */}
-      <div className="fu" style={{ marginBottom:24 }}>
+      {/* Greeting + Toggle */}
+      <div className="fu" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}>
         <h2 style={{ fontSize:28, fontWeight:800, color:'var(--text-primary)', letterSpacing:'-.03em' }}>{greeting}</h2>
+        <div style={{ display:'flex', gap:6 }}>
+          {['business','personal'].map(f => (
+            <button key={f} onClick={() => setAccountFilter(f)} style={{ padding:'7px 16px', borderRadius:20, border:`1px solid ${accountFilter === f ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:13, fontWeight:600, background: accountFilter === f ? 'var(--orange-dim)' : 'transparent', color: accountFilter === f ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
+              {f === 'business' ? (lang==='es'?'Negocio':'Business') : (lang==='es'?'Personal':'Personal')}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16 }}>

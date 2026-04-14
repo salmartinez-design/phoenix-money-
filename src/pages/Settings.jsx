@@ -12,7 +12,7 @@ function Toggle({ on, onChange }) {
 }
 
 export function Settings() {
-  const { lang, setLang, theme, setTheme, notifPrefs, updateNotifPref, rules, transactions } = useApp();
+  const { lang, setLang, theme, setTheme, notifPrefs, updateNotifPref, rules, transactions, accountFilter, setAccountFilter } = useApp();
   const t = useT(lang);
   const [section, setSection] = useState('profile');
   const [newCatName, setNewCatName] = useState('');
@@ -140,9 +140,24 @@ export function Settings() {
                 ))}
               </div>
               <p style={{ fontSize:12, fontWeight:600, color:'var(--text-muted)', marginBottom:10, textTransform:'uppercase', letterSpacing:'.06em' }}>{t('language')}</p>
-              <div style={{ display:'flex', gap:10 }}>
+              <div style={{ display:'flex', gap:10, marginBottom:24 }}>
                 {[{code:'en',label:'🇺🇸 English'},{code:'es',label:'🇲🇽 Español'}].map(l => (
                   <button key={l.code} onClick={() => setLang(l.code)} style={{ padding:'12px 28px', minHeight:48, borderRadius:10, cursor:'pointer', fontSize:15, fontWeight:600, border: lang===l.code?'2px solid var(--orange)':'1px solid var(--border)', background: lang===l.code?'var(--orange-dim)':'transparent', color: lang===l.code?'var(--orange)':'var(--text-secondary)', fontFamily:"'Outfit',sans-serif" }}>{l.label}</button>
+                ))}
+              </div>
+
+              <p style={{ fontSize:12, fontWeight:600, color:'var(--text-muted)', marginBottom:10, textTransform:'uppercase', letterSpacing:'.06em' }}>{lang==='es'?'Vista predeterminada':'Default View'}</p>
+              <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:10 }}>{lang==='es'?'Elige qué cuentas ver por defecto en el panel y reportes.':'Choose which accounts to show by default on the dashboard and reports.'}</p>
+              <div style={{ display:'flex', gap:10 }}>
+                {[
+                  {id:'all', label: lang==='es'?'Todo':'All Accounts', icon:'📊'},
+                  {id:'business', label: lang==='es'?'Negocio':'Business', icon:'💼'},
+                  {id:'personal', label:'Personal', icon:'👤'},
+                ].map(opt => (
+                  <button key={opt.id} onClick={() => setAccountFilter(opt.id)}
+                    style={{ padding:'14px 20px', minHeight:48, borderRadius:10, cursor:'pointer', fontSize:14, fontWeight:600, border: accountFilter===opt.id?'2px solid var(--orange)':'1px solid var(--border)', background: accountFilter===opt.id?'var(--orange-dim)':'transparent', color: accountFilter===opt.id?'var(--orange)':'var(--text-secondary)', fontFamily:"'Outfit',sans-serif", display:'flex', alignItems:'center', gap:8, transition:'all .15s' }}>
+                    <span style={{ fontSize:18 }}>{opt.icon}</span>{opt.label}
+                  </button>
                 ))}
               </div>
             </div>

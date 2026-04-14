@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useMemo, useEffect, useCallback } from 'react';
-import { SEED_TRANSACTIONS, SEED_RULES } from '../data/transactions';
+import { SEED_TRANSACTIONS, SEED_RULES } from '../data/seed';
 import { getParentCategory, isIncomeCategory, isTransferCategory, getCategoryById } from '../data/categories';
 import { safeSetLocal, normalize } from '../utils/format';
 

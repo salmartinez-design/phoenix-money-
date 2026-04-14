@@ -14,9 +14,33 @@ export function AiPanel({ onClose }) {
   const endRef = useRef(null);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [msgs]);
 
-  const quickQ = lang === 'es'
-    ? ['Agrega categoría COGS bajo Negocio', '¿Dónde estoy gastando de más?', 'Crea regla: amazon → COGS', '¿Cómo va mi negocio?']
-    : ['Add a COGS category under Business', 'Where am I overspending?', 'Create rule: amazon → COGS', "How's my business doing?"];
+  // Smart contextual prompts based on actual user data
+  const topExpenseCat = financialData.expenseCats?.[0];
+  const topMerchant = (() => {
+    const merchants = {};
+    transactions.slice(0, 200).forEach(t => {
+      if (t.amount < 0 && t.merchantName) {
+        merchants[t.merchantName] = (merchants[t.merchantName] || 0) + Math.abs(t.amount);
+      }
+    });
+    const sorted = Object.entries(merchants).sort((a,b) => b[1] - a[1]);
+    return sorted[0]?.[0] || 'Amazon';
+  })();
+  const flaggedCount = financialData.flaggedCount || 0;
+
+  const quickQ = lang === 'es' ? [
+    'Cómo puedo aumentar mi patrimonio neto?',
+    topExpenseCat ? `¿Está mi presupuesto de ${topExpenseCat.cat?.name} en buen camino?` : '¿Cómo va mi presupuesto?',
+    'Compara mis gastos de este mes vs el mes pasado',
+    `Crea regla: ${topMerchant.toLowerCase().slice(0,15)} → categoría`,
+    flaggedCount > 0 ? `Tengo ${flaggedCount} transacciones sin revisar` : '¿Dónde estoy gastando de más?',
+  ] : [
+    'How can I increase my net worth?',
+    topExpenseCat ? `Is my ${topExpenseCat.cat?.name} budget on track?` : "How's my budget looking?",
+    'Break down my spend vs. income this month',
+    `Create rule: ${topMerchant.toLowerCase().slice(0,15)} → category`,
+    flaggedCount > 0 ? `I have ${flaggedCount} transactions to review` : 'Where am I overspending?',
+  ];
 
   // Execute an action the AI requested
   const executeAction = (action) => {
@@ -178,9 +202,14 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
           </div>
         </div>
       )}
-      <div style={{ padding:'12px 14px', borderTop:'1px solid var(--border)', display:'flex', gap:8 }}>
-        <input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && !e.shiftKey && send()} placeholder={lang === 'es' ? 'Pregunta o da instrucciones...' : 'Ask a question or give instructions...'} style={{ flex:1, padding:'11px 14px', fontSize:14, minHeight:44 }} disabled={loading}/>
-        <button className="btn-primary" onClick={() => send()} disabled={loading || !input.trim()} style={{ padding:'11px 16px', minWidth:44, fontSize:16, opacity: loading || !input.trim() ? .4 : 1 }}>↑</button>
+      <div style={{ padding:'12px 14px 6px', borderTop:'1px solid var(--border)' }}>
+        <div style={{ display:'flex', gap:8 }}>
+          <input value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && !e.shiftKey && send()} placeholder={lang === 'es' ? 'Pregunta sobre tus finanzas...' : 'Ask anything about your money...'} style={{ flex:1, padding:'11px 14px', fontSize:14, minHeight:44 }} disabled={loading}/>
+          <button className="btn-primary" onClick={() => send()} disabled={loading || !input.trim()} style={{ padding:'11px 16px', minWidth:44, fontSize:16, opacity: loading || !input.trim() ? .4 : 1 }}>↑</button>
+        </div>
+        <p style={{ fontSize:10, color:'var(--text-muted)', textAlign:'center', marginTop:6, marginBottom:2 }}>
+          {lang === 'es' ? '✨ AI Advisor puede cometer errores y no es asesoría financiera.' : '✨ AI Advisor can make mistakes and is not financial advice.'}
+        </p>
       </div>
     </div>
   );

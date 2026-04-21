@@ -96,7 +96,7 @@ export function Transactions() {
                   </td>
                   <td style={{ padding:'12px 18px' }}>
                     {editId === txn.id ? (
-                      <select value={txn.categoryId} onChange={e => { updateCategory(txn.id, e.target.value); setEditId(null); }} style={{ fontSize:12, padding:'5px 10px', minHeight:36 }} autoFocus onBlur={() => setEditId(null)}>
+                      <select value={txn.categoryId} onChange={e => { updateCategory(txn.id, e.target.value); setEditId(null); }} style={{ fontSize:12, padding:'5px 10px', minHeight:36 }} autoFocus onBlur={e => { setTimeout(() => setEditId(null), 200); }}>
                         {getTopCategories().map(parent => (
                           <optgroup key={parent.id} label={parent.name}>
                             {getSubCategories(parent.id).map(sub => <option key={sub.id} value={sub.id}>{sub.name}</option>)}

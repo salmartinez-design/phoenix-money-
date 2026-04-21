@@ -89,6 +89,10 @@ export function AppProvider({ children }) {
     try { return JSON.parse(localStorage.getItem('phoenix-notif-prefs')); } catch {}
     return { negativeBalance: true, largeTransaction: true, largeTransactionThreshold: 500, uncategorizedPileup: true, uncategorizedThreshold: 3, weeklySummary: true, monthlySummary: true };
   });
+  const [accountantInvites, setAccountantInvites] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('phoenix-accountant-invites')) || []; }
+    catch { return []; }
+  });
 
   const setTheme = useCallback((t) => {
     setThemeState(t);
@@ -109,6 +113,7 @@ export function AppProvider({ children }) {
     });
   }, []);
 
+  useEffect(() => { safeSetLocal('phoenix-accountant-invites', accountantInvites); }, [accountantInvites]);
   useEffect(() => { safeSetLocal('phoenix-transactions', transactions); }, [transactions]);
   useEffect(() => { safeSetLocal('phoenix-rules', rules); }, [rules]);
   useEffect(() => { safeSetLocal('phoenix-budgets', budgets); }, [budgets]);
@@ -154,6 +159,24 @@ export function AppProvider({ children }) {
 
   const deleteRule = useCallback((ruleId) => {
     setRules(prev => prev.filter(r => r.id !== ruleId));
+  }, []);
+
+  const inviteAccountant = useCallback((email, permission) => {
+    setAccountantInvites(prev => [...prev, {
+      id: Date.now().toString(36),
+      email,
+      permission,
+      status: 'pending',
+      invitedAt: new Date().toISOString(),
+    }]);
+  }, []);
+
+  const updateAccountantInvite = useCallback((id, updates) => {
+    setAccountantInvites(prev => prev.map(inv => inv.id === id ? { ...inv, ...updates } : inv));
+  }, []);
+
+  const revokeAccountantInvite = useCallback((id) => {
+    setAccountantInvites(prev => prev.filter(inv => inv.id !== id));
   }, []);
 
   const financialData = useMemo(() => {
@@ -232,7 +255,7 @@ export function AppProvider({ children }) {
   }, [transactions, accountFilter]);
 
   return (
-    <AppContext.Provider value={{ transactions, rules, theme, lang, aiOpen, accountFilter, notifPrefs, budgets, accounts, setTheme, setLang, setAiOpen, setAccountFilter, updateNotifPref, updateCategory, addRule, updateRule, deleteRule, setBudget, copyBudgetFromMonth, financialData }}>
+    <AppContext.Provider value={{ transactions, rules, theme, lang, aiOpen, accountFilter, notifPrefs, budgets, accounts, accountantInvites, setTheme, setLang, setAiOpen, setAccountFilter, updateNotifPref, updateCategory, addRule, updateRule, deleteRule, setBudget, copyBudgetFromMonth, inviteAccountant, updateAccountantInvite, revokeAccountantInvite, financialData }}>
       {children}
     </AppContext.Provider>
   );

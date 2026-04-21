@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { useT } from '../i18n';
 
@@ -24,8 +24,12 @@ function Row({ label, desc, value, onChange, extra }) {
 }
 
 export function Settings() {
-  const { lang, setLang, theme, setTheme, notifPrefs, updateNotifPref } = useApp();
+  const { lang, setLang, theme, setTheme, notifPrefs, updateNotifPref, accountFilter, accountantInvites, inviteAccountant, updateAccountantInvite, revokeAccountantInvite } = useApp();
   const t = useT(lang);
+  const [inviteEmail, setInviteEmail] = useState('');
+  const [invitePermission, setInvitePermission] = useState('view');
+  const [inviteSuccess, setInviteSuccess] = useState(false);
+  const isBusiness = accountFilter !== 'personal';
   useEffect(() => { document.title = lang==='es'?'Ajustes — Phoenix Money':'Settings — Phoenix Money'; }, [lang]);
 
   return (
@@ -88,6 +92,95 @@ export function Settings() {
         <Row label={t('weeklySummary')} desc={t('weeklyDesc')} value={notifPrefs.weeklySummary} onChange={v => updateNotifPref('weeklySummary', v)}/>
         <Row label={t('monthlySummary')} desc={t('monthlyDesc')} value={notifPrefs.monthlySummary} onChange={v => updateNotifPref('monthlySummary', v)}/>
       </div>
+
+      {/* Accountant Access — business only */}
+      {isBusiness && (
+        <div className="phoenix-card fu4" style={{ marginTop:16 }}>
+          <h3 style={{ fontSize:16, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{t('accountantAccess')}</h3>
+          <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:20 }}>{t('accountantDesc')}</p>
+
+          {/* Invite form */}
+          <div style={{ display:'flex', gap:8, marginBottom:20, flexWrap:'wrap' }}>
+            <input
+              type="email"
+              placeholder={t('accountantEmail')}
+              value={inviteEmail}
+              onChange={e => { setInviteEmail(e.target.value); setInviteSuccess(false); }}
+              style={{ flex:'1 1 200px', padding:'10px 14px', fontSize:14 }}
+            />
+            <select
+              value={invitePermission}
+              onChange={e => setInvitePermission(e.target.value)}
+              style={{ padding:'10px 14px', fontSize:14, minWidth:130, cursor:'pointer' }}
+            >
+              <option value="view">{t('viewOnly')}</option>
+              <option value="full">{t('fullAccess')}</option>
+            </select>
+            <button
+              className="btn-primary"
+              disabled={!inviteEmail || !inviteEmail.includes('@')}
+              onClick={() => {
+                inviteAccountant(inviteEmail.trim(), invitePermission);
+                setInviteEmail('');
+                setInviteSuccess(true);
+                setTimeout(() => setInviteSuccess(false), 3000);
+              }}
+              style={{ padding:'10px 20px', fontSize:14 }}
+            >
+              {t('inviteAccountant')}
+            </button>
+          </div>
+
+          {inviteSuccess && (
+            <div style={{ background:'var(--green-dim)', color:'var(--green)', borderRadius:10, padding:'10px 16px', fontSize:13, fontWeight:600, marginBottom:16 }}>
+              ✓ {t('inviteSent')}
+            </div>
+          )}
+
+          {/* Invited accountants list */}
+          {accountantInvites.length === 0 ? (
+            <p style={{ fontSize:13, color:'var(--text-muted)', fontStyle:'italic' }}>{t('noAccountants')}</p>
+          ) : (
+            <div style={{ display:'flex', flexDirection:'column', gap:2 }}>
+              {accountantInvites.map(inv => (
+                <div key={inv.id} style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'12px 0', borderBottom:'1px solid var(--border)', flexWrap:'wrap', gap:8 }}>
+                  <div style={{ flex:'1 1 200px', minWidth:0 }}>
+                    <p style={{ fontSize:14, fontWeight:600, color:'var(--text-primary)', margin:0, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{inv.email}</p>
+                    <p style={{ fontSize:12, color:'var(--text-muted)', margin:'2px 0 0' }}>
+                      {lang === 'es' ? 'Invitado' : 'Invited'} {new Date(inv.invitedAt).toLocaleDateString(lang === 'es' ? 'es-MX' : 'en-US', { month:'short', day:'numeric' })}
+                    </p>
+                  </div>
+                  <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+                    <select
+                      value={inv.permission}
+                      onChange={e => updateAccountantInvite(inv.id, { permission: e.target.value })}
+                      style={{ padding:'6px 10px', fontSize:12, cursor:'pointer', borderRadius:8 }}
+                    >
+                      <option value="view">{t('viewOnly')}</option>
+                      <option value="full">{t('fullAccess')}</option>
+                    </select>
+                    <span style={{
+                      fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20,
+                      background: inv.status === 'active' ? 'var(--green-dim)' : 'var(--orange-dim)',
+                      color: inv.status === 'active' ? 'var(--green)' : 'var(--orange)',
+                    }}>
+                      {inv.status === 'active' ? t('activeInvite') : t('pendingInvite')}
+                    </span>
+                    {inv.status === 'pending' && (
+                      <button className="btn-ghost" onClick={() => updateAccountantInvite(inv.id, { invitedAt: new Date().toISOString() })} style={{ padding:'6px 12px', fontSize:12 }}>
+                        {t('resendInvite')}
+                      </button>
+                    )}
+                    <button className="btn-ghost" onClick={() => revokeAccountantInvite(inv.id)} style={{ padding:'6px 12px', fontSize:12, color:'var(--red)', borderColor:'var(--red-dim)' }}>
+                      {t('revokeAccess')}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

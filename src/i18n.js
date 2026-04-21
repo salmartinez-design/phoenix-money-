@@ -90,6 +90,13 @@ export const i18n = {
     thisWeekYouSpent: 'This week you spent', lessLastWeek: 'less than last week',
     moreLastWeek: 'more than last week', sameAsLastWeek: 'about the same as last week',
     paidSoFar: 'paid so far', remainingDue: 'remaining due',
+    // Accountant access
+    accountantAccess: 'Accountant Access', accountantDesc: 'Invite your accountant to view or manage your books.',
+    inviteAccountant: 'Send Invite', accountantEmail: 'Accountant email',
+    viewOnly: 'View only', fullAccess: 'Full access',
+    pendingInvite: 'Pending', activeInvite: 'Active', revokeAccess: 'Revoke',
+    inviteSent: 'Invite sent', noAccountants: 'No accountants invited yet.',
+    permissionLevel: 'Permission', resendInvite: 'Resend',
   },
   es: {
     dashboard: 'Panel', transactions: 'Transacciones', cashFlow: 'Flujo de Caja',
@@ -182,6 +189,13 @@ export const i18n = {
     thisWeekYouSpent: 'Esta semana gastaste', lessLastWeek: 'menos que la semana pasada',
     moreLastWeek: 'm\u00e1s que la semana pasada', sameAsLastWeek: 'igual que la semana pasada',
     paidSoFar: 'pagado hasta ahora', remainingDue: 'pendiente',
+    // Accountant access
+    accountantAccess: 'Acceso de Contador', accountantDesc: 'Invita a tu contador a ver o administrar tus libros.',
+    inviteAccountant: 'Enviar Invitación', accountantEmail: 'Email del contador',
+    viewOnly: 'Solo lectura', fullAccess: 'Acceso completo',
+    pendingInvite: 'Pendiente', activeInvite: 'Activo', revokeAccess: 'Revocar',
+    inviteSent: 'Invitación enviada', noAccountants: 'No hay contadores invitados aún.',
+    permissionLevel: 'Permiso', resendInvite: 'Reenviar',
   }
 };
 

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   PHOENIX MONEY — MOBILE RESPONSIVE
+   Mobile-only rules: hide sidebar, show bottom tab bar, safe-area padding.
+   Tested on: iPhone 15 Pro (390×844), iPhone SE (375×667), iPad (768×1024)
+   ========================================================================== */
+
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+@media (max-width: 768px) {
+
+  #root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .app-header button.tab-btn {
+    display: none !important;
+  }
+
+  .app-header {
+    padding: 0 16px !important;
+    justify-content: space-between !important;
+    padding-top: var(--sat) !important;
+    height: calc(52px + var(--sat)) !important;
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(64px + var(--sab));
+    padding-bottom: var(--sab);
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .mobile-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 8px 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+    transition: color 0.15s;
+  }
+
+  .mobile-nav-item.active {
+    color: var(--orange);
+  }
+
+  .mobile-nav-item .nav-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .mobile-nav-item .nav-badge {
+    position: absolute;
+    top: 6px;
+    background: #DC2626;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 1px 5px;
+    margin-left: 12px;
+    margin-top: -2px;
+  }
+}
+
+@media (max-width: 768px) {
+  button,
+  [role="button"],
+  select,
+  input[type="checkbox"],
+  input[type="radio"],
+  .nav-item {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .toggle-switch {
+    min-width: unset;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .phoenix-card {
+    border-radius: 12px !important;
+    margin: 0 0 12px 0 !important;
+  }
+
+  div[style*="padding:32px"],
+  div[style*="padding: 32px"] {
+    padding: 16px !important;
+    padding-bottom: calc(80px + var(--sab)) !important;
+  }
+
+  div[style*="padding:24px"],
+  div[style*="padding: 24px"] {
+    padding: 16px !important;
+  }
+
+  table {
+    font-size: 13px !important;
+  }
+
+  .ai-panel {
+    width: 100% !important;
+    top: var(--sat) !important;
+    border-left: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .recharts-wrapper {
+    overflow: hidden !important;
+  }
+}
+
+[data-theme="dark"] body {
+  background-color: #0F172A;
+}

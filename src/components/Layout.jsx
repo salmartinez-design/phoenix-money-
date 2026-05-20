@@ -1,6 +1,21 @@
+import { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { useT } from '../i18n';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { MobileNav } from './MobileNav';
+
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < breakpoint : false
+  );
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const handler = (e) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, [breakpoint]);
+  return isMobile;
+}
 
 export function Layout({ children }) {
   const { theme, setTheme, lang, setLang, setAiOpen, financialData } = useApp();
@@ -8,6 +23,7 @@ export function Layout({ children }) {
   const location = useLocation();
   const navigate = useNavigate();
   const path = location.pathname.replace('/', '') || 'dashboard';
+  const isMobile = useIsMobile();
 
   const navItems = [
     { id: 'dashboard', label: t('dashboard'), icon: '◈' },
@@ -26,7 +42,8 @@ export function Layout({ children }) {
   return (
     <div style={{ display:'flex', height:'100vh', overflow:'hidden', background:'var(--bg)', fontFamily:"'Outfit',system-ui,sans-serif" }}>
 
-      {/* SIDEBAR */}
+      {/* SIDEBAR — desktop only */}
+      {!isMobile && (
       <div style={{ width:230, background:'var(--surface)', borderRight:'1px solid var(--border)', display:'flex', flexDirection:'column', height:'100vh', flexShrink:0 }}>
         <div style={{ padding:'22px 20px 16px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:10 }}>
@@ -61,12 +78,13 @@ export function Layout({ children }) {
           </div>
         </div>
       </div>
+      )}
 
       {/* MAIN */}
       <div style={{ flex:1, display:'flex', flexDirection:'column', overflow:'hidden' }}>
 
         {/* Header */}
-        <div style={{ background:'var(--surface)', borderBottom:'1px solid var(--border)', padding:'0 28px', display:'flex', justifyContent:'space-between', alignItems:'center', height:52, flexShrink:0 }}>
+        <div className="app-header" style={{ background:'var(--surface)', borderBottom:'1px solid var(--border)', padding:'0 28px', display:'flex', justifyContent:'space-between', alignItems:'center', height:52, flexShrink:0 }}>
           <div style={{ display:'flex', alignItems:'stretch', height:'100%' }}>
             {navItems.map(item => (
               <button key={item.id} className={`tab-btn${isActive(item.id) ? ' active' : ''}`} onClick={() => navigate(`/${item.id}`)}>
@@ -97,8 +115,10 @@ export function Layout({ children }) {
           </div>
         </div>
 
-        <div style={{ flex:1, overflowY:'auto' }}>{children}</div>
+        <div style={{ flex:1, overflowY:'auto', paddingBottom: isMobile ? 72 : 0 }}>{children}</div>
       </div>
+
+      {isMobile && <MobileNav />}
     </div>
   );
 }

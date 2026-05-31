@@ -82,6 +82,8 @@ body {
 .fu3 { animation: fadeUp .45s .18s ease both; }
 .fu4 { animation: fadeUp .45s .24s ease both; }
 
+.mobile-brand { display: none; align-items: center; gap: 9px; cursor: pointer; }
+
 .phoenix-card {
   background: var(--card);
   border: 1px solid var(--border);

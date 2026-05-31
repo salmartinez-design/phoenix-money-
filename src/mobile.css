@@ -22,6 +22,10 @@
     display: none !important;
   }
 
+  .mobile-brand {
+    display: flex !important;
+  }
+
   .app-header {
     padding: 0 16px !important;
     justify-content: space-between !important;

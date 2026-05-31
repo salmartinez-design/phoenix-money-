@@ -11,7 +11,7 @@ export function Dashboard() {
   const t = useT(lang);
   const navigate = useNavigate();
   const { monthly, totalIncome, totalExpenses, totalNet, savingsRate, burnRate, runway, latestMonth, prevMonth, allTransactions, flaggedCount, recurringDetected, accountBalances } = financialData;
-  useEffect(() => { document.title = lang === 'es' ? 'Panel — Phoenix Money' : 'Dashboard — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Panel — Xentli' : 'Dashboard — Xentli'; }, [lang]);
   const $ = (n, d=0) => formatCurrency(n, lang, d);
 
   // Filter transactions by current account toggle

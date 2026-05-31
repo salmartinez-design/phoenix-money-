@@ -54,7 +54,7 @@ export function Transactions() {
 
   const presets = lang === 'es' ? DATE_PRESETS_ES : DATE_PRESETS_EN;
 
-  useEffect(() => { document.title = lang === 'es' ? 'Transacciones — Phoenix Money' : 'Transactions — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Transacciones — Xentli' : 'Transactions — Xentli'; }, [lang]);
   useEffect(() => { setPage(1); }, [search, catFilter, datePreset, customFrom, customTo, sortBy]);
 
   const dateRange = datePreset === 'custom' ? { from: customFrom, to: customTo } : getDateRange(datePreset);

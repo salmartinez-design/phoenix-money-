@@ -3,59 +3,63 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root, [data-theme="light"] {
-  --bg: #F8FAFC;
-  --surface: #FFFFFF;
-  --card: #FFFFFF;
-  --card-hover: #F1F5F9;
-  --border: #E2E8F0;
-  --border-hi: rgba(249,115,22,0.4);
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
-  --row-hover: #F1F5F9;
-  --orange: #F97316;
-  --orange-dim: rgba(249,115,22,0.10);
-  --orange-glow: rgba(249,115,22,0.25);
-  --amber: #F59E0B;
-  --green: #059669;
-  --green-dim: rgba(5,150,105,0.08);
-  --red: #DC2626;
-  --red-dim: rgba(220,38,38,0.08);
-  --blue: #2563EB;
-  --blue-dim: rgba(37,99,235,0.08);
-  --purple: #7C3AED;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  --chart-grid: #E2E8F0;
-  --chart-axis: #94A3B8;
-  --tooltip-bg: #0F172A;
+  --bg: #F1EDE3;
+  --surface: #FAF7F0;
+  --card: #FCFAF4;
+  --card-hover: #F1ECE1;
+  --border: #E4DECF;
+  --border-hi: rgba(26,22,16,0.30);
+  --text-primary: #1A1610;
+  --text-secondary: #5A5346;
+  --text-muted: #9C9482;
+  --row-hover: #F1ECE1;
+  /* Brand accent — espresso black on cream */
+  --orange: #1A1610;
+  --orange-dim: rgba(26,22,16,0.06);
+  --orange-glow: rgba(26,22,16,0.20);
+  --amber: #3A3326;
+  --on-accent: #FAF7F0;
+  --green: #0E7C57;
+  --green-dim: rgba(14,124,87,0.08);
+  --red: #C0392B;
+  --red-dim: rgba(192,57,43,0.08);
+  --blue: #2F6F9E;
+  --blue-dim: rgba(47,111,158,0.08);
+  --purple: #6B4FA8;
+  --card-shadow: 0 1px 3px rgba(40,32,20,0.07), 0 1px 2px rgba(40,32,20,0.04);
+  --chart-grid: #E4DECF;
+  --chart-axis: #9C9482;
+  --tooltip-bg: #1A1610;
 }
 
 [data-theme="dark"] {
-  --bg: #07090F;
-  --surface: #0C1018;
-  --card: #101623;
-  --card-hover: #131A28;
-  --border: #1A2438;
-  --border-hi: rgba(255,107,43,0.4);
-  --text-primary: #EEF2FF;
-  --text-secondary: #8899B0;
-  --text-muted: #3E5068;
-  --row-hover: #131A28;
-  --orange: #FF6B2B;
-  --orange-dim: rgba(255,107,43,0.12);
-  --orange-glow: rgba(255,107,43,0.25);
-  --amber: #FFB347;
-  --green: #00D4A0;
-  --green-dim: rgba(0,212,160,0.08);
-  --red: #FF4B6E;
-  --red-dim: rgba(255,75,110,0.08);
-  --blue: #4F9EFF;
-  --blue-dim: rgba(79,158,255,0.08);
-  --purple: #9B72FF;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  --chart-grid: #1A2438;
-  --chart-axis: #3E5068;
-  --tooltip-bg: #0A0E1A;
+  --bg: #121009;
+  --surface: #1A1710;
+  --card: #211D15;
+  --card-hover: #29241A;
+  --border: #342E22;
+  --border-hi: rgba(233,224,202,0.32);
+  --text-primary: #F2ECDD;
+  --text-secondary: #B0A892;
+  --text-muted: #6F6757;
+  --row-hover: #29241A;
+  /* Brand accent — warm cream on espresso */
+  --orange: #E9E0CA;
+  --orange-dim: rgba(233,224,202,0.12);
+  --orange-glow: rgba(233,224,202,0.20);
+  --amber: #C8B58A;
+  --on-accent: #1A1610;
+  --green: #34C99A;
+  --green-dim: rgba(52,201,154,0.10);
+  --red: #F0786A;
+  --red-dim: rgba(240,120,106,0.10);
+  --blue: #6FA8D6;
+  --blue-dim: rgba(111,168,214,0.10);
+  --purple: #A98FE0;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  --chart-grid: #342E22;
+  --chart-axis: #6F6757;
+  --tooltip-bg: #1A1710;
 }
 
 body {
@@ -105,7 +109,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--orange), var(--amber));
-  border: none; color: #fff; cursor: pointer;
+  border: none; color: var(--on-accent); cursor: pointer;
   font-family: 'Outfit', sans-serif; font-weight: 700;
   border-radius: 10px; transition: all .15s;
 }

@@ -46,12 +46,11 @@ export function Layout({ children }) {
       {!isMobile && (
       <div style={{ width:230, background:'var(--surface)', borderRight:'1px solid var(--border)', display:'flex', flexDirection:'column', height:'100vh', flexShrink:0 }}>
         <div style={{ padding:'22px 20px 16px' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-            <div style={{ width:36, height:36, borderRadius:10, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:20, boxShadow:'0 4px 14px rgba(249,115,22,0.3)' }}>P</div>
-            <div>
-              <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:17, letterSpacing:'-.02em', margin:0 }}>Phoenix</p>
-              <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>Money</p>
+          <div style={{ display:'flex', alignItems:'center', gap:11 }}>
+            <div style={{ width:38, height:38, borderRadius:10, background:'#F1EDE3', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:'0 2px 8px rgba(40,32,20,0.12)' }}>
+              <img src="/logo.svg" alt="Xentli" style={{ width:'80%', height:'80%', objectFit:'contain', display:'block' }}/>
             </div>
+            <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:20, letterSpacing:'-.03em', margin:0 }}>Xentli</p>
           </div>
         </div>
         <div style={{ padding:'4px 10px', flex:1 }}>
@@ -64,13 +63,13 @@ export function Layout({ children }) {
           ))}
         </div>
         <div style={{ padding:'10px 10px 20px' }}>
-          <div className="nav-item" onClick={() => setAiOpen(true)} style={{ background:'rgba(249,115,22,0.08)', border:'1px solid rgba(249,115,22,0.25)', color:'var(--orange)', fontWeight:700, marginBottom:6 }}>
+          <div className="nav-item" onClick={() => setAiOpen(true)} style={{ background:'var(--orange-dim)', border:'1px solid var(--border-hi)', color:'var(--orange)', fontWeight:700, marginBottom:6 }}>
             <span>✨</span>
             <span style={{ flex:1 }}>{t('aiAdvisor')}</span>
             <span style={{ width:7, height:7, borderRadius:'50%', background:'var(--green)', animation:'pulse 2s infinite' }}/>
           </div>
           <div style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 14px' }}>
-            <div style={{ width:30, height:30, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, color:'#fff', fontSize:13 }}>S</div>
+            <div style={{ width:30, height:30, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, color:'var(--on-accent)', fontSize:13 }}>S</div>
             <div>
               <p style={{ margin:0, fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>Sal</p>
               <p style={{ margin:0, fontSize:11, color:'var(--text-muted)' }}>Business Plan</p>
@@ -97,7 +96,7 @@ export function Layout({ children }) {
             <div style={{ display:'flex', gap:2, padding:3, background:'var(--bg)', borderRadius:8, border:'1px solid var(--border)' }}>
               {['en','es'].map(l => (
                 <button key={l} onClick={() => setLang(l)}
-                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: lang === l ? 'var(--orange)' : 'transparent', color: lang === l ? '#fff' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
+                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: lang === l ? 'var(--orange)' : 'transparent', color: lang === l ? 'var(--on-accent)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
                   {l.toUpperCase()}
                 </button>
               ))}
@@ -109,7 +108,7 @@ export function Layout({ children }) {
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
             {/* Ask AI */}
-            <button className="btn-primary" onClick={() => setAiOpen(true)} style={{ padding:'7px 16px', minHeight:36, fontSize:13, borderRadius:8, boxShadow:'0 4px 14px rgba(249,115,22,0.25)' }}>
+            <button className="btn-primary" onClick={() => setAiOpen(true)} style={{ padding:'7px 16px', minHeight:36, fontSize:13, borderRadius:8, boxShadow:'0 4px 14px var(--orange-glow)' }}>
               ✨ {t('askAI')}
             </button>
           </div>

@@ -47,7 +47,7 @@ export function Recurring() {
   const [viewMode, setViewMode] = useState('monthly');
 
   useEffect(() => {
-    document.title = lang === 'es' ? 'Recurrentes — Phoenix Money' : 'Recurring — Phoenix Money';
+    document.title = lang === 'es' ? 'Recurrentes — Xentli' : 'Recurring — Xentli';
   }, [lang]);
 
   const allItems = financialData.recurringDetected || [];

@@ -7,7 +7,7 @@ export function AiPanel({ onClose }) {
   const { lang, financialData, addRule, rules, updateCategory, transactions, accountFilter } = useApp();
   const t = useT(lang);
   const { totalIncome, totalNet, burnRate, runway, latestMonth, prevMonth } = financialData;
-  const [msgs, setMsgs] = useState([{ role: 'assistant', content: lang === 'es' ? '¡Hola! Soy tu asesor financiero IA de Phoenix. Puedo responder preguntas Y hacer cambios — crear categorías, reglas, recategorizar transacciones. ¿Qué necesitas?' : "Hey! I'm your Phoenix AI advisor. I can answer questions AND take action — create categories, set up rules, recategorize transactions. What do you need?" }]);
+  const [msgs, setMsgs] = useState([{ role: 'assistant', content: lang === 'es' ? '¡Hola! Soy tu asesor financiero IA de Xentli. Puedo responder preguntas Y hacer cambios — crear categorías, reglas, recategorizar transacciones. ¿Qué necesitas?' : "Hey! I'm your Xentli AI advisor. I can answer questions AND take action — create categories, set up rules, recategorize transactions. What do you need?" }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);
@@ -114,7 +114,7 @@ export function AiPanel({ onClose }) {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514', max_tokens: 1500,
-          system: `You are Phoenix Money's AI financial advisor for a small business owner (PHES LLC, cleaning/property services).
+          system: `You are Xentli's AI financial advisor for a small business owner (PHES LLC, cleaning/property services).
 IMPORTANT: Respond ONLY in ${lang === 'es' ? 'Spanish (friendly, clear Latin American)' : 'English'}.
 Keep responses concise. Use plain language, no jargon. 8th grade reading level.
 
@@ -161,7 +161,7 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
     <div className="ai-panel" style={{ position:'fixed', right:0, top:0, bottom:0, width:420, background:'var(--surface)', borderLeft:'1px solid var(--border)', display:'flex', flexDirection:'column', zIndex:999, boxShadow:'-8px 0 40px rgba(0,0,0,0.15)' }}>
       <div style={{ padding:'16px 18px', borderBottom:'1px solid var(--border)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
         <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-          <div style={{ width:38, height:38, borderRadius:10, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18 }}>✨</div>
+          <div style={{ width:38, height:38, borderRadius:10, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18 }}>✨</div>
           <div>
             <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:15, margin:0 }}>{t('aiAdvisor')}</p>
             <p style={{ fontSize:11, color:'var(--green)', fontWeight:600, margin:0 }}>{t('onlinePowered')}</p>
@@ -172,13 +172,13 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
         {msgs.map((m, i) => (
           <div key={i} style={{ marginBottom:12, display:'flex', flexDirection: m.role === 'user' ? 'row-reverse' : 'row', gap:8 }}>
-            {m.role === 'assistant' && <div style={{ width:28, height:28, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, flexShrink:0, marginTop:2 }}>✨</div>}
-            <div style={{ maxWidth:'88%', padding:'11px 14px', borderRadius: m.role === 'user' ? '16px 4px 16px 16px' : '4px 16px 16px 16px', background: m.role === 'user' ? 'linear-gradient(135deg,#F97316,#F59E0B)' : 'var(--card)', border: m.role === 'user' ? 'none' : '1px solid var(--border)', color: m.role === 'user' ? '#fff' : 'var(--text-primary)', fontSize:13.5, lineHeight:1.65, whiteSpace:'pre-wrap' }}>
+            {m.role === 'assistant' && <div style={{ width:28, height:28, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, flexShrink:0, marginTop:2 }}>✨</div>}
+            <div style={{ maxWidth:'88%', padding:'11px 14px', borderRadius: m.role === 'user' ? '16px 4px 16px 16px' : '4px 16px 16px 16px', background: m.role === 'user' ? 'var(--orange)' : 'var(--card)', border: m.role === 'user' ? 'none' : '1px solid var(--border)', color: m.role === 'user' ? 'var(--on-accent)' : 'var(--text-primary)', fontSize:13.5, lineHeight:1.65, whiteSpace:'pre-wrap' }}>
               {m.content}
             </div>
           </div>
         ))}
-        {loading && <div style={{ display:'flex', gap:8 }}><div style={{ width:28, height:28, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12 }}>✨</div><div style={{ padding:'11px 14px', background:'var(--card)', border:'1px solid var(--border)', borderRadius:'4px 16px 16px 16px', color:'var(--text-muted)', fontSize:13 }}>{t('thinking')}</div></div>}
+        {loading && <div style={{ display:'flex', gap:8 }}><div style={{ width:28, height:28, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12 }}>✨</div><div style={{ padding:'11px 14px', background:'var(--card)', border:'1px solid var(--border)', borderRadius:'4px 16px 16px 16px', color:'var(--text-muted)', fontSize:13 }}>{t('thinking')}</div></div>}
         <div ref={endRef}/>
       </div>
 

@@ -16,7 +16,7 @@ export function Rules() {
   const [editMatch, setEditMatch] = useState('');
   const [editCat, setEditCat] = useState('');
 
-  useEffect(() => { document.title = lang==='es'?'Reglas — Phoenix Money':'Rules — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang==='es'?'Reglas — Xentli':'Rules — Xentli'; }, [lang]);
 
   const aiSuggest = async (kw, forEdit = false) => {
     const keyword = forEdit ? editMatch : (kw || match);

@@ -14,7 +14,7 @@ export function CashFlow() {
   const [selectedMonth, setSelectedMonth] = useState(() => monthly[monthly.length-1]?.key || '2026-03');
   const [breakdown, setBreakdown] = useState('category');
 
-  useEffect(() => { document.title = lang === 'es' ? 'Flujo de Caja — Phoenix Money' : 'Cash Flow — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Flujo de Caja — Xentli' : 'Cash Flow — Xentli'; }, [lang]);
 
   // Compute income/expense breakdowns for selected month
   const monthData = useMemo(() => {

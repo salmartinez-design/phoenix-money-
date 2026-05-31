@@ -43,7 +43,7 @@ export function Accounts() {
   const [filterType, setFilterType] = useState('all');
 
   useEffect(() => {
-    document.title = lang === 'es' ? 'Cuentas — Phoenix Money' : 'Accounts — Phoenix Money';
+    document.title = lang === 'es' ? 'Cuentas — Xentli' : 'Accounts — Xentli';
   }, [lang]);
 
   const { accountSummaries = {}, accountBalances = {} } = financialData;

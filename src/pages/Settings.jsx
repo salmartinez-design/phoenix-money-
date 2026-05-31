@@ -20,7 +20,7 @@ export function Settings() {
   const [newGroupName, setNewGroupName] = useState('');
   const [showNewGroup, setShowNewGroup] = useState(false);
   const [catRefresh, setCatRefresh] = useState(0); // force re-render after adding
-  useEffect(() => { document.title = lang==='es'?'Ajustes — Phoenix Money':'Settings — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang==='es'?'Ajustes — Xentli':'Settings — Xentli'; }, [lang]);
 
   const sections = [
     { group: lang==='es'?'Cuenta':'Account', items: [
@@ -214,7 +214,7 @@ export function Settings() {
               </div>
               <div style={{ background:'var(--blue-dim)', border:'1px solid rgba(37,99,235,0.2)', borderRadius:10, padding:'12px 16px', marginBottom:20, marginTop:12 }}>
                 <p style={{ fontSize:13, color:'var(--blue)', lineHeight:1.5 }}>
-                  ℹ️ {lang==='es'?'Los cambios a tus categorías se aplican en toda la app. Personaliza la estructura a tu medida.':'Changes to your categories apply throughout Phoenix. Customize the structure to fit your needs.'}
+                  ℹ️ {lang==='es'?'Los cambios a tus categorías se aplican en toda la app. Personaliza la estructura a tu medida.':'Changes to your categories apply throughout Xentli. Customize the structure to fit your needs.'}
                 </p>
               </div>
 

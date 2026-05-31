@@ -15,7 +15,7 @@ export function Budget() {
   const [editingCell, setEditingCell] = useState(null);
   const [editValue, setEditValue] = useState('');
 
-  useEffect(() => { document.title = lang === 'es' ? 'Presupuesto — Phoenix Money' : 'Budget — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Presupuesto — Xentli' : 'Budget — Xentli'; }, [lang]);
 
   const monthBudgets = budgets[selectedMonth] || {};
   const monthSpend = categoryMonthlySpend[selectedMonth] || {};

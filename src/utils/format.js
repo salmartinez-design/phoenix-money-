@@ -26,7 +26,7 @@ export const normalize = (str) =>
 
 export const safeSetLocal = (key, value) => {
   try { localStorage.setItem(key, JSON.stringify(value)); }
-  catch (e) { if (e.name === 'QuotaExceededError') console.warn('Phoenix: localStorage full'); }
+  catch (e) { if (e.name === 'QuotaExceededError') console.warn('Xentli: localStorage full'); }
 };
 
 export const daysUntil = (dateStr) => {

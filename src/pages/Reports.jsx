@@ -39,7 +39,7 @@ export function Reports() {
   const [customFrom, setCustomFrom] = useState('');
   const [customTo, setCustomTo] = useState('');
   const [showDatePicker, setShowDatePicker] = useState(false);
-  useEffect(() => { document.title = lang==='es'?'Reportes — Phoenix Money':'Reports — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang==='es'?'Reportes — Xentli':'Reports — Xentli'; }, [lang]);
 
   const presets = DATE_PRESETS[lang] || DATE_PRESETS.en;
   const dateRange = datePreset === 'custom' ? { from: customFrom, to: customTo } : getDateRange(datePreset);

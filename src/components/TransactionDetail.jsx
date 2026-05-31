@@ -110,7 +110,7 @@ export function TransactionDetail({ txn, onClose }) {
         <p style={{ fontSize:11, fontWeight:600, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'.06em', marginBottom:6 }}>Tags</p>
         <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
           {(txn.tags || []).map((tag, i) => (
-            <span key={i} style={{ padding:'4px 10px', borderRadius:20, fontSize:12, fontWeight:600, background:'var(--orange-dim)', color:'var(--orange)', border:'1px solid rgba(249,115,22,0.25)' }}>{tag}</span>
+            <span key={i} style={{ padding:'4px 10px', borderRadius:20, fontSize:12, fontWeight:600, background:'var(--orange-dim)', color:'var(--orange)', border:'1px solid var(--border-hi)' }}>{tag}</span>
           ))}
           <button className="btn-ghost" style={{ padding:'4px 10px', borderRadius:20, fontSize:12 }}>+ {lang==='es'?'Agregar':'Add'}</button>
         </div>

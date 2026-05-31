@@ -97,7 +97,7 @@ export function MobileNav() {
           style={{
             display: 'flex', alignItems: 'center', gap: 14,
             padding: '14px 16px', borderRadius: 14, border: 'none', width: '100%',
-            background: 'rgba(249,115,22,0.08)', color: 'var(--orange)',
+            background: 'var(--orange-dim)', color: 'var(--orange)',
             fontWeight: 700, fontSize: 15, cursor: 'pointer', marginBottom: 8,
           }}
         >
@@ -116,7 +116,7 @@ export function MobileNav() {
             style={{
               display: 'flex', alignItems: 'center', gap: 14,
               padding: '14px 16px', borderRadius: 14, border: 'none', width: '100%',
-              background: isActive(tab.id) ? 'rgba(249,115,22,0.08)' : 'transparent',
+              background: isActive(tab.id) ? 'var(--orange-dim)' : 'transparent',
               color: isActive(tab.id) ? 'var(--orange)' : 'var(--text-primary)',
               fontWeight: 600, fontSize: 15, cursor: 'pointer',
             }}

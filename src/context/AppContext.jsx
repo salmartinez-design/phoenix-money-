@@ -234,9 +234,9 @@ export function AppProvider({ children }) {
     const burnRate = monthly.length > 0 ? Math.round(monthly.reduce((s,m) => s + Math.abs(m.expenses), 0) / monthly.length) : 0;
     const runway = burnRate > 0 ? Math.round((totalNet / burnRate) * 12) : 0;
 
-    // Category monthly spend (for budget page)
+    // Category monthly spend (for budget page) — respect the account filter
     const categoryMonthlySpend = {};
-    operational.forEach(t => {
+    filtered.forEach(t => {
       const mk = t.date.slice(0, 7);
       if (!categoryMonthlySpend[mk]) categoryMonthlySpend[mk] = {};
       const catId = t.categoryId;
@@ -261,8 +261,8 @@ export function AppProvider({ children }) {
       accountSummaries[t.accountId].monthlyBalances[mk] += t.amount;
     });
 
-    // Recurring detection
-    const recurringDetected = detectRecurring(transactions);
+    // Recurring detection — respect the account filter
+    const recurringDetected = detectRecurring(filtered);
 
     return { monthly, totalIncome, totalExpenses, totalNet, incomeCats, expenseCats, savingsRate: totalIncome > 0 ? Math.round((totalNet / totalIncome) * 100) : 0, burnRate, runway, flaggedCount, negativeAccounts, latestMonth: monthly[monthly.length - 1], prevMonth: monthly[monthly.length - 2], allTransactions: transactions, categoryMonthlySpend, accountSummaries, accountBalances, recurringDetected };
   }, [transactions, accountFilter]);

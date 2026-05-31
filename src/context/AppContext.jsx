@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useMemo, useEffect, useCallback } from 'react';
-import { SEED_TRANSACTIONS, SEED_RULES, SEED_ACCOUNTS as LOADED_ACCOUNTS } from '../data/seed';
+import { SEED_TRANSACTIONS, SEED_RULES, SEED_ACCOUNTS as LOADED_ACCOUNTS, DATA_VERSION } from '../data/seed';
 import { getParentCategory, isIncomeCategory, isTransferCategory, getCategoryById } from '../data/categories';
 import { safeSetLocal, normalize } from '../utils/format';
 
@@ -84,12 +84,21 @@ function detectRecurring(transactions) {
   return recurring.sort((a, b) => new Date(a.nextExpected) - new Date(b.nextExpected));
 }
 
+// When the shipped data version changes, reload it (overrides stale localStorage).
+// Once the user starts editing, freeze this by not bumping DATA_VERSION.
+const DATA_IS_FRESH = (() => {
+  try { return DATA_VERSION && localStorage.getItem('phoenix-data-version') !== DATA_VERSION; }
+  catch { return false; }
+})();
+
 export function AppProvider({ children }) {
   const [transactions, setTransactions] = useState(() => {
+    if (DATA_IS_FRESH) return SEED_TRANSACTIONS;
     try { const s = JSON.parse(localStorage.getItem('phoenix-transactions')); return (Array.isArray(s) && s.length) ? s : SEED_TRANSACTIONS; }
     catch { return SEED_TRANSACTIONS; }
   });
   const [rules, setRules] = useState(() => {
+    if (DATA_IS_FRESH) return SEED_RULES;
     try { const s = JSON.parse(localStorage.getItem('phoenix-rules')); return (Array.isArray(s) && s.length) ? s : SEED_RULES; }
     catch { return SEED_RULES; }
   });
@@ -102,6 +111,7 @@ export function AppProvider({ children }) {
     catch { return {}; }
   });
   const [accounts, setAccounts] = useState(() => {
+    if (DATA_IS_FRESH) return SEED_ACCOUNTS;
     try { const s = JSON.parse(localStorage.getItem('phoenix-accounts')); return (Array.isArray(s) && s.length) ? s : SEED_ACCOUNTS; }
     catch { return SEED_ACCOUNTS; }
   });
@@ -129,6 +139,7 @@ export function AppProvider({ children }) {
     });
   }, []);
 
+  useEffect(() => { try { localStorage.setItem('phoenix-data-version', DATA_VERSION); } catch {} }, []);
   useEffect(() => { safeSetLocal('phoenix-transactions', transactions); }, [transactions]);
   useEffect(() => { safeSetLocal('phoenix-rules', rules); }, [rules]);
   useEffect(() => { localStorage.setItem('phoenix-account-filter', accountFilter); }, [accountFilter]);

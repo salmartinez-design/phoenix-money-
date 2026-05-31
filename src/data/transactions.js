@@ -1,6 +1,8 @@
-// Auto-generated from reconciled bank statements. Git-ignored (personal data).
-// PNC Business Checking ...7478 (Jan-May 2026) + Discover Debit ...0714 (Feb-Apr 2026).
+// Auto-generated from reconciled bank statements.
+// PNC Checking ...7478 + PNC Money Market ...1972 + Discover Debit ...0714.
 // Every account reconciles to the statement balances to the penny.
+// Bump DATA_VERSION whenever this file is regenerated so the app reloads it.
+export const DATA_VERSION = '2026-05-31T23:26:17.729Z';
 export const SEED_ACCOUNTS = [
   {
     "id": "pnc-business-7478",
@@ -164,6 +166,127 @@ export const SEED_ACCOUNTS = [
   }
 ];
 export const SEED_TRANSACTIONS = [
+  {
+    "id": "p00001",
+    "date": "2025-12-30",
+    "description": "POS Credit 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
+    "amount": 94.85,
+    "categoryId": "other-income",
+    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00041",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 DD *DOORDASH OB 855-973-1040 CA US",
+    "amount": -37.14,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH OB",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00042",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
+    "amount": -94.85,
+    "categoryId": "uncategorized",
+    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00043",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -11,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00044",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 FANDANGO * 866-857-5191 CA US",
+    "amount": -42.64,
+    "categoryId": "uncategorized",
+    "merchantName": "FANDANGO *",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00045",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 AMAZON.COM*8958 AMZN.COM/BILL WA",
+    "amount": -38.33,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*8958 AMZN.COM/BILL WA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00046",
+    "date": "2025-12-30",
+    "description": "Debit Purchase 1230 5200 MARAZAN LAW LLC API.AFFINIPAY TX US",
+    "amount": -250,
+    "categoryId": "uncategorized",
+    "merchantName": "MARAZAN LAW LLC API.AFFINIPAY",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00048",
+    "date": "2025-12-31",
+    "description": "Debit Purchase 1231 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -11,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00049",
+    "date": "2025-12-31",
+    "description": "Debit Purchase 1231 5200 AMC 2539 CHICAG CHICAGO RIDGE IL US",
+    "amount": -33.47,
+    "categoryId": "entertainment",
+    "merchantName": "AMC 2539 CHICAG CHICAGO RIDGE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00050",
+    "date": "2025-12-31",
+    "description": "Debit Purchase 1231 5200 PRIME VIDEO *EW 888-802-3080 WA US",
+    "amount": -24.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *EW",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00051",
+    "date": "2025-12-31",
+    "description": "Debit Purchase 1231 5200 DD *DOORDASH TH 6506819470 CA US",
+    "amount": -68.3,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH TH 6506819470",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
   {
     "id": "p00047",
     "date": "2026-01-01",
@@ -25341,127 +25464,6 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Interest Payment I-GEN126052900149144",
     "accountId": "pnc-mmkt-1972",
     "accountType": "business",
-    "flagged": false
-  },
-  {
-    "id": "p00001",
-    "date": "2026-12-30",
-    "description": "POS Credit 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
-    "amount": 94.85,
-    "categoryId": "other-income",
-    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00041",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 DD *DOORDASH OB 855-973-1040 CA US",
-    "amount": -37.14,
-    "categoryId": "food-delivery",
-    "merchantName": "DD *DOORDASH OB",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00042",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
-    "amount": -94.85,
-    "categoryId": "uncategorized",
-    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00043",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 DUNKIN' MOBILE 800-447-0013 MA US",
-    "amount": -11,
-    "categoryId": "restaurants",
-    "merchantName": "DUNKIN' MOBILE",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00044",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 FANDANGO * 866-857-5191 CA US",
-    "amount": -42.64,
-    "categoryId": "uncategorized",
-    "merchantName": "FANDANGO *",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00045",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 AMAZON.COM*8958 AMZN.COM/BILL WA",
-    "amount": -38.33,
-    "categoryId": "shopping",
-    "merchantName": "AMAZON.COM*8958 AMZN.COM/BILL WA",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00046",
-    "date": "2026-12-30",
-    "description": "Debit Purchase 1230 5200 MARAZAN LAW LLC API.AFFINIPAY TX US",
-    "amount": -250,
-    "categoryId": "uncategorized",
-    "merchantName": "MARAZAN LAW LLC API.AFFINIPAY",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00048",
-    "date": "2026-12-31",
-    "description": "Debit Purchase 1231 5200 DUNKIN' MOBILE 800-447-0013 MA US",
-    "amount": -11,
-    "categoryId": "restaurants",
-    "merchantName": "DUNKIN' MOBILE",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00049",
-    "date": "2026-12-31",
-    "description": "Debit Purchase 1231 5200 AMC 2539 CHICAG CHICAGO RIDGE IL US",
-    "amount": -33.47,
-    "categoryId": "entertainment",
-    "merchantName": "AMC 2539 CHICAG CHICAGO RIDGE",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00050",
-    "date": "2026-12-31",
-    "description": "Debit Purchase 1231 5200 PRIME VIDEO *EW 888-802-3080 WA US",
-    "amount": -24.99,
-    "categoryId": "software-subscriptions",
-    "merchantName": "PRIME VIDEO *EW",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
-    "flagged": false
-  },
-  {
-    "id": "p00051",
-    "date": "2026-12-31",
-    "description": "Debit Purchase 1231 5200 DD *DOORDASH TH 6506819470 CA US",
-    "amount": -68.3,
-    "categoryId": "food-delivery",
-    "merchantName": "DD *DOORDASH TH 6506819470",
-    "accountId": "operating-account---0714",
-    "accountType": "personal",
     "flagged": false
   }
 ];

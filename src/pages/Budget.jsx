@@ -5,7 +5,7 @@ import { formatCurrency, formatMonthYear, prevMonthKey, nextMonthKey } from '../
 import { getTopCategories, getSubCategories, getCategoryById, isIncomeCategory } from '../data/categories';
 
 export function Budget() {
-  const { budgets, setBudget, copyBudgetFromMonth, financialData, lang, transactions } = useApp();
+  const { budgets, setBudget, copyBudgetFromMonth, financialData, lang, transactions, accountFilter } = useApp();
   const t = useT(lang);
   const $ = (n, d=0) => formatCurrency(n, lang, d);
   const { monthly, categoryMonthlySpend } = financialData;
@@ -17,7 +17,7 @@ export function Budget() {
 
   useEffect(() => { document.title = lang === 'es' ? 'Presupuesto — Xentli' : 'Budget — Xentli'; }, [lang]);
 
-  const monthBudgets = budgets[selectedMonth] || {};
+  const monthBudgets = budgets[`${accountFilter}::${selectedMonth}`] || {};
   const monthSpend = categoryMonthlySpend[selectedMonth] || {};
   const prevMk = prevMonthKey(selectedMonth);
   const prevSpend = categoryMonthlySpend[prevMk] || {};

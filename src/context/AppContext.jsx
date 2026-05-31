@@ -146,18 +146,22 @@ export function AppProvider({ children }) {
   useEffect(() => { safeSetLocal('phoenix-budgets', budgets); }, [budgets]);
   useEffect(() => { safeSetLocal('phoenix-accounts', accounts); }, [accounts]);
 
+  // Budgets are scoped per account view (personal/business/all) so Personal
+  // doesn't show business-sized targets. Key = "<accountFilter>::<monthKey>".
   const setBudget = useCallback((monthKey, categoryId, amount) => {
+    const mk = `${accountFilter}::${monthKey}`;
     setBudgets(prev => {
-      const month = { ...(prev[monthKey] || {}) };
+      const month = { ...(prev[mk] || {}) };
       if (amount === null || amount === 0) { delete month[categoryId]; }
       else { month[categoryId] = amount; }
-      return { ...prev, [monthKey]: month };
+      return { ...prev, [mk]: month };
     });
-  }, []);
+  }, [accountFilter]);
 
   const copyBudgetFromMonth = useCallback((sourceMonth, targetMonth) => {
-    setBudgets(prev => ({ ...prev, [targetMonth]: { ...(prev[sourceMonth] || {}) } }));
-  }, []);
+    const s = `${accountFilter}::${sourceMonth}`, tgt = `${accountFilter}::${targetMonth}`;
+    setBudgets(prev => ({ ...prev, [tgt]: { ...(prev[s] || {}) } }));
+  }, [accountFilter]);
 
   const applyRulesToAll = useCallback((ruleList, txnList) =>
     txnList.map(t => {

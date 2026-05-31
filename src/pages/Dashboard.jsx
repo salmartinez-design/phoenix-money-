@@ -30,7 +30,7 @@ export function Dashboard() {
 
   // Budget data for the latest data month
   const budgetMonth = dataMonth.key;
-  const monthBudgets = budgets[budgetMonth] || {};
+  const monthBudgets = budgets[`${accountFilter}::${budgetMonth}`] || {};
   const budgetedIncome = Object.entries(monthBudgets).filter(([k]) => ['income','paychecks','business-revenue','other-income','interest'].includes(k)).reduce((s,[,v]) => s+v, 0);
   const budgetedExpenses = Object.entries(monthBudgets).filter(([k]) => !['income','paychecks','business-revenue','other-income','interest'].includes(k)).reduce((s,[,v]) => s+v, 0);
   const actualIncome = dataMonth.income || 0;
@@ -183,39 +183,6 @@ export function Dashboard() {
                 </div>
               );
             })}
-          </div>
-
-          {/* Weekly Recap — last 7 days of data */}
-          <div className="phoenix-card fu3">
-            <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:12 }}>
-              <span style={{ fontSize:18 }}>✨</span>
-              <p style={{ fontSize:15, fontWeight:700, color:'var(--orange)' }}>{t('weeklyRecap')}</p>
-              <span style={{ fontSize:13, color:'var(--text-muted)', fontWeight:400 }}>
-                {formatDateShort(weekAgoStr, lang)} — {formatDateShort(latestDate, lang)}
-              </span>
-            </div>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, marginBottom:12 }}>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--green-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('income')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color:'var(--green)' }}>{$(thisWeekIncome)}</p>
-              </div>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--red-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('expenses')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color:'var(--red)' }}>{$(thisWeekSpent)}</p>
-              </div>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--blue-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('netIncome')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color: (thisWeekIncome-thisWeekSpent) >= 0 ? 'var(--green)' : 'var(--red)' }}>{$(thisWeekIncome - thisWeekSpent)}</p>
-              </div>
-            </div>
-            <p style={{ fontSize:13, color:'var(--text-secondary)', lineHeight:1.6 }}>
-              {weekDiff < 0
-                ? `${lang==='es'?'Esa semana gastaste':'That week you spent'} ${Math.abs(weekDiff)}% ${t('lessLastWeek')} 🎉`
-                : weekDiff > 0
-                  ? `${lang==='es'?'Esa semana gastaste':'That week you spent'} ${weekDiff}% ${t('moreLastWeek')} 📈`
-                  : `${lang==='es'?'Gastos similares a la semana anterior':'Spending was similar to the prior week'}`
-              }
-            </p>
           </div>
 
           {/* Net Worth */}

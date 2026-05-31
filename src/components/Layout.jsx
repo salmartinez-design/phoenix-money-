@@ -18,7 +18,7 @@ function useIsMobile(breakpoint = 768) {
 }
 
 export function Layout({ children }) {
-  const { theme, setTheme, lang, setLang, setAiOpen, financialData } = useApp();
+  const { theme, setTheme, lang, setLang, setAiOpen, financialData, accountFilter, setAccountFilter } = useApp();
   const t = useT(lang);
   const location = useLocation();
   const navigate = useNavigate();
@@ -101,6 +101,19 @@ export function Layout({ children }) {
             ))}
           </div>
           <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+            {/* Personal / Business / All — global account scope */}
+            <div style={{ display:'flex', gap:2, padding:3, background:'var(--bg)', borderRadius:8, border:'1px solid var(--border)' }}>
+              {[
+                { id:'personal', l: lang==='es'?'Personal':'Personal' },
+                { id:'business', l: lang==='es'?'Negocio':'Business' },
+                { id:'all', l: lang==='es'?'Todo':'All' },
+              ].map(a => (
+                <button key={a.id} onClick={() => setAccountFilter(a.id)}
+                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: accountFilter === a.id ? 'var(--orange)' : 'transparent', color: accountFilter === a.id ? 'var(--on-accent)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
+                  {a.l}
+                </button>
+              ))}
+            </div>
             {/* EN / ES */}
             <div style={{ display:'flex', gap:2, padding:3, background:'var(--bg)', borderRadius:8, border:'1px solid var(--border)' }}>
               {['en','es'].map(l => (

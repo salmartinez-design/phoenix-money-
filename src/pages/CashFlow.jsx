@@ -6,7 +6,7 @@ import { formatCurrency } from '../utils/format';
 import { getCategoryById, getParentCategory, isIncomeCategory, isTransferCategory } from '../data/categories';
 
 export function CashFlow() {
-  const { financialData, lang, transactions } = useApp();
+  const { financialData, lang, transactions, accountFilter } = useApp();
   const t = useT(lang);
   const { monthly } = financialData;
   const $ = (n,d=0) => formatCurrency(n,lang,d);
@@ -18,7 +18,7 @@ export function CashFlow() {
 
   // Compute income/expense breakdowns for selected month
   const monthData = useMemo(() => {
-    const monthTxns = transactions.filter(tx => tx.date.startsWith(selectedMonth) && !isTransferCategory(tx.categoryId));
+    const monthTxns = transactions.filter(tx => tx.date.startsWith(selectedMonth) && !isTransferCategory(tx.categoryId) && (accountFilter === 'all' || tx.accountType === accountFilter));
     const income = monthTxns.filter(tx => isIncomeCategory(tx.categoryId));
     const expenses = monthTxns.filter(tx => !isIncomeCategory(tx.categoryId) && tx.amount < 0);
 
@@ -63,7 +63,7 @@ export function CashFlow() {
       incomeBreakdown: groupBy(income, true),
       expenseBreakdown: groupBy(expenses, false),
     };
-  }, [transactions, selectedMonth, breakdown]);
+  }, [transactions, selectedMonth, breakdown, accountFilter]);
 
   const sel = monthly.find(m => m.key === selectedMonth) || monthly[monthly.length-1] || { income:0, expenses:0, net:0, label:'—', short:'—' };
 

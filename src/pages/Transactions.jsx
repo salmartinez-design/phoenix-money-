@@ -65,7 +65,8 @@ export function Transactions() {
       const matchSearch = !q || normalize(txn.description).includes(q) || normalize(txn.merchantName||'').includes(q);
       const matchCat = catFilter === 'all' || (catFilter === 'flagged' && txn.flagged) || txn.categoryId === catFilter || getParentCategory(txn.categoryId)?.id === catFilter;
       const matchDate = (!dateRange.from || txn.date >= dateRange.from) && (!dateRange.to || txn.date <= dateRange.to);
-      return matchSearch && matchCat && matchDate;
+      const matchAccount = accountFilter === 'all' || txn.accountType === accountFilter;
+      return matchSearch && matchCat && matchDate && matchAccount;
     });
 
     // Sort
@@ -77,7 +78,7 @@ export function Transactions() {
       default: list.sort((a,b) => b.date.localeCompare(a.date)); break; // date-desc
     }
     return list;
-  }, [transactions, search, catFilter, dateRange.from, dateRange.to, sortBy]);
+  }, [transactions, search, catFilter, dateRange.from, dateRange.to, sortBy, accountFilter]);
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page-1)*PER_PAGE, page*PER_PAGE);

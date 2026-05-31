@@ -7,7 +7,7 @@ import { getCategoryById } from '../data/categories';
 import { useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
-  const { financialData, lang, budgets, accountFilter, setAccountFilter } = useApp();
+  const { financialData, lang, budgets, accountFilter } = useApp();
   const t = useT(lang);
   const navigate = useNavigate();
   const { monthly, totalIncome, totalExpenses, totalNet, savingsRate, burnRate, runway, latestMonth, prevMonth, allTransactions, flaggedCount, recurringDetected, accountBalances } = financialData;
@@ -100,16 +100,12 @@ export function Dashboard() {
 
   return (
     <div style={{ padding:'28px 36px' }}>
-      {/* Greeting + Toggle */}
+      {/* Greeting (account scope toggle now lives in the global header) */}
       <div className="fu" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}>
         <h2 style={{ fontSize:28, fontWeight:800, color:'var(--text-primary)', letterSpacing:'-.03em' }}>{greeting}</h2>
-        <div style={{ display:'flex', gap:6 }}>
-          {['business','personal'].map(f => (
-            <button key={f} onClick={() => setAccountFilter(f)} style={{ padding:'7px 16px', borderRadius:20, border:`1px solid ${accountFilter === f ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:13, fontWeight:600, background: accountFilter === f ? 'var(--orange-dim)' : 'transparent', color: accountFilter === f ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
-              {f === 'business' ? (lang==='es'?'Negocio':'Business') : (lang==='es'?'Personal':'Personal')}
-            </button>
-          ))}
-        </div>
+        <span style={{ fontSize:13, fontWeight:600, color:'var(--text-muted)', textTransform:'capitalize' }}>
+          {accountFilter === 'all' ? (lang==='es'?'Todas las cuentas':'All accounts') : accountFilter === 'business' ? (lang==='es'?'Negocio':'Business') : (lang==='es'?'Personal':'Personal')}
+        </span>
       </div>
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16 }}>

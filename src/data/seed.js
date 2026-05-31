@@ -8,3 +8,4 @@ const real = local['./transactions.js'];
 
 export const SEED_TRANSACTIONS = (real && real.SEED_TRANSACTIONS) || [];
 export const SEED_RULES = (real && real.SEED_RULES) || [];
+export const SEED_ACCOUNTS = (real && real.SEED_ACCOUNTS) || [];

@@ -1,11 +1,11 @@
 import { createContext, useContext, useState, useMemo, useEffect, useCallback } from 'react';
-import { SEED_TRANSACTIONS, SEED_RULES } from '../data/seed';
+import { SEED_TRANSACTIONS, SEED_RULES, SEED_ACCOUNTS as LOADED_ACCOUNTS } from '../data/seed';
 import { getParentCategory, isIncomeCategory, isTransferCategory, getCategoryById } from '../data/categories';
 import { safeSetLocal, normalize } from '../utils/format';
 
 const AppContext = createContext(null);
 
-const SEED_ACCOUNTS = [
+const DEFAULT_ACCOUNTS = [
   { id: 'operating-account---0714', name: 'Operating Account (...0714)', type: 'cash', institution: 'PNC', lastSynced: '2026-04-13' },
   { id: 'savings', name: 'Savings', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
   { id: 'emergency-fund---6910', name: 'Emergency Fund (...6910)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
@@ -25,6 +25,9 @@ const SEED_ACCOUNTS = [
   { id: 'visa---5054', name: 'Visa (...5054)', type: 'credit', institution: 'Visa', lastSynced: '2026-04-13' },
   { id: 'mortgage-0067---0067', name: 'Mortgage (...0067)', type: 'loan', institution: 'Mortgage', lastSynced: '2026-04-13' },
 ];
+
+// Real account list loaded from statements when present; otherwise the default set.
+const SEED_ACCOUNTS = LOADED_ACCOUNTS.length ? LOADED_ACCOUNTS : DEFAULT_ACCOUNTS;
 
 function detectRecurring(transactions) {
   const byMerchant = {};

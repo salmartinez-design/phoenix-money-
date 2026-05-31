@@ -110,10 +110,10 @@ export function AiPanel({ onClose }) {
     const rulesList = rules.slice(0, 30).map(r => `"${r.match}" → ${getCategoryById(r.categoryId)?.name}`).join(', ');
 
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/chat', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514', max_tokens: 1500,
+          model: 'claude-sonnet-4-6', max_tokens: 1500,
           system: `You are Xentli's AI financial advisor for a small business owner (PHES LLC, cleaning/property services).
 IMPORTANT: Respond ONLY in ${lang === 'es' ? 'Spanish (friendly, clear Latin American)' : 'English'}.
 Keep responses concise. Use plain language, no jargon. 8th grade reading level.
@@ -136,6 +136,10 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
         })
       });
       const d = await res.json();
+      if (!res.ok || !d.content) {
+        setMsgs([...next, { role: 'assistant', content: d?.error?.message || t('connectionError') }]);
+        setLoading(false); return;
+      }
       let reply = d.content[0].text;
 
       // Check if AI returned an action block

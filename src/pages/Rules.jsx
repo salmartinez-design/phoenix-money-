@@ -23,10 +23,10 @@ export function Rules() {
     if (!keyword.trim()) return;
     setLoading(true); setHint(null);
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/chat', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514', max_tokens: 300,
+          model: 'claude-sonnet-4-6', max_tokens: 300,
           messages: [{ role: 'user', content: `Transaction: "${keyword}". Best financial category? Respond ONLY as JSON: {"categoryId":"one of: business-revenue,paychecks,other-income,mortgage,rent-lease,restaurants,food-delivery,groceries,contractors,payroll,software-subscriptions,marketing-ads,ride-share,gas-fuel,federal-tax,financial-fees,bank-fees,owner-compensation,shopping,utilities,transfers,uncategorized","reason":"${lang==='es'?'una oración en español':'one English sentence'}"}` }]
         })
       });

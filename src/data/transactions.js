@@ -165,6 +165,61 @@ export const SEED_ACCOUNTS = [
 ];
 export const SEED_TRANSACTIONS = [
   {
+    "id": "p00047",
+    "date": "2026-01-01",
+    "description": "Debit Purchase 0101 5200 OAK LAWN ENDOSC 866-8091220 TN US",
+    "amount": -65.91,
+    "categoryId": "uncategorized",
+    "merchantName": "OAK LAWN ENDOSC 866-8091220",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00054",
+    "date": "2026-01-01",
+    "description": "Debit Purchase 0101 5200 AMAZON DIGIT*CC 888-802-3080 WA US",
+    "amount": -8.79,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON DIGIT*CC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00055",
+    "date": "2026-01-01",
+    "description": "Debit Purchase 0101 5200 AMAZON MKTPL*F3 AMZN.COM/BILL WA US",
+    "amount": -13.72,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*F3 AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00163",
+    "date": "2026-01-01",
+    "description": "Zelle Payment To NICOLE MONET SBW1WK6AD",
+    "amount": -15,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET SBW1WK6AD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00164",
+    "date": "2026-01-01",
+    "description": "Transfer To ONLINE SAVINGS 2158",
+    "amount": -166.06,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 2158",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00001",
     "date": "2026-01-02",
     "description": "Zel From Salvador Ivan Martinez DFS0QB51SKTA",
@@ -451,6 +506,226 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00052",
+    "date": "2026-01-02",
+    "description": "Debit Purchase 0102 5200 AMAZON.COM*CL1A SEATTLE WA US",
+    "amount": -24.19,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*CL1A SEATTLE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00053",
+    "date": "2026-01-02",
+    "description": "Debit Purchase 0102 5200 UBER *EATS 866-576-1039 CA US",
+    "amount": -34.16,
+    "categoryId": "ride-share",
+    "merchantName": "UBER *EATS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00056",
+    "date": "2026-01-02",
+    "description": "Debit Purchase 0102 5200 AMAZON.COM*1R6W AMZN.COM/BILL WA",
+    "amount": -12.67,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*1R6W AMZN.COM/BILL WA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00057",
+    "date": "2026-01-02",
+    "description": "Debit Purchase 0102 5200 DOORDASH*01/02- 6506819470 CA US",
+    "amount": -41.44,
+    "categoryId": "food-delivery",
+    "merchantName": "DOORDASH*01/02- 6506819470",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00058",
+    "date": "2026-01-02",
+    "description": "Debit Purchase 0102 5200 LITTLE CAESARS EVERGREEN PAR IL US",
+    "amount": -22.74,
+    "categoryId": "uncategorized",
+    "merchantName": "LITTLE CAESARS EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00165",
+    "date": "2026-01-02",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -53,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00002",
+    "date": "2026-01-03",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00003",
+    "date": "2026-01-03",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00004",
+    "date": "2026-01-03",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00059",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 PRIME VIDEO *MH 888-802-3080 WA US",
+    "amount": -3.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *MH",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00061",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -16,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00063",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 CHEESECAKE ORLA ORLAND PARK IL US",
+    "amount": -199.37,
+    "categoryId": "uncategorized",
+    "merchantName": "CHEESECAKE ORLA ORLAND PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00064",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 CHEESECAKE ORLA ORLAND PARK IL US",
+    "amount": -59.85,
+    "categoryId": "uncategorized",
+    "merchantName": "CHEESECAKE ORLA ORLAND PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00065",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 SHELL5744408880 EVERGREEN PAR IL US",
+    "amount": -36,
+    "categoryId": "gas-fuel",
+    "merchantName": "SHELL5744408880 EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00066",
+    "date": "2026-01-03",
+    "description": "Debit Purchase 0103 5200 PRIME VIDEO *Q0 888-802-3080 WA US",
+    "amount": -9.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *Q0",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00166",
+    "date": "2026-01-03",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -1,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00005",
+    "date": "2026-01-04",
+    "description": "Transfer From ONLINE SAVINGS 6143",
+    "amount": 50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6143",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00060",
+    "date": "2026-01-04",
+    "description": "Third Party Debit 0104 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -30,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00062",
+    "date": "2026-01-04",
+    "description": "Debit Purchase 0104 5200 DD/BR #357030 OAK LAWN IL US",
+    "amount": -24.1,
+    "categoryId": "uncategorized",
+    "merchantName": "DD/BR #357030 OAK LAWN",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00067",
+    "date": "2026-01-04",
+    "description": "Debit Purchase 0104 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -11,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00003",
     "date": "2026-01-05",
     "description": "Zelle From Thriving Lives Counseling Llc USBAgpKruEc2",
@@ -715,6 +990,28 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00072",
+    "date": "2026-01-05",
+    "description": "Debit Purchase 0105 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -12,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00167",
+    "date": "2026-01-05",
+    "description": "ACH Withdrawal PAYPAL INST XFER",
+    "amount": -10.99,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Withdrawal PAYPAL INST XFER",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00060",
     "date": "2026-01-06",
     "description": "PNC Merchant Deposit 277314996996 277314996996 NKY",
@@ -869,6 +1166,149 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00006",
+    "date": "2026-01-06",
+    "description": "ACH Deposit PAYROLL From PHES LLC",
+    "amount": 1407.46,
+    "categoryId": "paychecks",
+    "merchantName": "ACH Deposit PAYROLL From PHES LLC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00007",
+    "date": "2026-01-06",
+    "description": "ACH Deposit From APPLE CASH SAL MARTINEZ",
+    "amount": 62.17,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Deposit From APPLE CASH SAL MARTINEZ",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00068",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 CTLP*INREACH N BETHESDA MD US",
+    "amount": -4.2,
+    "categoryId": "uncategorized",
+    "merchantName": "CTLP*INREACH N BETHESDA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00069",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 SOLDIER FIELD N CHICAGO IL US",
+    "amount": -27,
+    "categoryId": "uncategorized",
+    "merchantName": "SOLDIER FIELD N CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00070",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 DD *DOORDASH DU 855-973-1040 CA US",
+    "amount": -22.1,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH DU",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00071",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 STACKED - OAK L OAK LAWN IL US",
+    "amount": -98.86,
+    "categoryId": "uncategorized",
+    "merchantName": "STACKED - OAK L OAK LAWN",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00073",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 PRIME VIDEO *GH 888-802-3080 WA US",
+    "amount": -29.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *GH",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00074",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 DENOOPY LLC CHICAGO IL US",
+    "amount": -28.5,
+    "categoryId": "uncategorized",
+    "merchantName": "DENOOPY LLC CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00075",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 SHEDD AQUARIUM CHICAGO IL US",
+    "amount": -8,
+    "categoryId": "utilities",
+    "merchantName": "SHEDD AQUARIUM CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00076",
+    "date": "2026-01-06",
+    "description": "Debit Purchase 0106 5200 PRIME VIDEO *E2 888-802-3080 WA US",
+    "amount": -4.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *E2",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00168",
+    "date": "2026-01-06",
+    "description": "ACH Withdrawal Credit One Bank Payment",
+    "amount": -40,
+    "categoryId": "credit-card-payment",
+    "merchantName": "ACH Withdrawal Credit One Bank Payment",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00169",
+    "date": "2026-01-06",
+    "description": "Zelle Payment To NICOLE MONET EBN12KA2D",
+    "amount": -850,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET EBN12KA2D",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00170",
+    "date": "2026-01-06",
+    "description": "ACH Withdrawal Bridgecrest DT RETAIL",
+    "amount": -250,
+    "categoryId": "auto-payment",
+    "merchantName": "ACH Withdrawal Bridgecrest DT RETAIL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00006",
     "date": "2026-01-07",
     "description": "Zel From DevonteThompson JPM99c18f74c",
@@ -932,6 +1372,28 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Zelle To Juan Navas Alcala",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00077",
+    "date": "2026-01-07",
+    "description": "Debit Purchase 0107 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -12,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00171",
+    "date": "2026-01-07",
+    "description": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
+    "amount": -30,
+    "categoryId": "shopping",
+    "merchantName": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -1064,6 +1526,83 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Online Transfer ToXXXXX7478 00010389",
     "accountId": "pnc-mmkt-1972",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00008",
+    "date": "2026-01-08",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 2,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00009",
+    "date": "2026-01-08",
+    "description": "Transfer From ONLINE SAVINGS 2119",
+    "amount": 112.49,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00010",
+    "date": "2026-01-08",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00078",
+    "date": "2026-01-08",
+    "description": "Debit Purchase 0108 5200 PRIME VIDEO CHA AMZN.COM/BILL WA US",
+    "amount": -9.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO CHA AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00079",
+    "date": "2026-01-08",
+    "description": "Debit Purchase 0108 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -20,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00080",
+    "date": "2026-01-08",
+    "description": "Debit Purchase 0108 5200 STARBUCKS STORE CHICAGO IL US",
+    "amount": -16.88,
+    "categoryId": "coffee",
+    "merchantName": "STARBUCKS STORE CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00173",
+    "date": "2026-01-08",
+    "description": "ACH Withdrawal DISCOVER E-PAYMENT",
+    "amount": -85,
+    "categoryId": "credit-card-payment",
+    "merchantName": "ACH Withdrawal DISCOVER E-PAYMENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -1207,6 +1746,314 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Overdraft Item Fee",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00011",
+    "date": "2026-01-09",
+    "description": "Transfer From ONLINE SAVINGS 2158",
+    "amount": 1600,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2158",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00012",
+    "date": "2026-01-09",
+    "description": "Zelle Payment From EVINCO SERVICES IN GB61TKS3C",
+    "amount": 1200,
+    "categoryId": "paychecks",
+    "merchantName": "Zelle Payment From EVINCO SERVICES IN GB61TKS3C",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00081",
+    "date": "2026-01-09",
+    "description": "Debit Purchase 0109 5200 AMAZON MKTPL*97 AMZN.COM/BILL WA US",
+    "amount": -11.77,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*97 AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00082",
+    "date": "2026-01-09",
+    "description": "Debit Purchase 0109 5200 DD *DOORDASH BA 855-973-1040 CA US",
+    "amount": -17.41,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH BA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00085",
+    "date": "2026-01-09",
+    "description": "Debit Purchase 0109 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -90,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00172",
+    "date": "2026-01-09",
+    "description": "Zelle Payment To NICOLE MONET EBW1OK53D",
+    "amount": -30,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET EBW1OK53D",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00174",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -200,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00175",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 3824",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 3824",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00176",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 2119",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00177",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 4337",
+    "amount": -100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 4337",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00178",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 3958",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 3958",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00179",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 6143",
+    "amount": -30,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6143",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00180",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 6020",
+    "amount": -100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00181",
+    "date": "2026-01-09",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00083",
+    "date": "2026-01-10",
+    "description": "Third Party Debit 0110 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -50,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00084",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 APPLE CASH SENT 877-233-8552 CA US",
+    "amount": -10,
+    "categoryId": "uncategorized",
+    "merchantName": "APPLE CASH SENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00086",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 AUDIBLE*7K9JE7Q AMZN.COM/BILL NJ US",
+    "amount": -0.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "AUDIBLE*7K9JE7Q AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00087",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 AMAZON MKTPL*N4 AMZN.COM/BILL WA US",
+    "amount": -26.43,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*N4 AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00091",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 Walmart.com Bentonville AR US",
+    "amount": -115.98,
+    "categoryId": "shopping",
+    "merchantName": "Walmart.com Bentonville",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00093",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 LITTLE CAESARS EVERGREEN PAR IL US",
+    "amount": -25.47,
+    "categoryId": "uncategorized",
+    "merchantName": "LITTLE CAESARS EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00094",
+    "date": "2026-01-10",
+    "description": "Debit Purchase 0110 5200 AMAZON MKTPL*UZ AMZN.COM/BILL WA US",
+    "amount": -27.48,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*UZ AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00088",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -50.46,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00089",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -0.11,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00090",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 Walmart.com Bentonville AR US",
+    "amount": -20.75,
+    "categoryId": "shopping",
+    "merchantName": "Walmart.com Bentonville",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00092",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 COMED PAYMENT 800-334-7661 IL US",
+    "amount": -134.05,
+    "categoryId": "utilities",
+    "merchantName": "COMED PAYMENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00096",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 AMAZON MKTPL*TK AMZN.COM/BILL WA US",
+    "amount": -15.39,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*TK AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00097",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -20,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00098",
+    "date": "2026-01-11",
+    "description": "Debit Purchase 0111 5200 AMAZON MKTPL*77 AMZN.COM/BILL WA US",
+    "amount": -148.49,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*77 AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -1375,6 +2222,39 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00013",
+    "date": "2026-01-12",
+    "description": "ACH Deposit PAYMENT From FD Sptsbk Casino",
+    "amount": 27,
+    "categoryId": "entertainment",
+    "merchantName": "ACH Deposit PAYMENT From FD Sptsbk Casino",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00014",
+    "date": "2026-01-12",
+    "description": "ACH Deposit PAYMENT From FD Sptsbk Casino",
+    "amount": 78,
+    "categoryId": "entertainment",
+    "merchantName": "ACH Deposit PAYMENT From FD Sptsbk Casino",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00101",
+    "date": "2026-01-12",
+    "description": "Debit Purchase 0112 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -10,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00026",
     "date": "2026-01-13",
     "description": "ACH Credit Sq260113 Square Inc T30Egvnd17E4Zke 00026013905426620",
@@ -1526,6 +2406,138 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Zelle To Juan Navas Alcala",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00015",
+    "date": "2026-01-13",
+    "description": "Transfer From ONLINE SAVINGS 6910",
+    "amount": 30,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00016",
+    "date": "2026-01-13",
+    "description": "Transfer From ONLINE SAVINGS 2119",
+    "amount": 10,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00017",
+    "date": "2026-01-13",
+    "description": "Transfer From ONLINE SAVINGS 2119",
+    "amount": 10,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00095",
+    "date": "2026-01-13",
+    "description": "Debit Purchase 0113 5200 WALGREENS STORE EVERGREEN PAR IL US",
+    "amount": -20.44,
+    "categoryId": "medical",
+    "merchantName": "WALGREENS STORE EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00099",
+    "date": "2026-01-13",
+    "description": "ATM W/D 0113 170349 5200 BMO BANK N.A. EVERGREEN PK IL US",
+    "amount": -50,
+    "categoryId": "uncategorized",
+    "merchantName": "5200 BMO BANK N.A. EVERGREEN PK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00100",
+    "date": "2026-01-13",
+    "description": "Debit Purchase 0113 5200 USCIS ELGIN LOC CAMP SPRINGS MD US",
+    "amount": -1385,
+    "categoryId": "uncategorized",
+    "merchantName": "USCIS ELGIN LOC CAMP SPRINGS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00102",
+    "date": "2026-01-13",
+    "description": "Debit Purchase 0113 5200 DUNKIN #352358 EVERGREEN PRK IL US",
+    "amount": -6.04,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN #352358 EVERGREEN PRK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00103",
+    "date": "2026-01-13",
+    "description": "Debit Purchase 0113 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -8,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00104",
+    "date": "2026-01-13",
+    "description": "Debit Purchase 0113 5200 PRIME VIDEO *72 888-802-3080 WA US",
+    "amount": -9.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *72",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00182",
+    "date": "2026-01-13",
+    "description": "Zelle Payment To NICOLE MONET ZBM19KLFD",
+    "amount": -25,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET ZBM19KLFD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00183",
+    "date": "2026-01-13",
+    "description": "Zelle Payment To JEN POOP 911 ZB61HKNFD",
+    "amount": -60,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To JEN POOP 911 ZB61HKNFD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00211",
+    "date": "2026-01-13",
+    "description": "BMO BANK N.A. EVERGREEN PK IL ATM Fee",
+    "amount": -3.5,
+    "categoryId": "bank-fees",
+    "merchantName": "BMO BANK N.A. EVERGREEN PK IL ATM Fee",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -1771,6 +2783,138 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00018",
+    "date": "2026-01-15",
+    "description": "Early Pay PAYROLL ACH from EVINCO SERVICES",
+    "amount": 1124.4,
+    "categoryId": "paychecks",
+    "merchantName": "Early Pay PAYROLL ACH from EVINCO SERVICES",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00019",
+    "date": "2026-01-15",
+    "description": "ACH Deposit TRANSFER From PNCBK CK WEBXFR",
+    "amount": 959.67,
+    "categoryId": "bank-transfer",
+    "merchantName": "ACH Deposit TRANSFER From PNCBK CK WEBXFR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00105",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 AMAZON MKTPL*SW AMZN.COM/BILL WA US",
+    "amount": -18.18,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*SW AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00106",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 AFFIRM.COM PAYM 8554233729 CA US",
+    "amount": -36.28,
+    "categoryId": "financial-fees",
+    "merchantName": "AFFIRM.COM PAYM 8554233729",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00107",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 AFFIRM.COM PAYM 8554233729 CA US",
+    "amount": -132.45,
+    "categoryId": "financial-fees",
+    "merchantName": "AFFIRM.COM PAYM 8554233729",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00110",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -20,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00111",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -8,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00113",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 AMAZON MKTPL*FZ AMZN.COM/BILL WA US",
+    "amount": -87.98,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*FZ AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00114",
+    "date": "2026-01-15",
+    "description": "Debit Purchase 0115 5200 MARAZAN LAW LLC API.AFFINIPAY TX US",
+    "amount": -650,
+    "categoryId": "uncategorized",
+    "merchantName": "MARAZAN LAW LLC API.AFFINIPAY",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00184",
+    "date": "2026-01-15",
+    "description": "ACH Withdrawal PAYPAL INST XFER",
+    "amount": -9.99,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Withdrawal PAYPAL INST XFER",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00185",
+    "date": "2026-01-15",
+    "description": "ACH Withdrawal Credit One Bank Payment",
+    "amount": -80.78,
+    "categoryId": "credit-card-payment",
+    "merchantName": "ACH Withdrawal Credit One Bank Payment",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00186",
+    "date": "2026-01-15",
+    "description": "ACH Withdrawal PAYPAL INST XFER",
+    "amount": -10.99,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Withdrawal PAYPAL INST XFER",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00013",
     "date": "2026-01-16",
     "description": "Zel From Evinco Services Inc PNCAA0XMS43w",
@@ -1911,6 +3055,303 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Overdraft Item Fee",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00108",
+    "date": "2026-01-16",
+    "description": "Third Party Debit 0116 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -100,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00109",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 UBER *ONE MEM 866-576-1039 CA US",
+    "amount": -9.99,
+    "categoryId": "ride-share",
+    "merchantName": "UBER *ONE MEM",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00112",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 DUNKIN #347097 CHICAGO IL US",
+    "amount": -3.76,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN #347097 CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00115",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 AMAZON.COM*5O5C AMZN.COM/BILL WA",
+    "amount": -57.91,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*5O5C AMZN.COM/BILL WA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00116",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 SPOTHERO 844-35 8443568054 IL US",
+    "amount": -15.99,
+    "categoryId": "parking",
+    "merchantName": "SPOTHERO 844-35 8443568054",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00117",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 SPOTHERO 844-35 8443568054 IL US",
+    "amount": -15.99,
+    "categoryId": "parking",
+    "merchantName": "SPOTHERO 844-35 8443568054",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00118",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 HOCK INTL* O #5 8668074625 OH US",
+    "amount": -49.99,
+    "categoryId": "uncategorized",
+    "merchantName": "HOCK INTL* O #5 8668074625",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00120",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 DD *DOORDASH BA 855-973-1040 CA US",
+    "amount": -23.47,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH BA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00121",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -9,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00122",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 SHELL5744408880 EVERGREEN PAR IL US",
+    "amount": -35.86,
+    "categoryId": "gas-fuel",
+    "merchantName": "SHELL5744408880 EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00123",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 ETSY.COMUS BROOKLYN NY US",
+    "amount": -18.58,
+    "categoryId": "shopping",
+    "merchantName": "ETSY.COMUS BROOKLYN",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00129",
+    "date": "2026-01-16",
+    "description": "Debit Purchase 0116 5200 MCDONALDS 490 CHICAGO IL US",
+    "amount": -11.94,
+    "categoryId": "restaurants",
+    "merchantName": "MCDONALDS 490 CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00187",
+    "date": "2026-01-16",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -118,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00020",
+    "date": "2026-01-17",
+    "description": "Zelle Payment From CONCEPCION BELTRAN HB11NKWHC",
+    "amount": 5,
+    "categoryId": "other-income",
+    "merchantName": "Zelle Payment From CONCEPCION BELTRAN HB11NKWHC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00119",
+    "date": "2026-01-17",
+    "description": "Third Party Debit 0117 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -20,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00124",
+    "date": "2026-01-17",
+    "description": "Debit Purchase 0117 5200 DD *DOORDASH JA 855-973-1040 CA US",
+    "amount": -44.63,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH JA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00127",
+    "date": "2026-01-17",
+    "description": "Debit Purchase 0117 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -12,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00125",
+    "date": "2026-01-18",
+    "description": "Third Party Debit 0118 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -20,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00126",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 HARVEST ROOM PALOS HEIGHTS IL US",
+    "amount": -116.77,
+    "categoryId": "uncategorized",
+    "merchantName": "HARVEST ROOM PALOS HEIGHTS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00128",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 AMAZON PRIME*RT AMZN.COM/BILL WA US",
+    "amount": -2.99,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON PRIME*RT AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00130",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 AFFIRM.COM PAYM 8554233729 CA US",
+    "amount": -48.66,
+    "categoryId": "financial-fees",
+    "merchantName": "AFFIRM.COM PAYM 8554233729",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00131",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 CAKE `N BAKE PALOS HILLS IL US",
+    "amount": -58.05,
+    "categoryId": "uncategorized",
+    "merchantName": "CAKE `N BAKE PALOS HILLS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00132",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -18,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00133",
+    "date": "2026-01-18",
+    "description": "Debit Purchase 0118 5200 AMAZON MKTPL*5A AMZN.COM/BILL WA US",
+    "amount": -32.62,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*5A AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00134",
+    "date": "2026-01-19",
+    "description": "Debit Purchase 0119 5200 MYFICO.COM 8003194433 MT US",
+    "amount": -39.95,
+    "categoryId": "financial-fees",
+    "merchantName": "MYFICO.COM 8003194433",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00135",
+    "date": "2026-01-19",
+    "description": "Debit Purchase 0119 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -17,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00188",
+    "date": "2026-01-19",
+    "description": "Zelle Payment To NICOLE MONET WBD19KUID",
+    "amount": -45,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET WBD19KUID",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -2222,6 +3663,50 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00021",
+    "date": "2026-01-20",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 5,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00189",
+    "date": "2026-01-20",
+    "description": "ACH Withdrawal PAYPAL INST XFER",
+    "amount": -19.83,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Withdrawal PAYPAL INST XFER",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00190",
+    "date": "2026-01-20",
+    "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
+    "amount": -100,
+    "categoryId": "credit-card-payment",
+    "merchantName": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00191",
+    "date": "2026-01-20",
+    "description": "ACH Withdrawal Bridgecrest DT RETAIL",
+    "amount": -11,
+    "categoryId": "auto-payment",
+    "merchantName": "ACH Withdrawal Bridgecrest DT RETAIL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00015",
     "date": "2026-01-21",
     "description": "Mobile Deposit 083355306",
@@ -2354,6 +3839,72 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00022",
+    "date": "2026-01-21",
+    "description": "ACH Deposit PAYROLL From PHES LLC",
+    "amount": 1364.7,
+    "categoryId": "paychecks",
+    "merchantName": "ACH Deposit PAYROLL From PHES LLC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00136",
+    "date": "2026-01-21",
+    "description": "Debit Purchase 0121 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -44.68,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00137",
+    "date": "2026-01-21",
+    "description": "Debit Purchase 0121 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -85.9,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00141",
+    "date": "2026-01-21",
+    "description": "Debit Purchase 0121 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -10,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00192",
+    "date": "2026-01-21",
+    "description": "Zelle Payment To NICOLE MONET VB61NK4JD",
+    "amount": -850,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET VB61NK4JD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00193",
+    "date": "2026-01-21",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -3,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00016",
     "date": "2026-01-22",
     "description": "Zel From Salvador Ivan Martinez DFS01BX1ZKEZ",
@@ -2450,6 +4001,105 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Corporate ACH Wage Pay",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00023",
+    "date": "2026-01-22",
+    "description": "Transfer From ONLINE SAVINGS 3958",
+    "amount": 700,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 3958",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00024",
+    "date": "2026-01-22",
+    "description": "Transfer From ONLINE SAVINGS 4337",
+    "amount": 300,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 4337",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00025",
+    "date": "2026-01-22",
+    "description": "Transfer From ONLINE SAVINGS 3824",
+    "amount": 150,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 3824",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00026",
+    "date": "2026-01-22",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 60,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00138",
+    "date": "2026-01-22",
+    "description": "Debit Purchase 0122 5200 APPLE CASH SENT 877-233-8552 CA US",
+    "amount": -50,
+    "categoryId": "uncategorized",
+    "merchantName": "APPLE CASH SENT",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00139",
+    "date": "2026-01-22",
+    "description": "Debit Purchase 0122 5200 SQ *SPOKE & VIN EVERGREEN PAR IL US",
+    "amount": -8.79,
+    "categoryId": "uncategorized",
+    "merchantName": "SQ *SPOKE & VIN EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00140",
+    "date": "2026-01-22",
+    "description": "Debit Purchase 0122 5200 SQ *SPOKE & VIN EVERGREEN PAR IL US",
+    "amount": -31.9,
+    "categoryId": "uncategorized",
+    "merchantName": "SQ *SPOKE & VIN EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00142",
+    "date": "2026-01-22",
+    "description": "Debit Purchase 0122 5200 AFFIRM.COM PAYM 8554233729 CA US",
+    "amount": -48.66,
+    "categoryId": "financial-fees",
+    "merchantName": "AFFIRM.COM PAYM 8554233729",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00194",
+    "date": "2026-01-22",
+    "description": "Zelle Payment To PHES 1BX1ZKEZD",
+    "amount": -1200,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To PHES 1BX1ZKEZD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -2593,6 +4243,127 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Overdraft Item Fee",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00027",
+    "date": "2026-01-23",
+    "description": "Transfer From ONLINE SAVINGS 6143",
+    "amount": 80,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6143",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00028",
+    "date": "2026-01-23",
+    "description": "Transfer From ONLINE SAVINGS 2158",
+    "amount": 350,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2158",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00029",
+    "date": "2026-01-23",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 30,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00030",
+    "date": "2026-01-23",
+    "description": "Transfer From ONLINE SAVINGS 2119",
+    "amount": 30,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00031",
+    "date": "2026-01-23",
+    "description": "Transfer From ONLINE SAVINGS 6020",
+    "amount": 7,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00195",
+    "date": "2026-01-23",
+    "description": "Zelle Payment To ALMA SALINAS 4B61SKJKD",
+    "amount": -700,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To ALMA SALINAS 4B61SKJKD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00032",
+    "date": "2026-01-24",
+    "description": "Transfer From ONLINE SAVINGS 3958",
+    "amount": 0.67,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 3958",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00033",
+    "date": "2026-01-24",
+    "description": "Transfer From ONLINE SAVINGS 6910",
+    "amount": 0.87,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00143",
+    "date": "2026-01-24",
+    "description": "Third Party Debit 0124 5200 FANDUELSBKPRIMA JERSEY CITY NJ US",
+    "amount": -5,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA JERSEY CITY",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00144",
+    "date": "2026-01-24",
+    "description": "Third Party Debit 0124 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
+    "amount": -20,
+    "categoryId": "entertainment",
+    "merchantName": "FANDUELSBKPRIMA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00034",
+    "date": "2026-01-25",
+    "description": "Zelle Payment From PHES LLC XBN1MKOYC",
+    "amount": 20,
+    "categoryId": "other-income",
+    "merchantName": "Zelle Payment From PHES LLC XBN1MKOYC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -2827,6 +4598,39 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00035",
+    "date": "2026-01-26",
+    "description": "Check Deposit",
+    "amount": 1124.4,
+    "categoryId": "uncategorized",
+    "merchantName": "Check Deposit",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00148",
+    "date": "2026-01-26",
+    "description": "Debit Purchase 0126 5200 AMAZON MKTPL*EW AMZN.COM/BILL WA US",
+    "amount": -77.63,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*EW AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00196",
+    "date": "2026-01-26",
+    "description": "ACH Withdrawal PAYPAL INST XFER",
+    "amount": -12.99,
+    "categoryId": "uncategorized",
+    "merchantName": "ACH Withdrawal PAYPAL INST XFER",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00017",
     "date": "2026-01-27",
     "description": "Zel From Arofat Rakhmankulova JPM99c3fph2n",
@@ -3025,6 +4829,138 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00036",
+    "date": "2026-01-27",
+    "description": "ACH Deposit PAYROLL From PHES LLC",
+    "amount": 2200,
+    "categoryId": "paychecks",
+    "merchantName": "ACH Deposit PAYROLL From PHES LLC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00145",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 Walmart.com Bentonville AR US",
+    "amount": -41.65,
+    "categoryId": "shopping",
+    "merchantName": "Walmart.com Bentonville",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00146",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 DD *DOORDASH DU 855-973-1040 CA US",
+    "amount": -32.62,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH DU",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00147",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 DUNKIN #352358 EVERGREEN PRK IL US",
+    "amount": -9.33,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN #352358 EVERGREEN PRK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00149",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 PRIME VIDEO *UV 888-802-3080 WA US",
+    "amount": -29.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *UV",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00150",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 TAQUERIA EL PER OAK LAWN IL US",
+    "amount": -44.56,
+    "categoryId": "uncategorized",
+    "merchantName": "TAQUERIA EL PER OAK LAWN",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00154",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 AMAZON.COM*RY00 AMZN.COM/BILL WA",
+    "amount": -6.53,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*RY00 AMZN.COM/BILL WA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00155",
+    "date": "2026-01-27",
+    "description": "Debit Purchase 0127 5200 AMAZON MKTPL*38 AMZN.COM/BILL WA US",
+    "amount": -29.25,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*38 AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00197",
+    "date": "2026-01-27",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -5,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00198",
+    "date": "2026-01-27",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -60,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00199",
+    "date": "2026-01-27",
+    "description": "Zelle Payment To NICOLE MONET RBS1CKIXD",
+    "amount": -850.8,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET RBS1CKIXD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00200",
+    "date": "2026-01-27",
+    "description": "Zelle Payment To NICOLE MONET OB217KKXD",
+    "amount": -45,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To NICOLE MONET OB217KKXD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00046",
     "date": "2026-01-28",
     "description": "ACH Credit Sq260128 Square Inc T3Rk5E7Nmswdqaw 00026028905185855",
@@ -3135,6 +5071,50 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
+    "id": "p00151",
+    "date": "2026-01-28",
+    "description": "Debit Purchase 0128 5200 MCDONALD'S F490 CHICAGO IL US",
+    "amount": -14.27,
+    "categoryId": "restaurants",
+    "merchantName": "MCDONALD'S F490 CHICAGO",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00152",
+    "date": "2026-01-28",
+    "description": "Debit Purchase 0128 5200 Walmart.com Bentonville AR US",
+    "amount": -141.01,
+    "categoryId": "shopping",
+    "merchantName": "Walmart.com Bentonville",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00153",
+    "date": "2026-01-28",
+    "description": "Debit Purchase 0128 5200 SQ *PAPPYS GOSQ.COM IL US",
+    "amount": -28.42,
+    "categoryId": "uncategorized",
+    "merchantName": "SQ *PAPPYS GOSQ.COM",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00201",
+    "date": "2026-01-28",
+    "description": "ACH Withdrawal FREEDOM MTG PYMTS",
+    "amount": -1657.05,
+    "categoryId": "mortgage",
+    "merchantName": "ACH Withdrawal FREEDOM MTG PYMTS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
     "id": "b00018",
     "date": "2026-01-29",
     "description": "Zel From Citylight International A JPM99c3ogdks",
@@ -3242,6 +5222,116 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Corporate ACH Wage Pay",
     "accountId": "pnc-business-7478",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00037",
+    "date": "2026-01-29",
+    "description": "ACH Deposit From eBay ComYLIWNYCD PAYMENTS",
+    "amount": 86.55,
+    "categoryId": "shopping",
+    "merchantName": "ACH Deposit From eBay ComYLIWNYCD PAYMENTS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00038",
+    "date": "2026-01-29",
+    "description": "Transfer From ONLINE SAVINGS 6910",
+    "amount": 200,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00039",
+    "date": "2026-01-29",
+    "description": "Transfer From ONLINE SAVINGS 2158",
+    "amount": 100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer From ONLINE SAVINGS 2158",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00158",
+    "date": "2026-01-29",
+    "description": "Debit Purchase 0129 5200 TST*CHUCKS SOUT BURBANK IL US",
+    "amount": -117.89,
+    "categoryId": "restaurants",
+    "merchantName": "TST*CHUCKS SOUT BURBANK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00159",
+    "date": "2026-01-29",
+    "description": "Debit Purchase 0129 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -5,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00160",
+    "date": "2026-01-29",
+    "description": "Debit Purchase 0129 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -8,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00162",
+    "date": "2026-01-29",
+    "description": "Debit Purchase 0129 5200 AMAZON MKTPL*PP AMZN.COM/BILL WA US",
+    "amount": -50.58,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON MKTPL*PP AMZN.COM/BILL",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00202",
+    "date": "2026-01-29",
+    "description": "ACH Withdrawal eBay ComW66YE6DO PAYMENTS",
+    "amount": -7.52,
+    "categoryId": "shopping",
+    "merchantName": "ACH Withdrawal eBay ComW66YE6DO PAYMENTS",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00203",
+    "date": "2026-01-29",
+    "description": "Transfer To ONLINE SAVINGS 2158",
+    "amount": -300,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 2158",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00204",
+    "date": "2026-01-29",
+    "description": "Zelle Payment To ZEMA XBE1SKLWD",
+    "amount": -125,
+    "categoryId": "personal",
+    "merchantName": "Zelle Payment To ZEMA XBE1SKLWD",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   },
   {
@@ -3388,7 +5478,117 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00032",
+    "id": "p00040",
+    "date": "2026-01-30",
+    "description": "ACH Deposit PAYROLL From PHES LLC",
+    "amount": 1000,
+    "categoryId": "paychecks",
+    "merchantName": "ACH Deposit PAYROLL From PHES LLC",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00156",
+    "date": "2026-01-30",
+    "description": "Debit Purchase 0130 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -81.65,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00157",
+    "date": "2026-01-30",
+    "description": "Debit Purchase 0130 5200 TARGET.COM BROOKLYN PARK MN US",
+    "amount": -49.6,
+    "categoryId": "shopping",
+    "merchantName": "TARGET.COM BROOKLYN PARK",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00161",
+    "date": "2026-01-30",
+    "description": "Debit Purchase 0130 5200 CHIPOTLE MEX GR 303-595-4000 CA US",
+    "amount": -19.14,
+    "categoryId": "restaurants",
+    "merchantName": "CHIPOTLE MEX GR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00205",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 6020",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6020",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00206",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 2119",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 2119",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00207",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 6910",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6910",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00208",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 6143",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6143",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00209",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 6143",
+    "amount": -50,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 6143",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00210",
+    "date": "2026-01-30",
+    "description": "Transfer To ONLINE SAVINGS 4337",
+    "amount": -100,
+    "categoryId": "bank-transfer",
+    "merchantName": "Transfer To ONLINE SAVINGS 4337",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00243",
     "date": "2026-01-30",
     "description": "Debit Purchase 0130 5200 DUNKIN' MOBILE 800-447-0013 MA US",
     "amount": -8,
@@ -3399,7 +5599,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00033",
+    "id": "p00244",
     "date": "2026-01-30",
     "description": "Debit Purchase 0130 5200 AMAZON.COM*1R3U AMZN.COM/BILL WA",
     "amount": -55.26,
@@ -3410,7 +5610,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00034",
+    "id": "p00245",
     "date": "2026-01-30",
     "description": "Debit Purchase 0130 5200 AMAZON MKTPL*8L AMZN.COM/BILL WA US",
     "amount": -57.64,
@@ -3421,7 +5621,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00035",
+    "id": "p00246",
     "date": "2026-01-30",
     "description": "Debit Purchase 0130 5200 AMAZON MKTPL*KX AMZN.COM/BILL WA US",
     "amount": -39.59,
@@ -3432,7 +5632,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00030",
+    "id": "p00241",
     "date": "2026-01-31",
     "description": "Debit Purchase 0131 5200 APPLE CASH SENT 877-233-8552 CA US",
     "amount": -120,
@@ -3443,7 +5643,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00038",
+    "id": "p00249",
     "date": "2026-01-31",
     "description": "Debit Purchase 0131 5200 WENDY'S 0003 CHICAGO IL US",
     "amount": -34.93,
@@ -3454,7 +5654,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00044",
+    "id": "p00255",
     "date": "2026-01-31",
     "description": "Debit Purchase 0131 5200 PORTILLOS HOT D OAK LAWN IL US",
     "amount": -12.38,
@@ -3465,7 +5665,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00031",
+    "id": "p00242",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 TST*OUTPUT LOUN BERWYN IL US",
     "amount": -31.86,
@@ -3476,7 +5676,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00036",
+    "id": "p00247",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 OAK LAWN ENDOSC 866-8091220 TN US",
     "amount": -65.9,
@@ -3487,7 +5687,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00039",
+    "id": "p00250",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 DD *DOORDASH EL 855-973-1040 CA US",
     "amount": -47.61,
@@ -3498,7 +5698,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00042",
+    "id": "p00253",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 LITTLE CAESARS EVERGREEN PAR IL US",
     "amount": -29.16,
@@ -3509,7 +5709,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00045",
+    "id": "p00256",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 AMAZON DIGIT*L5 888-802-3080 WA US",
     "amount": -8.79,
@@ -3520,7 +5720,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00046",
+    "id": "p00257",
     "date": "2026-02-01",
     "description": "Debit Purchase 0201 5200 ETSY.COMUS BROOKLYN NY US",
     "amount": -6,
@@ -3762,7 +5962,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00001",
+    "id": "p00212",
     "date": "2026-02-02",
     "description": "Zelle Payment From DAVID MARTINEZ EB919KHUC",
     "amount": 125,
@@ -3773,7 +5973,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00002",
+    "id": "p00213",
     "date": "2026-02-02",
     "description": "Transfer From ONLINE SAVINGS 6143",
     "amount": 100,
@@ -3784,7 +5984,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00003",
+    "id": "p00214",
     "date": "2026-02-02",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 80,
@@ -3795,7 +5995,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00004",
+    "id": "p00215",
     "date": "2026-02-02",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 110,
@@ -3806,7 +6006,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00005",
+    "id": "p00216",
     "date": "2026-02-02",
     "description": "Check Deposit",
     "amount": 1124.4,
@@ -3817,7 +6017,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00037",
+    "id": "p00248",
     "date": "2026-02-02",
     "description": "Debit Purchase 0202 5200 USPS PO 1615670 CHICAGO IL US",
     "amount": -26.94,
@@ -3828,7 +6028,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00040",
+    "id": "p00251",
     "date": "2026-02-02",
     "description": "Debit Purchase 0202 5200 CTLP*CSC SERVIC MELVILLE NY US",
     "amount": -2.5,
@@ -3839,7 +6039,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00041",
+    "id": "p00252",
     "date": "2026-02-02",
     "description": "Debit Purchase 0202 5200 FULLERS CARWASH OAK LAWN IL US",
     "amount": -25,
@@ -3850,7 +6050,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00043",
+    "id": "p00254",
     "date": "2026-02-02",
     "description": "Debit Purchase 0202 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -3861,7 +6061,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00048",
+    "id": "p00259",
     "date": "2026-02-02",
     "description": "Debit Purchase 0202 5200 SHELL5744326540 OAK LAWN IL US",
     "amount": -15.15,
@@ -3872,7 +6072,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00107",
+    "id": "p00318",
     "date": "2026-02-02",
     "description": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
     "amount": -100,
@@ -3883,7 +6083,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00108",
+    "id": "p00319",
     "date": "2026-02-02",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -106.7,
@@ -3894,7 +6094,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00109",
+    "id": "p00320",
     "date": "2026-02-02",
     "description": "ACH Withdrawal DISCOVER E-PAYMENT",
     "amount": -104.16,
@@ -4004,7 +6204,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00047",
+    "id": "p00258",
     "date": "2026-02-03",
     "description": "Debit Purchase 0203 5200 TARGET.COM BROOKLYN PARK MN US",
     "amount": -17.36,
@@ -4015,7 +6215,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00049",
+    "id": "p00260",
     "date": "2026-02-03",
     "description": "Debit Purchase 0203 5200 PRIME VIDEO *ZQ 888-802-3080 WA US",
     "amount": -24.99,
@@ -4026,7 +6226,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00051",
+    "id": "p00262",
     "date": "2026-02-03",
     "description": "Debit Purchase 0203 5200 SHELL5744408880 EVERGREEN PAR IL US",
     "amount": -33.77,
@@ -4037,7 +6237,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00110",
+    "id": "p00321",
     "date": "2026-02-03",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -100,
@@ -4048,7 +6248,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00111",
+    "id": "p00322",
     "date": "2026-02-03",
     "description": "Zelle Payment To NICOLE MONET MBE1QK9TD",
     "amount": -850,
@@ -4059,7 +6259,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00112",
+    "id": "p00323",
     "date": "2026-02-03",
     "description": "ACH Withdrawal Bridgecrest DT RETAIL",
     "amount": -100,
@@ -4191,7 +6391,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00006",
+    "id": "p00217",
     "date": "2026-02-04",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 25,
@@ -4202,7 +6402,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00050",
+    "id": "p00261",
     "date": "2026-02-04",
     "description": "Debit Purchase 0204 5200 FULLERS CARWASH OAK LAWN IL US",
     "amount": -25,
@@ -4213,7 +6413,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00052",
+    "id": "p00263",
     "date": "2026-02-04",
     "description": "Debit Purchase 0204 5200 PADDLE.COM INC BROOKLYN NY US",
     "amount": -10.99,
@@ -4224,7 +6424,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00053",
+    "id": "p00264",
     "date": "2026-02-04",
     "description": "Debit Purchase 0204 5200 DUNKIN' MOBILE 800-447-0013 MA US",
     "amount": -8,
@@ -4312,7 +6512,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00009",
+    "id": "p00220",
     "date": "2026-02-05",
     "description": "POS Credit 0205 5200 TARGET.COM 800-591-3869 MN US",
     "amount": 17.36,
@@ -4477,7 +6677,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00007",
+    "id": "p00218",
     "date": "2026-02-06",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 60,
@@ -4488,7 +6688,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00008",
+    "id": "p00219",
     "date": "2026-02-06",
     "description": "Transfer From ONLINE SAVINGS 4337",
     "amount": 100,
@@ -4499,7 +6699,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00113",
+    "id": "p00324",
     "date": "2026-02-06",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -4510,7 +6710,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00010",
+    "id": "p00221",
     "date": "2026-02-08",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 40,
@@ -4521,7 +6721,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00054",
+    "id": "p00265",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 MCDONALD'S F490 CHICAGO IL US",
     "amount": -1.32,
@@ -4532,7 +6732,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00055",
+    "id": "p00266",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 Etsy Etsy.com*I Brooklyn NY US",
     "amount": -32.99,
@@ -4543,7 +6743,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00056",
+    "id": "p00267",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 PRIME VIDEO CHA AMZN.COM/BILL WA US",
     "amount": -9.99,
@@ -4554,7 +6754,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00057",
+    "id": "p00268",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 PRIME VIDEO *HG 888-802-3080 WA US",
     "amount": -24.99,
@@ -4565,7 +6765,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00058",
+    "id": "p00269",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 OAK LAWN PARK D OAK LAWN IL US",
     "amount": -16,
@@ -4576,7 +6776,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00059",
+    "id": "p00270",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 OAK LAWN PARK D OAK LAWN IL US",
     "amount": -5,
@@ -4587,7 +6787,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00060",
+    "id": "p00271",
     "date": "2026-02-08",
     "description": "Debit Purchase 0208 5200 BURGER KING #99 OAK LAWN IL US",
     "amount": -39.08,
@@ -4862,7 +7062,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00011",
+    "id": "p00222",
     "date": "2026-02-09",
     "description": "Check Deposit",
     "amount": 1124.4,
@@ -4873,7 +7073,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00114",
+    "id": "p00325",
     "date": "2026-02-09",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -12.99,
@@ -4884,7 +7084,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00115",
+    "id": "p00326",
     "date": "2026-02-09",
     "description": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
     "amount": -150,
@@ -4895,7 +7095,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00116",
+    "id": "p00327",
     "date": "2026-02-09",
     "description": "ACH Withdrawal FREEDOM MTG PYMTS",
     "amount": -1623.66,
@@ -4906,7 +7106,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00117",
+    "id": "p00328",
     "date": "2026-02-09",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -16.99,
@@ -4917,7 +7117,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00118",
+    "id": "p00329",
     "date": "2026-02-09",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -5082,7 +7282,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00012",
+    "id": "p00223",
     "date": "2026-02-10",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 1364.69,
@@ -5093,7 +7293,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00013",
+    "id": "p00224",
     "date": "2026-02-10",
     "description": "Transfer From ONLINE SAVINGS 2119",
     "amount": 50,
@@ -5104,7 +7304,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00014",
+    "id": "p00225",
     "date": "2026-02-10",
     "description": "ACH Returned to FREEDOM MTG PYMTS",
     "amount": 1623.66,
@@ -5115,7 +7315,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00061",
+    "id": "p00272",
     "date": "2026-02-10",
     "description": "Debit Purchase 0210 5200 AUDIBLE*3D1YH7T AMZN.COM/BILL NJ US",
     "amount": -0.99,
@@ -5126,7 +7326,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00062",
+    "id": "p00273",
     "date": "2026-02-10",
     "description": "Debit Purchase 0210 5200 PRIME VIDEO *0R 888-802-3080 WA US",
     "amount": -24.99,
@@ -5137,7 +7337,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00119",
+    "id": "p00330",
     "date": "2026-02-10",
     "description": "ACH Withdrawal CAPITAL ONE CRCARDPMT",
     "amount": -250,
@@ -5148,7 +7348,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00120",
+    "id": "p00331",
     "date": "2026-02-10",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -17.18,
@@ -5159,7 +7359,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00121",
+    "id": "p00332",
     "date": "2026-02-10",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -76.79,
@@ -5170,7 +7370,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00122",
+    "id": "p00333",
     "date": "2026-02-10",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -12.26,
@@ -5181,7 +7381,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00123",
+    "id": "p00334",
     "date": "2026-02-10",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -38.09,
@@ -5192,7 +7392,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00124",
+    "id": "p00335",
     "date": "2026-02-10",
     "description": "Zelle Payment To NICOLE MONET 2BQ1JY9RD",
     "amount": -700,
@@ -5269,7 +7469,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00125",
+    "id": "p00336",
     "date": "2026-02-11",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -140,
@@ -5357,7 +7557,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00015",
+    "id": "p00226",
     "date": "2026-02-12",
     "description": "ACH Returned to APPLECARD GSBANK PAYMENT",
     "amount": 140,
@@ -5368,7 +7568,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00016",
+    "id": "p00227",
     "date": "2026-02-12",
     "description": "ACH Deposit From FID BKG SVC LLC Z32204744 5EJ6P",
     "amount": 1154.35,
@@ -5379,7 +7579,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00017",
+    "id": "p00228",
     "date": "2026-02-12",
     "description": "ACH Deposit From FID BKG SVC LLC 241162460 5EJ9S",
     "amount": 1418.21,
@@ -5390,7 +7590,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00066",
+    "id": "p00277",
     "date": "2026-02-12",
     "description": "Debit Purchase 0212 5200 SHELL5744408880 EVERGREEN PAR IL US",
     "amount": -47.07,
@@ -5401,7 +7601,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00126",
+    "id": "p00337",
     "date": "2026-02-12",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -6.59,
@@ -5412,7 +7612,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00127",
+    "id": "p00338",
     "date": "2026-02-12",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -8.81,
@@ -5423,7 +7623,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00128",
+    "id": "p00339",
     "date": "2026-02-12",
     "description": "ACH Withdrawal FREEDOM RETRY PYMT",
     "amount": -1623.66,
@@ -5566,7 +7766,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00018",
+    "id": "p00229",
     "date": "2026-02-13",
     "description": "ACH Deposit CREDIT From ADPRTS - 0524",
     "amount": 4213.25,
@@ -5577,7 +7777,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00063",
+    "id": "p00274",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 TARGET.COM BROOKLYN PARK MN US",
     "amount": -34.71,
@@ -5588,7 +7788,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00064",
+    "id": "p00275",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 TARGET.COM BROOKLYN PARK MN US",
     "amount": -75.66,
@@ -5599,7 +7799,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00065",
+    "id": "p00276",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 APPLE CASH SENT 877-233-8552 CA US",
     "amount": -1500,
@@ -5610,7 +7810,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00067",
+    "id": "p00278",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -132.45,
@@ -5621,7 +7821,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00068",
+    "id": "p00279",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -155.36,
@@ -5632,7 +7832,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00069",
+    "id": "p00280",
     "date": "2026-02-13",
     "description": "Debit Purchase 0213 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -36.28,
@@ -5643,7 +7843,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00129",
+    "id": "p00340",
     "date": "2026-02-13",
     "description": "Zelle Payment To NICOLE MONET 3BS1LY3DD",
     "amount": -150,
@@ -5654,7 +7854,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00130",
+    "id": "p00341",
     "date": "2026-02-13",
     "description": "Zelle Payment To PHES 8BO1XY3DD",
     "amount": -850,
@@ -5665,7 +7865,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00131",
+    "id": "p00342",
     "date": "2026-02-13",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -5676,7 +7876,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00132",
+    "id": "p00343",
     "date": "2026-02-13",
     "description": "Zelle Payment To PHES RBN1DYVDD",
     "amount": -1200,
@@ -5687,7 +7887,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00133",
+    "id": "p00344",
     "date": "2026-02-13",
     "description": "ACH Withdrawal Bridgecrest DT RETAIL",
     "amount": -275,
@@ -5698,7 +7898,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00070",
+    "id": "p00281",
     "date": "2026-02-14",
     "description": "Debit Purchase 0214 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -50.63,
@@ -5709,7 +7909,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00134",
+    "id": "p00345",
     "date": "2026-02-14",
     "description": "Zelle Payment To DELIA MARTINEZ HBE1DY9ED",
     "amount": -28,
@@ -5720,7 +7920,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00071",
+    "id": "p00282",
     "date": "2026-02-15",
     "description": "Debit Purchase 0215 5200 UBER *ONE MEM 866-576-1039 CA US",
     "amount": -9.99,
@@ -5731,7 +7931,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00072",
+    "id": "p00283",
     "date": "2026-02-15",
     "description": "Debit Purchase 0215 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -18.46,
@@ -5742,7 +7942,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00073",
+    "id": "p00284",
     "date": "2026-02-15",
     "description": "Debit Purchase 0215 5200 AMAZON MKTPL*4K AMZN.COM/BILL WA US",
     "amount": -14.13,
@@ -5753,7 +7953,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00074",
+    "id": "p00285",
     "date": "2026-02-15",
     "description": "Debit Purchase 0215 5200 AMAZON MKTPL*BS AMZN.COM/BILL WA US",
     "amount": -20.03,
@@ -5764,7 +7964,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00019",
+    "id": "p00230",
     "date": "2026-02-16",
     "description": "POS Credit 0216 5200 AMAZON MKTPLACE AMZN.COM/BILL WA US",
     "amount": 2.99,
@@ -5775,7 +7975,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00020",
+    "id": "p00231",
     "date": "2026-02-16",
     "description": "POS Credit 0216 5200 AMAZON MKTPLACE AMZN.COM/BILL WA US",
     "amount": 2.99,
@@ -5786,7 +7986,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00075",
+    "id": "p00286",
     "date": "2026-02-16",
     "description": "Debit Purchase 0216 5200 FULLERS CARWASH OAK LAWN IL US",
     "amount": -25,
@@ -5797,7 +7997,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00076",
+    "id": "p00287",
     "date": "2026-02-16",
     "description": "Debit Purchase 0216 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -5808,7 +8008,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00077",
+    "id": "p00288",
     "date": "2026-02-16",
     "description": "Debit Purchase 0216 5200 KINDLE SVCS*5D7 888-802-3080 WA US",
     "amount": -10.99,
@@ -5819,7 +8019,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00078",
+    "id": "p00289",
     "date": "2026-02-16",
     "description": "Debit Purchase 0216 5200 AMAZON MKTPL*B1 AMZN.COM/BILL WA US",
     "amount": -49.59,
@@ -5830,7 +8030,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00079",
+    "id": "p00290",
     "date": "2026-02-16",
     "description": "Debit Purchase 0216 5200 HOCK INTL* O #6 8668074625 OH US",
     "amount": -49.99,
@@ -6028,7 +8228,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00080",
+    "id": "p00291",
     "date": "2026-02-17",
     "description": "Debit Purchase 0217 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -6039,7 +8239,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00135",
+    "id": "p00346",
     "date": "2026-02-17",
     "description": "Zelle Payment To JEN POOP 911 UBT1DYU4D",
     "amount": -30,
@@ -6050,7 +8250,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00136",
+    "id": "p00347",
     "date": "2026-02-17",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -150,
@@ -6061,7 +8261,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00137",
+    "id": "p00348",
     "date": "2026-02-17",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -322.29,
@@ -6072,7 +8272,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00138",
+    "id": "p00349",
     "date": "2026-02-17",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -6083,7 +8283,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00139",
+    "id": "p00350",
     "date": "2026-02-17",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -20,
@@ -6303,7 +8503,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00021",
+    "id": "p00232",
     "date": "2026-02-18",
     "description": "Transfer From ONLINE SAVINGS 3958",
     "amount": 1,
@@ -6314,7 +8514,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00081",
+    "id": "p00292",
     "date": "2026-02-18",
     "description": "Debit Purchase 0218 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -6325,7 +8525,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00082",
+    "id": "p00293",
     "date": "2026-02-18",
     "description": "Debit Purchase 0218 5200 AMAZON PRIME*6W AMZN.COM/BILL WA US",
     "amount": -2.99,
@@ -6336,7 +8536,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00083",
+    "id": "p00294",
     "date": "2026-02-18",
     "description": "Debit Purchase 0218 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -48.66,
@@ -6347,7 +8547,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00140",
+    "id": "p00351",
     "date": "2026-02-18",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -150,
@@ -6358,7 +8558,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00141",
+    "id": "p00352",
     "date": "2026-02-18",
     "description": "Zelle Payment To NICOLE MONET XB81AY35D",
     "amount": -650,
@@ -6468,7 +8668,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00084",
+    "id": "p00295",
     "date": "2026-02-19",
     "description": "Debit Purchase 0219 5200 TARGET.COM BROOKLYN PARK MN US",
     "amount": -21.33,
@@ -6479,7 +8679,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00085",
+    "id": "p00296",
     "date": "2026-02-19",
     "description": "Debit Purchase 0219 5200 TARGET.COM BROOKLYN PARK MN US",
     "amount": -11.23,
@@ -6490,7 +8690,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00087",
+    "id": "p00298",
     "date": "2026-02-19",
     "description": "Debit Purchase 0219 5200 MYFICO.COM 8003194433 MT US",
     "amount": -39.95,
@@ -6501,7 +8701,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00142",
+    "id": "p00353",
     "date": "2026-02-19",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -2,
@@ -6644,7 +8844,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00022",
+    "id": "p00233",
     "date": "2026-02-20",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 1000,
@@ -6655,7 +8855,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00024",
+    "id": "p00235",
     "date": "2026-02-20",
     "description": "POS Credit 0220 5200 TARGET.COM 800-591-3869 MN US",
     "amount": 11.23,
@@ -6666,7 +8866,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00025",
+    "id": "p00236",
     "date": "2026-02-20",
     "description": "POS Credit 0220 5200 TARGET.COM 800-591-3869 MN US",
     "amount": 21.33,
@@ -6677,7 +8877,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00086",
+    "id": "p00297",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 Natural Gas Bil Atlanta GA US",
     "amount": -160,
@@ -6688,7 +8888,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00088",
+    "id": "p00299",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 DZINE CLOTHING BURBANK IL US",
     "amount": -40,
@@ -6699,7 +8899,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00089",
+    "id": "p00300",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -6710,7 +8910,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00090",
+    "id": "p00301",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 VILLAGE OF EVER EVERGREEN PAR IL US",
     "amount": -320,
@@ -6721,7 +8921,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00091",
+    "id": "p00302",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -48.66,
@@ -6732,7 +8932,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00094",
+    "id": "p00305",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 TST* NICKY'S OF CHICAGO IL US",
     "amount": -69.77,
@@ -6743,7 +8943,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00095",
+    "id": "p00306",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 DICKSSPORTINGGO 0000000000 PA US",
     "amount": -97.49,
@@ -6754,7 +8954,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00096",
+    "id": "p00307",
     "date": "2026-02-20",
     "description": "Debit Purchase 0220 5200 7-ELEVEN 13314 CHICAGO IL US",
     "amount": -16.96,
@@ -6765,7 +8965,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00143",
+    "id": "p00354",
     "date": "2026-02-20",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -19.83,
@@ -6776,7 +8976,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00144",
+    "id": "p00355",
     "date": "2026-02-20",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -6787,7 +8987,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00145",
+    "id": "p00356",
     "date": "2026-02-20",
     "description": "Zelle Payment To BETO 7BP1DY36D",
     "amount": -100,
@@ -6798,7 +8998,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00023",
+    "id": "p00234",
     "date": "2026-02-21",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 10,
@@ -6809,7 +9009,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00092",
+    "id": "p00303",
     "date": "2026-02-21",
     "description": "Third Party Debit 0221 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -20,
@@ -6820,7 +9020,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00093",
+    "id": "p00304",
     "date": "2026-02-21",
     "description": "Third Party Debit 0221 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -20,
@@ -6831,7 +9031,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00146",
+    "id": "p00357",
     "date": "2026-02-21",
     "description": "Zelle Payment To NICOLE MONET 6BN1LYGHD",
     "amount": -50,
@@ -6842,7 +9042,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00026",
+    "id": "p00237",
     "date": "2026-02-22",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 8,
@@ -6853,7 +9053,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00097",
+    "id": "p00308",
     "date": "2026-02-22",
     "description": "Debit Purchase 0222 5200 PRIME VIDEO *2U 888-802-3080 WA US",
     "amount": -3.99,
@@ -6864,7 +9064,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00098",
+    "id": "p00309",
     "date": "2026-02-22",
     "description": "Debit Purchase 0222 5200 PRIME VIDEO *B1 888-802-3080 WA US",
     "amount": -24.99,
@@ -7194,7 +9394,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00027",
+    "id": "p00238",
     "date": "2026-02-23",
     "description": "Zelle Payment From PHES LLC MBX17YP7C",
     "amount": 1150.8,
@@ -7205,7 +9405,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00099",
+    "id": "p00310",
     "date": "2026-02-23",
     "description": "Debit Purchase 0223 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -7216,7 +9416,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00100",
+    "id": "p00311",
     "date": "2026-02-23",
     "description": "Debit Purchase 0223 5200 DD *DOORDASH DE 855-973-1040 CA US",
     "amount": -40.29,
@@ -7227,7 +9427,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00147",
+    "id": "p00358",
     "date": "2026-02-23",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -19.76,
@@ -7238,7 +9438,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00148",
+    "id": "p00359",
     "date": "2026-02-23",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -8.81,
@@ -7249,7 +9449,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00149",
+    "id": "p00360",
     "date": "2026-02-23",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -8.81,
@@ -7260,7 +9460,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00150",
+    "id": "p00361",
     "date": "2026-02-23",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -7271,7 +9471,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00151",
+    "id": "p00362",
     "date": "2026-02-23",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -146,
@@ -7392,7 +9592,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00101",
+    "id": "p00312",
     "date": "2026-02-24",
     "description": "Debit Purchase 0224 5200 CHIPOTLE MEX GR 303-595-4000 CA US",
     "amount": -10.73,
@@ -7403,7 +9603,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00152",
+    "id": "p00363",
     "date": "2026-02-24",
     "description": "Zelle Payment To NICOLE MONET YBC1OYHID",
     "amount": -850,
@@ -7755,7 +9955,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00028",
+    "id": "p00239",
     "date": "2026-02-26",
     "description": "Early Pay PAYROLL ACH from Evinco Services",
     "amount": 900,
@@ -7766,7 +9966,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00102",
+    "id": "p00313",
     "date": "2026-02-26",
     "description": "Third Party Debit 0226 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -46.66,
@@ -7777,7 +9977,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00103",
+    "id": "p00314",
     "date": "2026-02-26",
     "description": "Third Party Debit 0226 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -33.37,
@@ -7788,7 +9988,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00104",
+    "id": "p00315",
     "date": "2026-02-26",
     "description": "Third Party Debit 0226 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -64.75,
@@ -8019,7 +10219,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00029",
+    "id": "p00240",
     "date": "2026-02-27",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 962.69,
@@ -8030,7 +10230,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00105",
+    "id": "p00316",
     "date": "2026-02-27",
     "description": "Debit Purchase 0227 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -8041,7 +10241,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00106",
+    "id": "p00317",
     "date": "2026-02-27",
     "description": "Debit Purchase 0227 5200 10605D CAVA EVE 941-557-7239 IL US",
     "amount": -68.38,
@@ -8052,7 +10252,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00153",
+    "id": "p00364",
     "date": "2026-02-27",
     "description": "Zelle Payment To JEN POOP 911 8BO1AYXZD",
     "amount": -30,
@@ -8063,7 +10263,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00154",
+    "id": "p00365",
     "date": "2026-02-27",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -8074,7 +10274,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00155",
+    "id": "p00366",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 6020",
     "amount": -25,
@@ -8085,7 +10285,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00156",
+    "id": "p00367",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 3958",
     "amount": -100,
@@ -8096,7 +10296,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00157",
+    "id": "p00368",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -100,
@@ -8107,7 +10307,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00158",
+    "id": "p00369",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 2119",
     "amount": -50,
@@ -8118,7 +10318,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00159",
+    "id": "p00370",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -50,
@@ -8129,7 +10329,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00160",
+    "id": "p00371",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 3824",
     "amount": -50,
@@ -8140,7 +10340,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00161",
+    "id": "p00372",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 4337",
     "amount": -100,
@@ -8151,7 +10351,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00162",
+    "id": "p00373",
     "date": "2026-02-27",
     "description": "Transfer To ONLINE SAVINGS 6143",
     "amount": -40,
@@ -8162,7 +10362,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00197",
+    "id": "p00408",
     "date": "2026-02-27",
     "description": "Debit Purchase 0227 5200 NORTH AMERICAN 423-894-5654 TN US",
     "amount": -25,
@@ -8173,7 +10373,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00163",
+    "id": "p00374",
     "date": "2026-02-28",
     "description": "Zelle Payment To RICHARD ABS17YRYD",
     "amount": -220,
@@ -8184,7 +10384,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00196",
+    "id": "p00407",
     "date": "2026-02-28",
     "description": "Third Party Debit 0228 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -20,
@@ -8195,7 +10395,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00198",
+    "id": "p00409",
     "date": "2026-02-28",
     "description": "Debit Purchase 0228 5200 CHIPOTLE MEX GR 303-595-4000 CA US",
     "amount": -20.46,
@@ -8206,7 +10406,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00199",
+    "id": "p00410",
     "date": "2026-02-28",
     "description": "Third Party Debit 0228 5200 FANDUELSPORTSBO NEW YORK NY US",
     "amount": -5.5,
@@ -8217,7 +10417,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00200",
+    "id": "p00411",
     "date": "2026-02-28",
     "description": "Debit Purchase 0228 5200 Walmart.com Bentonville AR US",
     "amount": -51.59,
@@ -8228,7 +10428,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00201",
+    "id": "p00412",
     "date": "2026-02-28",
     "description": "Debit Purchase 0228 5200 TACO BELL #1650 OAK LAWN IL US",
     "amount": -18,
@@ -8239,7 +10439,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00202",
+    "id": "p00413",
     "date": "2026-02-28",
     "description": "Debit Purchase 0228 5200 MONSTER JAM A1 PALMETTO FL US",
     "amount": -25,
@@ -8250,7 +10450,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00206",
+    "id": "p00417",
     "date": "2026-02-28",
     "description": "Debit Purchase 0228 5200 ALLSTATE ARENA ROSEMONT IL US",
     "amount": -25,
@@ -8261,7 +10461,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00164",
+    "id": "p00375",
     "date": "2026-03-01",
     "description": "Zelle Payment To NICOLE MONET 2BI1RYGLD",
     "amount": -500,
@@ -8272,7 +10472,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00204",
+    "id": "p00415",
     "date": "2026-03-01",
     "description": "Debit Purchase 0301 5200 SQSP* DOMAIN#22 6465803456 NY US",
     "amount": -14,
@@ -8283,7 +10483,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00207",
+    "id": "p00418",
     "date": "2026-03-01",
     "description": "Debit Purchase 0301 5200 AMAZON DIGIT*BE 888-802-3080 WA US",
     "amount": -8.79,
@@ -8294,7 +10494,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00208",
+    "id": "p00419",
     "date": "2026-03-01",
     "description": "Debit Purchase 0301 5200 ETSY.COMUS BROOKLYN NY US",
     "amount": -47.57,
@@ -8305,7 +10505,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00209",
+    "id": "p00420",
     "date": "2026-03-01",
     "description": "Debit Purchase 0301 5200 BURGER KING #13 CHICAGO IL US",
     "amount": -18,
@@ -8778,7 +10978,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00165",
+    "id": "p00376",
     "date": "2026-03-02",
     "description": "Zelle Payment From PHES LLC ZBK14Y2MC",
     "amount": 1125,
@@ -8789,7 +10989,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00203",
+    "id": "p00414",
     "date": "2026-03-02",
     "description": "Debit Purchase 0302 5200 Natural Gas Bil Atlanta GA US",
     "amount": -200.2,
@@ -8800,7 +11000,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00205",
+    "id": "p00416",
     "date": "2026-03-02",
     "description": "Debit Purchase 0302 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -60.54,
@@ -8811,7 +11011,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00244",
+    "id": "p00455",
     "date": "2026-03-02",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -30,
@@ -8822,7 +11022,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00245",
+    "id": "p00456",
     "date": "2026-03-02",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -50,
@@ -8833,7 +11033,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00246",
+    "id": "p00457",
     "date": "2026-03-02",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -100,
@@ -8844,7 +11044,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00247",
+    "id": "p00458",
     "date": "2026-03-02",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -100,
@@ -8855,7 +11055,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00248",
+    "id": "p00459",
     "date": "2026-03-02",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -22.04,
@@ -8866,7 +11066,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00249",
+    "id": "p00460",
     "date": "2026-03-02",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -8877,7 +11077,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00250",
+    "id": "p00461",
     "date": "2026-03-02",
     "description": "ACH Withdrawal DISCOVER E-PAYMENT",
     "amount": -192.45,
@@ -9042,7 +11242,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00210",
+    "id": "p00421",
     "date": "2026-03-03",
     "description": "Debit Purchase 0303 5200 ROSIES DRIVE IN OAK LAWN IL US",
     "amount": -20.41,
@@ -9053,7 +11253,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00251",
+    "id": "p00462",
     "date": "2026-03-03",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -100,
@@ -9064,7 +11264,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00252",
+    "id": "p00463",
     "date": "2026-03-03",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -72,
@@ -9075,7 +11275,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00253",
+    "id": "p00464",
     "date": "2026-03-03",
     "description": "Zelle Payment To ANA PUGA IBO14YRWD",
     "amount": -60,
@@ -9086,7 +11286,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00254",
+    "id": "p00465",
     "date": "2026-03-03",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -41.72,
@@ -9240,7 +11440,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00166",
+    "id": "p00377",
     "date": "2026-03-04",
     "description": "Transfer From ONLINE SAVINGS 4337",
     "amount": 70,
@@ -9251,7 +11451,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00255",
+    "id": "p00466",
     "date": "2026-03-04",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -8.81,
@@ -9262,7 +11462,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00256",
+    "id": "p00467",
     "date": "2026-03-04",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -19.82,
@@ -9273,7 +11473,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00257",
+    "id": "p00468",
     "date": "2026-03-04",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -50.4,
@@ -9405,7 +11605,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00167",
+    "id": "p00378",
     "date": "2026-03-05",
     "description": "ACH Deposit ADJUSTMENT From AMAZON BUSINESS",
     "amount": 19.82,
@@ -9416,7 +11616,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00168",
+    "id": "p00379",
     "date": "2026-03-05",
     "description": "Transfer From ONLINE SAVINGS 3958",
     "amount": 38,
@@ -9427,7 +11627,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00169",
+    "id": "p00380",
     "date": "2026-03-05",
     "description": "Transfer From ONLINE SAVINGS 3958",
     "amount": 5,
@@ -9438,7 +11638,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00258",
+    "id": "p00469",
     "date": "2026-03-05",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -21,
@@ -9449,7 +11649,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00259",
+    "id": "p00470",
     "date": "2026-03-05",
     "description": "Zelle Payment To ANNIE 9B71RY7VD",
     "amount": -20,
@@ -9460,7 +11660,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00260",
+    "id": "p00471",
     "date": "2026-03-05",
     "description": "Zelle Payment To ERIKA GARZA TB811YYVD",
     "amount": -55,
@@ -9603,7 +11803,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00170",
+    "id": "p00381",
     "date": "2026-03-06",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 900,
@@ -9614,7 +11814,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00261",
+    "id": "p00472",
     "date": "2026-03-06",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -9625,7 +11825,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00262",
+    "id": "p00473",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -200,
@@ -9636,7 +11836,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00263",
+    "id": "p00474",
     "date": "2026-03-06",
     "description": "Zelle Payment To ZEMA YB11VY7OD",
     "amount": -125,
@@ -9647,7 +11847,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00264",
+    "id": "p00475",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 6020",
     "amount": -50,
@@ -9658,7 +11858,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00265",
+    "id": "p00476",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 2119",
     "amount": -50,
@@ -9669,7 +11869,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00266",
+    "id": "p00477",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -100,
@@ -9680,7 +11880,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00267",
+    "id": "p00478",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 6143",
     "amount": -30,
@@ -9691,7 +11891,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00268",
+    "id": "p00479",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 3824",
     "amount": -25,
@@ -9702,7 +11902,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00269",
+    "id": "p00480",
     "date": "2026-03-06",
     "description": "Transfer To ONLINE SAVINGS 3958",
     "amount": -150,
@@ -9713,7 +11913,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00211",
+    "id": "p00422",
     "date": "2026-03-07",
     "description": "Debit Purchase 0307 5200 MCDONALD'S F489 BURBANK IL US",
     "amount": -11.39,
@@ -9724,7 +11924,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00212",
+    "id": "p00423",
     "date": "2026-03-07",
     "description": "Debit Purchase 0307 5200 SKOOL.COM 3103596796 CA US",
     "amount": -9,
@@ -9735,7 +11935,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00213",
+    "id": "p00424",
     "date": "2026-03-07",
     "description": "Third Party Debit 0307 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -20,
@@ -9746,7 +11946,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00214",
+    "id": "p00425",
     "date": "2026-03-07",
     "description": "Debit Purchase 0307 5200 OAK LAWN PARK D OAK LAWN IL US",
     "amount": -10,
@@ -9757,7 +11957,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00171",
+    "id": "p00382",
     "date": "2026-03-08",
     "description": "Zelle Payment From PHES LLC JBJ1CY8PC",
     "amount": 1250,
@@ -9768,7 +11968,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00270",
+    "id": "p00481",
     "date": "2026-03-08",
     "description": "Zelle Payment To NICOLE MONET SBM1RY8PD",
     "amount": -1000,
@@ -10076,7 +12276,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00172",
+    "id": "p00383",
     "date": "2026-03-09",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 69,
@@ -10087,7 +12287,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00271",
+    "id": "p00482",
     "date": "2026-03-09",
     "description": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
     "amount": -120,
@@ -10098,7 +12298,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00272",
+    "id": "p00483",
     "date": "2026-03-09",
     "description": "ACH Withdrawal TARGET CARD SRVC PAYMENT",
     "amount": -150,
@@ -10109,7 +12309,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00273",
+    "id": "p00484",
     "date": "2026-03-09",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -60,
@@ -10120,7 +12320,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00274",
+    "id": "p00485",
     "date": "2026-03-09",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -10131,7 +12331,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00275",
+    "id": "p00486",
     "date": "2026-03-09",
     "description": "ACH Withdrawal FD Sptsbk Casino payment",
     "amount": -20,
@@ -10142,7 +12342,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00276",
+    "id": "p00487",
     "date": "2026-03-09",
     "description": "ACH Withdrawal FD Sptsbk Casino payment",
     "amount": -20,
@@ -10153,7 +12353,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00277",
+    "id": "p00488",
     "date": "2026-03-09",
     "description": "ACH Withdrawal FD Sptsbk Casino payment",
     "amount": -15,
@@ -10164,7 +12364,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00278",
+    "id": "p00489",
     "date": "2026-03-09",
     "description": "ACH Withdrawal FD Sptsbk Casino payment",
     "amount": -8,
@@ -10285,7 +12485,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00173",
+    "id": "p00384",
     "date": "2026-03-10",
     "description": "Transfer From ONLINE SAVINGS 3958",
     "amount": 207,
@@ -10296,7 +12496,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00174",
+    "id": "p00385",
     "date": "2026-03-10",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 200,
@@ -10307,7 +12507,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00175",
+    "id": "p00386",
     "date": "2026-03-10",
     "description": "Zelle Payment From EVINCO SERVICES IN GB314YDQC",
     "amount": 1000,
@@ -10318,7 +12518,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00215",
+    "id": "p00426",
     "date": "2026-03-10",
     "description": "Debit Purchase 0310 5200 Natural Gas Bil Atlanta GA US",
     "amount": -150,
@@ -10329,7 +12529,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00279",
+    "id": "p00490",
     "date": "2026-03-10",
     "description": "ACH Withdrawal CAPITAL ONE CRCARDPMT",
     "amount": -250,
@@ -10340,7 +12540,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00280",
+    "id": "p00491",
     "date": "2026-03-10",
     "description": "Transfer To ONLINE SAVINGS 4337",
     "amount": -60,
@@ -10351,7 +12551,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00281",
+    "id": "p00492",
     "date": "2026-03-10",
     "description": "Zelle Payment To NICOLE MONET DBP16YDQD",
     "amount": -500,
@@ -10516,7 +12716,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00216",
+    "id": "p00427",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -82.4,
@@ -10527,7 +12727,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00217",
+    "id": "p00428",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -10538,7 +12738,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00219",
+    "id": "p00430",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 AMAZON MKTPL*BD AMZN.COM/BILL WA US",
     "amount": -72.72,
@@ -10549,7 +12749,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00220",
+    "id": "p00431",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 AUDIBLE*1X0N48C AMZN.COM/BILL NJ US",
     "amount": -0.99,
@@ -10560,7 +12760,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00221",
+    "id": "p00432",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 TARGET.COM 800-591-3869 MN US",
     "amount": -75.56,
@@ -10571,7 +12771,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00223",
+    "id": "p00434",
     "date": "2026-03-11",
     "description": "Debit Purchase 0311 5200 SPEEDWAY 43613 OAK LAWN IL US",
     "amount": -67.12,
@@ -10725,7 +12925,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00176",
+    "id": "p00387",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 4337",
     "amount": 90,
@@ -10736,7 +12936,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00177",
+    "id": "p00388",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 6143",
     "amount": 70,
@@ -10747,7 +12947,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00178",
+    "id": "p00389",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 2119",
     "amount": 100,
@@ -10758,7 +12958,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00179",
+    "id": "p00390",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 3824",
     "amount": 75,
@@ -10769,7 +12969,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00180",
+    "id": "p00391",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 54,
@@ -10780,7 +12980,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00181",
+    "id": "p00392",
     "date": "2026-03-12",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 6.32,
@@ -10791,7 +12991,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00218",
+    "id": "p00429",
     "date": "2026-03-12",
     "description": "ATM W/D 0312 110502 5200 PNC BANK BURBANK IL US",
     "amount": -20,
@@ -10802,7 +13002,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00224",
+    "id": "p00435",
     "date": "2026-03-12",
     "description": "Debit Purchase 0312 5200 WALMART.COM 800 BENTONVILLE AR US",
     "amount": -27.06,
@@ -10813,7 +13013,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00313",
+    "id": "p00524",
     "date": "2026-03-12",
     "description": "PNC BANK BURBANK IL ATM Fee",
     "amount": -3.75,
@@ -10978,7 +13178,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00222",
+    "id": "p00433",
     "date": "2026-03-13",
     "description": "Debit Purchase 0313 5200 MCDONALD'S F490 CHICAGO IL US",
     "amount": -4.42,
@@ -10989,7 +13189,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00282",
+    "id": "p00493",
     "date": "2026-03-13",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -11000,7 +13200,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00283",
+    "id": "p00494",
     "date": "2026-03-13",
     "description": "ACH Withdrawal IRS USATAXPYMT",
     "amount": -300,
@@ -11011,7 +13211,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00225",
+    "id": "p00436",
     "date": "2026-03-14",
     "description": "Debit Purchase 0314 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -77.41,
@@ -11022,7 +13222,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00226",
+    "id": "p00437",
     "date": "2026-03-14",
     "description": "Third Party Debit 0314 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -5,
@@ -11033,7 +13233,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00227",
+    "id": "p00438",
     "date": "2026-03-14",
     "description": "Third Party Debit 0314 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -5,
@@ -11044,7 +13244,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00182",
+    "id": "p00393",
     "date": "2026-03-15",
     "description": "Zelle Payment From DANIEL MARTINEZ PB41ALMCC",
     "amount": 80,
@@ -11209,7 +13409,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00284",
+    "id": "p00495",
     "date": "2026-03-16",
     "description": "ACH Withdrawal UPGRADE, INC. PAYMENT",
     "amount": -191.05,
@@ -11220,7 +13420,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00285",
+    "id": "p00496",
     "date": "2026-03-16",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -11363,7 +13563,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00183",
+    "id": "p00394",
     "date": "2026-03-17",
     "description": "ACH Returned to MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": 63,
@@ -11374,7 +13574,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00184",
+    "id": "p00395",
     "date": "2026-03-17",
     "description": "ACH Returned to UPGRADE, INC. PAYMENT",
     "amount": 191.05,
@@ -11385,7 +13585,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00286",
+    "id": "p00497",
     "date": "2026-03-17",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -150,
@@ -11528,7 +13728,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00185",
+    "id": "p00396",
     "date": "2026-03-18",
     "description": "Zelle Payment From PHES LLC TBA1NLI2C",
     "amount": 170,
@@ -11539,7 +13739,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00186",
+    "id": "p00397",
     "date": "2026-03-18",
     "description": "Zelle Payment From PHES LLC HBC1TLN2C",
     "amount": 1200,
@@ -11550,7 +13750,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00287",
+    "id": "p00498",
     "date": "2026-03-18",
     "description": "ACH Withdrawal IL DEPT OF REVEN EDI PYMNTS",
     "amount": -1109,
@@ -11561,7 +13761,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00288",
+    "id": "p00499",
     "date": "2026-03-18",
     "description": "Zelle Payment To PHES DBE1TLN2D",
     "amount": -100,
@@ -11715,7 +13915,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00187",
+    "id": "p00398",
     "date": "2026-03-19",
     "description": "Early Pay PAYROLL ACH from Evinco Services",
     "amount": 524.4,
@@ -11726,7 +13926,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00228",
+    "id": "p00439",
     "date": "2026-03-19",
     "description": "Debit Purchase 0319 5200 HOCK INTL* O #6 COLUMBUS OH US",
     "amount": -49.99,
@@ -11737,7 +13937,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00229",
+    "id": "p00440",
     "date": "2026-03-19",
     "description": "Debit Purchase 0319 5200 MYFICO.COM 8003194433 MT US",
     "amount": -39.95,
@@ -11748,7 +13948,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00230",
+    "id": "p00441",
     "date": "2026-03-19",
     "description": "Debit Purchase 0319 5200 SPEEDWAY 43613 OAK LAWN IL US",
     "amount": -30.74,
@@ -11759,7 +13959,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00289",
+    "id": "p00500",
     "date": "2026-03-19",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -2,
@@ -11770,7 +13970,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00290",
+    "id": "p00501",
     "date": "2026-03-19",
     "description": "Zelle Payment To NICOLE MONET DBT1GLD3D",
     "amount": -220.08,
@@ -11990,7 +14190,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00291",
+    "id": "p00502",
     "date": "2026-03-20",
     "description": "Zelle Payment To DIANA XBF16LK3D",
     "amount": -9,
@@ -12001,7 +14201,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00292",
+    "id": "p00503",
     "date": "2026-03-20",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -12012,7 +14212,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00293",
+    "id": "p00504",
     "date": "2026-03-20",
     "description": "ACH Withdrawal PAYPAL INST XFER",
     "amount": -19.83,
@@ -12023,7 +14223,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00294",
+    "id": "p00505",
     "date": "2026-03-20",
     "description": "ACH Withdrawal UPGRADE, INC. PAYMENT",
     "amount": -191.05,
@@ -12034,7 +14234,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00188",
+    "id": "p00399",
     "date": "2026-03-21",
     "description": "Zelle Payment From PHES LLC 9BX14LFEC",
     "amount": 100,
@@ -12045,7 +14245,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00189",
+    "id": "p00400",
     "date": "2026-03-21",
     "description": "Zelle Payment From PHES LLC MBC16LFEC",
     "amount": 29,
@@ -12056,7 +14256,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00295",
+    "id": "p00506",
     "date": "2026-03-21",
     "description": "Zelle Payment To JEN POOP 911 4B21HLFED",
     "amount": -30,
@@ -12331,7 +14531,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00190",
+    "id": "p00401",
     "date": "2026-03-23",
     "description": "Zelle Payment From PHES LLC NBA1ALJFC",
     "amount": 120,
@@ -12342,7 +14542,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00296",
+    "id": "p00507",
     "date": "2026-03-23",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -12353,7 +14553,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00297",
+    "id": "p00508",
     "date": "2026-03-23",
     "description": "ACH Withdrawal MARILOU JERIOS RETRY PYMT PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -12452,7 +14652,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00191",
+    "id": "p00402",
     "date": "2026-03-24",
     "description": "Zelle Payment From PHES LLC 3BJ1MLH5C",
     "amount": 2300,
@@ -12463,7 +14663,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00298",
+    "id": "p00509",
     "date": "2026-03-24",
     "description": "Zelle Payment To NICOLE MONET OBP1MLH5D",
     "amount": -500,
@@ -12562,7 +14762,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00232",
+    "id": "p00443",
     "date": "2026-03-25",
     "description": "Debit Purchase 0325 5200 DUNKIN' MOBILE 800-447-0013 MA US",
     "amount": -12,
@@ -12573,7 +14773,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00299",
+    "id": "p00510",
     "date": "2026-03-25",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -80,
@@ -12584,7 +14784,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00300",
+    "id": "p00511",
     "date": "2026-03-25",
     "description": "ACH Withdrawal FREEDOM MTG PYMTS",
     "amount": -1657.05,
@@ -12716,7 +14916,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00192",
+    "id": "p00403",
     "date": "2026-03-26",
     "description": "Early Pay PAYROLL ACH from Evinco Services",
     "amount": 524.4,
@@ -12727,7 +14927,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00231",
+    "id": "p00442",
     "date": "2026-03-26",
     "description": "Debit Purchase 0326 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -27.95,
@@ -12738,7 +14938,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00233",
+    "id": "p00444",
     "date": "2026-03-26",
     "description": "Debit Purchase 0326 5200 SQ *WOLF'S BAKE EVERGREEN PAR IL US",
     "amount": -69.84,
@@ -12749,7 +14949,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00235",
+    "id": "p00446",
     "date": "2026-03-26",
     "description": "Debit Purchase 0326 5200 WENDY'S 0003 CHICAGO IL US",
     "amount": -17.24,
@@ -12760,7 +14960,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00236",
+    "id": "p00447",
     "date": "2026-03-26",
     "description": "Debit Purchase 0326 5200 Walmart.com Bentonville AR US",
     "amount": -26.62,
@@ -12771,7 +14971,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00301",
+    "id": "p00512",
     "date": "2026-03-26",
     "description": "Zelle Payment To NICOLE MONET ZBQ1ZL56D",
     "amount": -300,
@@ -12980,7 +15180,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00193",
+    "id": "p00404",
     "date": "2026-03-27",
     "description": "ACH Deposit From FID BKG SVC LLC 241162460 8XRBF",
     "amount": 1508.4,
@@ -12991,7 +15191,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00194",
+    "id": "p00405",
     "date": "2026-03-27",
     "description": "ACH Deposit From FID BKG SVC LLC Z32204744 8XRCX",
     "amount": 309,
@@ -13002,7 +15202,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00234",
+    "id": "p00445",
     "date": "2026-03-27",
     "description": "Debit Purchase 0327 5200 DD *DOORDASH PA 855-973-1040 CA US",
     "amount": -66.93,
@@ -13013,7 +15213,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00302",
+    "id": "p00513",
     "date": "2026-03-27",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -13024,7 +15224,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00303",
+    "id": "p00514",
     "date": "2026-03-27",
     "description": "Zelle Payment To ANNIE 4BT1MLNHD",
     "amount": -100,
@@ -13035,7 +15235,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00304",
+    "id": "p00515",
     "date": "2026-03-27",
     "description": "Zelle Payment To PHES SERVICES IBO1DLVHD",
     "amount": -1100,
@@ -13046,7 +15246,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00237",
+    "id": "p00448",
     "date": "2026-03-28",
     "description": "Debit Purchase 0328 5200 CULVERS 2122600895 IL US",
     "amount": -45.82,
@@ -13057,7 +15257,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00238",
+    "id": "p00449",
     "date": "2026-03-28",
     "description": "Debit Purchase 0328 5200 PRIME VIDEO *BC 888-802-3080 WA US",
     "amount": -24.99,
@@ -13068,7 +15268,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00241",
+    "id": "p00452",
     "date": "2026-03-28",
     "description": "Debit Purchase 0328 5200 7-ELEVEN 33765 OAK LAWN IL US",
     "amount": -12.03,
@@ -13079,7 +15279,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00305",
+    "id": "p00516",
     "date": "2026-03-28",
     "description": "Zelle Payment To JEN POOP 911 EBE1DLW7D",
     "amount": -30,
@@ -13090,7 +15290,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00195",
+    "id": "p00406",
     "date": "2026-03-29",
     "description": "Zelle Payment From PHES LLC SBW1PLIIC",
     "amount": 1100,
@@ -13101,7 +15301,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00239",
+    "id": "p00450",
     "date": "2026-03-29",
     "description": "Debit Purchase 0329 5200 MCDONALD'S F490 CHICAGO IL US",
     "amount": -4.42,
@@ -13112,7 +15312,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00240",
+    "id": "p00451",
     "date": "2026-03-29",
     "description": "Debit Purchase 0329 5200 DD/BR #335722 Q OAKLAWN IL US",
     "amount": -29.68,
@@ -13123,7 +15323,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00242",
+    "id": "p00453",
     "date": "2026-03-29",
     "description": "Debit Purchase 0329 5200 DD *DOORDASH PA 855-973-1040 CA US",
     "amount": -47.34,
@@ -13134,7 +15334,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00243",
+    "id": "p00454",
     "date": "2026-03-29",
     "description": "Debit Purchase 0329 5200 PRIME VIDEO *BC 888-802-3080 WA US",
     "amount": -29.99,
@@ -13145,7 +15345,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00306",
+    "id": "p00517",
     "date": "2026-03-29",
     "description": "Zelle Payment To NICOLE MONET QBW1AL1ID",
     "amount": -70,
@@ -13156,7 +15356,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00307",
+    "id": "p00518",
     "date": "2026-03-29",
     "description": "Zelle Payment To NICOLE MONET XBI1ELRID",
     "amount": -28.8,
@@ -13167,7 +15367,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00308",
+    "id": "p00519",
     "date": "2026-03-29",
     "description": "Zelle Payment To NICOLE MONET HBD1TLIID",
     "amount": -650,
@@ -13178,7 +15378,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00345",
+    "id": "p00556",
     "date": "2026-03-29",
     "description": "Debit Purchase 0329 5200 BURGER KING #99 OAK LAWN IL US",
     "amount": -6.59,
@@ -13431,7 +15631,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00309",
+    "id": "p00520",
     "date": "2026-03-30",
     "description": "ACH Withdrawal TDCPA PLLC SALE",
     "amount": -500,
@@ -13442,7 +15642,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00310",
+    "id": "p00521",
     "date": "2026-03-30",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -13453,7 +15653,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00311",
+    "id": "p00522",
     "date": "2026-03-30",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -125,
@@ -13464,7 +15664,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00346",
+    "id": "p00557",
     "date": "2026-03-30",
     "description": "Debit Purchase 0330 5200 AMAZON.COM*BG6Y AMZN.COM/BILL WA",
     "amount": -24.7,
@@ -13618,7 +15818,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00312",
+    "id": "p00523",
     "date": "2026-03-31",
     "description": "ACH Withdrawal AMAZON BUSINESS INTERNET",
     "amount": -32.38,
@@ -13816,7 +16016,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00314",
+    "id": "p00525",
     "date": "2026-04-01",
     "description": "ACH Returned to AMAZON BUSINESS INTERNET",
     "amount": 32.38,
@@ -14135,7 +16335,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00315",
+    "id": "p00526",
     "date": "2026-04-02",
     "description": "Early Pay PAYROLL ACH from Evinco Services",
     "amount": 924.4,
@@ -14146,7 +16346,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00347",
+    "id": "p00558",
     "date": "2026-04-02",
     "description": "Debit Purchase 0402 5200 VILLAGE OF EVER CHICAGO IL US",
     "amount": -350.29,
@@ -14157,7 +16357,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00348",
+    "id": "p00559",
     "date": "2026-04-02",
     "description": "Debit Purchase 0402 5200 DOORDASH*04/02- 855-973-1040 CA US",
     "amount": -107.52,
@@ -14168,7 +16368,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00418",
+    "id": "p00629",
     "date": "2026-04-02",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -56.1,
@@ -14179,7 +16379,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00419",
+    "id": "p00630",
     "date": "2026-04-02",
     "description": "Zelle Payment To NICOLE MONET PBE17LPKD",
     "amount": -200,
@@ -14190,7 +16390,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00420",
+    "id": "p00631",
     "date": "2026-04-02",
     "description": "Zelle Payment To NICOLE MONET 6BP18LDYD",
     "amount": -125,
@@ -14201,7 +16401,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00421",
+    "id": "p00632",
     "date": "2026-04-02",
     "description": "ACH Withdrawal DISCOVER E-PAYMENT",
     "amount": -181,
@@ -14476,7 +16676,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00316",
+    "id": "p00527",
     "date": "2026-04-03",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 805.19,
@@ -14487,7 +16687,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00317",
+    "id": "p00528",
     "date": "2026-04-03",
     "description": "Zelle Payment From PHES LLC MB11RLHLC",
     "amount": 1105.76,
@@ -14498,7 +16698,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00351",
+    "id": "p00562",
     "date": "2026-04-03",
     "description": "Debit Purchase 0403 5200 AMAZON MKTPL*BC AMZN.COM/BILL WA US",
     "amount": -82.5,
@@ -14509,7 +16709,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00422",
+    "id": "p00633",
     "date": "2026-04-03",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -100,
@@ -14520,7 +16720,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00423",
+    "id": "p00634",
     "date": "2026-04-03",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -14531,7 +16731,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00424",
+    "id": "p00635",
     "date": "2026-04-03",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -130,
@@ -14542,7 +16742,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00425",
+    "id": "p00636",
     "date": "2026-04-03",
     "description": "ACH Withdrawal MARILOU JERIOS IAT PAYPAL PUROK RIVERSIDE RAFAELA",
     "amount": -63,
@@ -14553,7 +16753,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00426",
+    "id": "p00637",
     "date": "2026-04-03",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -300,
@@ -14564,7 +16764,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00427",
+    "id": "p00638",
     "date": "2026-04-03",
     "description": "ACH Withdrawal Bridgecrest DT RETAIL",
     "amount": -442,
@@ -14575,7 +16775,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00349",
+    "id": "p00560",
     "date": "2026-04-04",
     "description": "Debit Purchase 0404 5200 DUNKIN #347097 708-612-4466 IL US",
     "amount": -11.71,
@@ -14586,7 +16786,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00350",
+    "id": "p00561",
     "date": "2026-04-04",
     "description": "Debit Purchase 0404 5200 AMAZON.COM*BG1M AMZN.COM/BILL WA",
     "amount": -47.95,
@@ -14597,7 +16797,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00352",
+    "id": "p00563",
     "date": "2026-04-04",
     "description": "Debit Purchase 0404 5200 AMAZON MKTPL*B7 AMZN.COM/BILL WA US",
     "amount": -51.65,
@@ -14608,7 +16808,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00353",
+    "id": "p00564",
     "date": "2026-04-04",
     "description": "Debit Purchase 0404 5200 Walmart.com Bentonville AR US",
     "amount": -133.24,
@@ -14619,7 +16819,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00354",
+    "id": "p00565",
     "date": "2026-04-04",
     "description": "Debit Purchase 0404 5200 DD *DOORDASH CU 855-973-1040 CA US",
     "amount": -89.58,
@@ -14630,7 +16830,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00428",
+    "id": "p00639",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 6020",
     "amount": -25,
@@ -14641,7 +16841,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00429",
+    "id": "p00640",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 2119",
     "amount": -50,
@@ -14652,7 +16852,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00430",
+    "id": "p00641",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -50,
@@ -14663,7 +16863,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00431",
+    "id": "p00642",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 6143",
     "amount": -30,
@@ -14674,7 +16874,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00432",
+    "id": "p00643",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -50,
@@ -14685,7 +16885,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00433",
+    "id": "p00644",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 3958",
     "amount": -25,
@@ -14696,7 +16896,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00434",
+    "id": "p00645",
     "date": "2026-04-04",
     "description": "Transfer To ONLINE SAVINGS 4337",
     "amount": -50,
@@ -14707,7 +16907,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00318",
+    "id": "p00529",
     "date": "2026-04-05",
     "description": "POS Credit 0405 5200 AMAZON.COM AMZN.COM/BILL WA US",
     "amount": 47.95,
@@ -14949,7 +17149,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00435",
+    "id": "p00646",
     "date": "2026-04-06",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -11.99,
@@ -14960,7 +17160,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00436",
+    "id": "p00647",
     "date": "2026-04-06",
     "description": "ACH Withdrawal AMAZON BUSINESS RETRY PYMT",
     "amount": -32.38,
@@ -15103,7 +17303,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00319",
+    "id": "p00530",
     "date": "2026-04-07",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 977.08,
@@ -15114,7 +17314,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00355",
+    "id": "p00566",
     "date": "2026-04-07",
     "description": "Debit Purchase 0407 5200 SKOOL.COM 3103596796 CA US",
     "amount": -9,
@@ -15125,7 +17325,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00357",
+    "id": "p00568",
     "date": "2026-04-07",
     "description": "Debit Purchase 0407 5200 AMAZON.COM*BC1W AMZN.COM/BILL WA",
     "amount": -24.74,
@@ -15136,7 +17336,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00361",
+    "id": "p00572",
     "date": "2026-04-07",
     "description": "Debit Purchase 0407 5200 KLARNA COLUMBUS OH US",
     "amount": -85.25,
@@ -15147,7 +17347,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00437",
+    "id": "p00648",
     "date": "2026-04-07",
     "description": "ACH Withdrawal COMED PAYMENT BILLPAY",
     "amount": -248.7,
@@ -15158,7 +17358,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00438",
+    "id": "p00649",
     "date": "2026-04-07",
     "description": "Zelle Payment To NICOLE MONET ZB81GL1ND",
     "amount": -450,
@@ -15389,7 +17589,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00356",
+    "id": "p00567",
     "date": "2026-04-08",
     "description": "Debit Purchase 0408 5200 APPLE CASH SENT 877-233-8552 CA US",
     "amount": -20,
@@ -15400,7 +17600,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00358",
+    "id": "p00569",
     "date": "2026-04-08",
     "description": "Debit Purchase 0408 5200 CHIPOTLE MEX GR 303-595-4000 CA US",
     "amount": -16.45,
@@ -15411,7 +17611,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00359",
+    "id": "p00570",
     "date": "2026-04-08",
     "description": "Debit Purchase 0408 5200 DD/BR #342523 Q EVERGREEN PK IL US",
     "amount": -19.32,
@@ -15422,7 +17622,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00360",
+    "id": "p00571",
     "date": "2026-04-08",
     "description": "Debit Purchase 0408 5200 AMAZON MKTPL*BC AMZN.COM/BILL WA US",
     "amount": -24.42,
@@ -15433,7 +17633,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00364",
+    "id": "p00575",
     "date": "2026-04-08",
     "description": "Debit Purchase 0408 5200 DUNKIN' MOBILE 800-447-0013 MA US",
     "amount": -12,
@@ -15664,7 +17864,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00320",
+    "id": "p00531",
     "date": "2026-04-09",
     "description": "Zelle Payment From PHES LLC 2BS15LDOC",
     "amount": 600,
@@ -15675,7 +17875,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00321",
+    "id": "p00532",
     "date": "2026-04-09",
     "description": "Early Pay PAYROLL ACH from Evinco Services",
     "amount": 524.4,
@@ -15686,7 +17886,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00322",
+    "id": "p00533",
     "date": "2026-04-09",
     "description": "Zelle Payment From PHES LLC DBX1TL6OC",
     "amount": 2400,
@@ -15697,7 +17897,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00362",
+    "id": "p00573",
     "date": "2026-04-09",
     "description": "Debit Purchase 0409 5200 ParkWhiz, Inc. Chicago IL US",
     "amount": -36.63,
@@ -15708,7 +17908,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00363",
+    "id": "p00574",
     "date": "2026-04-09",
     "description": "Debit Purchase 0409 5200 CTLP*LEVY LINCO CHICAGO IL US",
     "amount": -4.85,
@@ -15719,7 +17919,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00365",
+    "id": "p00576",
     "date": "2026-04-09",
     "description": "Third Party Debit 0409 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -0.48,
@@ -15730,7 +17930,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00368",
+    "id": "p00579",
     "date": "2026-04-09",
     "description": "Debit Purchase 0409 5200 LEVY@ LINCOLN P CHICAGO IL US",
     "amount": -78.78,
@@ -15741,7 +17941,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00439",
+    "id": "p00650",
     "date": "2026-04-09",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -68.9,
@@ -15752,7 +17952,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00440",
+    "id": "p00651",
     "date": "2026-04-09",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -132.86,
@@ -15763,7 +17963,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00441",
+    "id": "p00652",
     "date": "2026-04-09",
     "description": "Zelle Payment To NICOLE MONET XB61HLDOD",
     "amount": -150,
@@ -15774,7 +17974,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00442",
+    "id": "p00653",
     "date": "2026-04-09",
     "description": "Zelle Payment To ANNIE ZBN11L4OD",
     "amount": -100,
@@ -15785,7 +17985,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00443",
+    "id": "p00654",
     "date": "2026-04-09",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -1000,
@@ -15917,7 +18117,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00366",
+    "id": "p00577",
     "date": "2026-04-10",
     "description": "Debit Purchase 0410 5200 UBER *EATS 866-576-1039 CA US",
     "amount": -42.1,
@@ -15928,7 +18128,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00367",
+    "id": "p00578",
     "date": "2026-04-10",
     "description": "Debit Purchase 0410 5200 DD *DOORDASH WA 855-973-1040 CA US",
     "amount": -70.75,
@@ -15939,7 +18139,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00369",
+    "id": "p00580",
     "date": "2026-04-10",
     "description": "Debit Purchase 0410 5200 AUDIBLE*5Z8178O AMZN.COM/BILL NJ US",
     "amount": -14.95,
@@ -15950,7 +18150,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00372",
+    "id": "p00583",
     "date": "2026-04-10",
     "description": "Debit Purchase 0410 5200 DUNKIN' MOBILE 800-447-0013 MA US",
     "amount": -10,
@@ -15961,7 +18161,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00444",
+    "id": "p00655",
     "date": "2026-04-10",
     "description": "ACH Withdrawal CAPITAL ONE CRCARDPMT",
     "amount": -250,
@@ -15972,7 +18172,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00445",
+    "id": "p00656",
     "date": "2026-04-10",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -15983,7 +18183,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00446",
+    "id": "p00657",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 6020",
     "amount": -30,
@@ -15994,7 +18194,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00447",
+    "id": "p00658",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 3824",
     "amount": -100,
@@ -16005,7 +18205,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00448",
+    "id": "p00659",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 3958",
     "amount": -200,
@@ -16016,7 +18216,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00449",
+    "id": "p00660",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -50,
@@ -16027,7 +18227,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00450",
+    "id": "p00661",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 6020",
     "amount": -50,
@@ -16038,7 +18238,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00451",
+    "id": "p00662",
     "date": "2026-04-10",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -100,
@@ -16049,7 +18249,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00370",
+    "id": "p00581",
     "date": "2026-04-11",
     "description": "Debit Purchase 0411 5200 VILLAGE OF EVER EVERGREEN PAR IL US",
     "amount": -320,
@@ -16060,7 +18260,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00371",
+    "id": "p00582",
     "date": "2026-04-11",
     "description": "Debit Purchase 0411 5200 TST*SMOKEHOUSE CHICAGO RIDGE IL US",
     "amount": -28.18,
@@ -16071,7 +18271,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00373",
+    "id": "p00584",
     "date": "2026-04-11",
     "description": "Third Party Debit 0411 5200 FANDUELSBKPRIMA 888-221-1161 NJ US",
     "amount": -20,
@@ -16082,7 +18282,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00375",
+    "id": "p00586",
     "date": "2026-04-11",
     "description": "Debit Purchase 0411 5200 SBARRO 103 CHICAGO RIDGE IL US",
     "amount": -30.07,
@@ -16093,7 +18293,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00376",
+    "id": "p00587",
     "date": "2026-04-11",
     "description": "Debit Purchase 0411 5200 SBARRO 103 CHICAGO RIDGE IL US",
     "amount": -7.68,
@@ -16104,7 +18304,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00378",
+    "id": "p00589",
     "date": "2026-04-11",
     "description": "Debit Purchase 0411 5200 MCDONALDS #4897 BURBANK IL US",
     "amount": -20.14,
@@ -16115,7 +18315,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00452",
+    "id": "p00663",
     "date": "2026-04-11",
     "description": "Zelle Payment To JEN POOP 911 JBT1RLPUD",
     "amount": -30,
@@ -16126,7 +18326,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00453",
+    "id": "p00664",
     "date": "2026-04-11",
     "description": "Zelle Payment To KATIA GBD1ML6PD",
     "amount": -122.5,
@@ -16137,7 +18337,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00374",
+    "id": "p00585",
     "date": "2026-04-12",
     "description": "Debit Purchase 0412 5200 FULLERS CARWASH OAK LAWN IL US",
     "amount": -25,
@@ -16148,7 +18348,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00377",
+    "id": "p00588",
     "date": "2026-04-12",
     "description": "Debit Purchase 0412 5200 JEWEL OSCO 1214 CHICAGO IL US",
     "amount": -49.6,
@@ -16346,7 +18546,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00323",
+    "id": "p00534",
     "date": "2026-04-13",
     "description": "Zelle Payment From PHES LLC KBF16L4QC",
     "amount": 1250,
@@ -16357,7 +18557,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00454",
+    "id": "p00665",
     "date": "2026-04-13",
     "description": "ACH Withdrawal Credit One Bank Payment",
     "amount": -527.08,
@@ -16368,7 +18568,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00455",
+    "id": "p00666",
     "date": "2026-04-13",
     "description": "ACH Withdrawal CAPITAL ONE MOBILE PMT",
     "amount": -1000,
@@ -16478,7 +18678,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00379",
+    "id": "p00590",
     "date": "2026-04-14",
     "description": "Debit Purchase 0414 5200 SHELL5744408880 EVERGREEN PAR IL US",
     "amount": -26.5,
@@ -16489,7 +18689,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00456",
+    "id": "p00667",
     "date": "2026-04-14",
     "description": "Zelle Payment To NICOLE MONET 8BE1DLOQD",
     "amount": -100,
@@ -16566,7 +18766,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00324",
+    "id": "p00535",
     "date": "2026-04-15",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 200,
@@ -16577,7 +18777,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00325",
+    "id": "p00536",
     "date": "2026-04-15",
     "description": "Zelle Payment From EVINCO SERVICES IN ABH1HXAAC",
     "amount": 1000,
@@ -16588,7 +18788,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00380",
+    "id": "p00591",
     "date": "2026-04-15",
     "description": "Debit Purchase 0415 5200 TARGET.COM 800-591-3869 MN US",
     "amount": -25.39,
@@ -16599,7 +18799,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00381",
+    "id": "p00592",
     "date": "2026-04-15",
     "description": "Debit Purchase 0415 5200 TARGET.COM 800-591-3869 MN US",
     "amount": -18.88,
@@ -16610,7 +18810,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00382",
+    "id": "p00593",
     "date": "2026-04-15",
     "description": "Third Party Debit 0415 5200 AFFIRM.COM PAYM 8554233729 CA US",
     "amount": -36.28,
@@ -16621,7 +18821,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00383",
+    "id": "p00594",
     "date": "2026-04-15",
     "description": "Debit Purchase 0415 5200 MIDWEST ORTHOPA ORTHOEXPERTS. IL US",
     "amount": -94.47,
@@ -16632,7 +18832,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00457",
+    "id": "p00668",
     "date": "2026-04-15",
     "description": "ACH Withdrawal UPGRADE, INC. PAYMENT",
     "amount": -191.05,
@@ -16643,7 +18843,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00458",
+    "id": "p00669",
     "date": "2026-04-15",
     "description": "Zelle Payment To NICOLE MONET DB81KXAAD",
     "amount": -350,
@@ -16654,7 +18854,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00459",
+    "id": "p00670",
     "date": "2026-04-15",
     "description": "Transfer To ONLINE SAVINGS 2158",
     "amount": -250,
@@ -16665,7 +18865,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00460",
+    "id": "p00671",
     "date": "2026-04-15",
     "description": "Transfer To ONLINE SAVINGS 3958",
     "amount": -100,
@@ -16676,7 +18876,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00461",
+    "id": "p00672",
     "date": "2026-04-15",
     "description": "Transfer To ONLINE SAVINGS 2119",
     "amount": -25,
@@ -16687,7 +18887,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00462",
+    "id": "p00673",
     "date": "2026-04-15",
     "description": "Transfer To ONLINE SAVINGS 4337",
     "amount": -50,
@@ -16698,7 +18898,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00463",
+    "id": "p00674",
     "date": "2026-04-15",
     "description": "Transfer To ONLINE SAVINGS 6910",
     "amount": -50,
@@ -16940,7 +19140,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00326",
+    "id": "p00537",
     "date": "2026-04-17",
     "description": "Transfer From ONLINE SAVINGS 2158",
     "amount": 250,
@@ -16951,7 +19151,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00327",
+    "id": "p00538",
     "date": "2026-04-17",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 30,
@@ -16962,7 +19162,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00328",
+    "id": "p00539",
     "date": "2026-04-17",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 30,
@@ -16973,7 +19173,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00329",
+    "id": "p00540",
     "date": "2026-04-17",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 100,
@@ -16984,7 +19184,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00330",
+    "id": "p00541",
     "date": "2026-04-17",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 30,
@@ -16995,7 +19195,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00385",
+    "id": "p00596",
     "date": "2026-04-17",
     "description": "Debit Purchase 0417 5200 SHELL5744408880 EVERGREEN PAR IL US",
     "amount": -56.82,
@@ -17006,7 +19206,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00386",
+    "id": "p00597",
     "date": "2026-04-17",
     "description": "Debit Purchase 0417 5200 MCDONALDS #490 CHICAGO IL US",
     "amount": -15.34,
@@ -17017,7 +19217,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00464",
+    "id": "p00675",
     "date": "2026-04-17",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -50,
@@ -17028,7 +19228,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00465",
+    "id": "p00676",
     "date": "2026-04-17",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -17039,7 +19239,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00466",
+    "id": "p00677",
     "date": "2026-04-17",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -50,
@@ -17050,7 +19250,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00467",
+    "id": "p00678",
     "date": "2026-04-17",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -25,
@@ -17061,7 +19261,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00468",
+    "id": "p00679",
     "date": "2026-04-17",
     "description": "ACH Withdrawal CAPITAL ONE MOBILE PMT",
     "amount": -100,
@@ -17072,7 +19272,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00469",
+    "id": "p00680",
     "date": "2026-04-17",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -25,
@@ -17083,7 +19283,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00470",
+    "id": "p00681",
     "date": "2026-04-17",
     "description": "ACH Withdrawal AMAZON BUSINESS RETURN FEE",
     "amount": -25,
@@ -17094,7 +19294,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00384",
+    "id": "p00595",
     "date": "2026-04-18",
     "description": "Debit Purchase 0418 5200 MCDONALD'S F753 OAK LAWN IL US",
     "amount": -18,
@@ -17292,7 +19492,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00331",
+    "id": "p00542",
     "date": "2026-04-20",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 112,
@@ -17303,7 +19503,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00471",
+    "id": "p00682",
     "date": "2026-04-20",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -39.09,
@@ -17314,7 +19514,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00472",
+    "id": "p00683",
     "date": "2026-04-20",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -54.2,
@@ -17325,7 +19525,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00473",
+    "id": "p00684",
     "date": "2026-04-20",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -19.83,
@@ -17336,7 +19536,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00474",
+    "id": "p00685",
     "date": "2026-04-20",
     "description": "ACH Withdrawal FD Sptsbk Casino payment",
     "amount": -8,
@@ -17435,7 +19635,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00332",
+    "id": "p00543",
     "date": "2026-04-21",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 2499.77,
@@ -17446,7 +19646,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00333",
+    "id": "p00544",
     "date": "2026-04-21",
     "description": "Transfer From ONLINE SAVINGS 4337",
     "amount": 100,
@@ -17457,7 +19657,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00387",
+    "id": "p00598",
     "date": "2026-04-21",
     "description": "Debit Purchase 0421 5200 TARGET.COM 800-591-3869 MN US",
     "amount": -42.91,
@@ -17468,7 +19668,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00388",
+    "id": "p00599",
     "date": "2026-04-21",
     "description": "Debit Purchase 0421 5200 TARGET.COM 800-591-3869 MN US",
     "amount": -12.95,
@@ -17479,7 +19679,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00390",
+    "id": "p00601",
     "date": "2026-04-21",
     "description": "Debit Purchase 0421 5200 DD *DOORDASH TA 6506819470 CA US",
     "amount": -44.61,
@@ -17490,7 +19690,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00475",
+    "id": "p00686",
     "date": "2026-04-21",
     "description": "Zelle Payment To NICOLE MONET WB813XX2D",
     "amount": -600,
@@ -17501,7 +19701,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00476",
+    "id": "p00687",
     "date": "2026-04-21",
     "description": "ACH Withdrawal FREEDOM MTG PYMTS",
     "amount": -1657.05,
@@ -17633,7 +19833,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00334",
+    "id": "p00545",
     "date": "2026-04-22",
     "description": "Transfer From ONLINE SAVINGS 6910",
     "amount": 45,
@@ -17644,7 +19844,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00335",
+    "id": "p00546",
     "date": "2026-04-22",
     "description": "Transfer From ONLINE SAVINGS 6020",
     "amount": 45,
@@ -17655,7 +19855,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00389",
+    "id": "p00600",
     "date": "2026-04-22",
     "description": "Debit Purchase 0422 5200 VSI*BURBANK PAR BURBANK IL US",
     "amount": -2.58,
@@ -17666,7 +19866,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00477",
+    "id": "p00688",
     "date": "2026-04-22",
     "description": "Zelle Payment To BETO BARBER PBN1NXCDD",
     "amount": -110,
@@ -17677,7 +19877,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00478",
+    "id": "p00689",
     "date": "2026-04-22",
     "description": "Zelle Payment To JESUS 4BO1AX4DD",
     "amount": -100,
@@ -17688,7 +19888,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00479",
+    "id": "p00690",
     "date": "2026-04-22",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -15.05,
@@ -17699,7 +19899,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00480",
+    "id": "p00691",
     "date": "2026-04-22",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -25,
@@ -17710,7 +19910,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00481",
+    "id": "p00692",
     "date": "2026-04-22",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -25.5,
@@ -17721,7 +19921,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00482",
+    "id": "p00693",
     "date": "2026-04-22",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -43.46,
@@ -17798,7 +19998,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00336",
+    "id": "p00547",
     "date": "2026-04-23",
     "description": "Zelle Payment From EVINCO SERVICES IN ABJ1HX13C",
     "amount": 600,
@@ -17809,7 +20009,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00337",
+    "id": "p00548",
     "date": "2026-04-23",
     "description": "Transfer From ONLINE SAVINGS 3958",
     "amount": 325,
@@ -17820,7 +20020,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00391",
+    "id": "p00602",
     "date": "2026-04-23",
     "description": "ATM W/D 0423 194356 5200 BMO BANK N.A. EVERGREEN PK IL US",
     "amount": -400,
@@ -17831,7 +20031,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00392",
+    "id": "p00603",
     "date": "2026-04-23",
     "description": "Debit Purchase 0423 5200 WALMART.COM 800 BENTONVILLE AR US",
     "amount": -17.29,
@@ -17842,7 +20042,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00393",
+    "id": "p00604",
     "date": "2026-04-23",
     "description": "Debit Purchase 0423 5200 MYFICO.COM 8003194433 MT US",
     "amount": -39.95,
@@ -17853,7 +20053,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00397",
+    "id": "p00608",
     "date": "2026-04-23",
     "description": "Debit Purchase 0423 5200 DD *DOORDASH PA 855-973-1040 CA US",
     "amount": -60.88,
@@ -17864,7 +20064,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00483",
+    "id": "p00694",
     "date": "2026-04-23",
     "description": "Zelle Payment To NICOLE MONET 2BG1QX13D",
     "amount": -200,
@@ -17875,7 +20075,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00484",
+    "id": "p00695",
     "date": "2026-04-23",
     "description": "ACH Withdrawal PAYPAL PURCHASE",
     "amount": -110.49,
@@ -17886,7 +20086,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00501",
+    "id": "p00712",
     "date": "2026-04-23",
     "description": "BMO BANK N.A. EVERGREEN PK IL ATM Fee",
     "amount": -3.5,
@@ -17974,7 +20174,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00338",
+    "id": "p00549",
     "date": "2026-04-24",
     "description": "ACH Deposit PAYROLL From PHES LLC",
     "amount": 1450,
@@ -17985,7 +20185,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00339",
+    "id": "p00550",
     "date": "2026-04-24",
     "description": "Transfer From ONLINE SAVINGS 6143",
     "amount": 30,
@@ -17996,7 +20196,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00340",
+    "id": "p00551",
     "date": "2026-04-24",
     "description": "Transfer From ONLINE SAVINGS 3824",
     "amount": 50,
@@ -18007,7 +20207,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00341",
+    "id": "p00552",
     "date": "2026-04-24",
     "description": "Transfer From ONLINE SAVINGS 2119",
     "amount": 75,
@@ -18018,7 +20218,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00394",
+    "id": "p00605",
     "date": "2026-04-24",
     "description": "Debit Purchase 0424 5200 CURB LV TAXI YC ASTORIA NY US",
     "amount": -40.01,
@@ -18029,7 +20229,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00396",
+    "id": "p00607",
     "date": "2026-04-24",
     "description": "Debit Purchase 0424 5200 AMAZON MKTPL*BY AMZN.COM/BILL WA US",
     "amount": -90.17,
@@ -18040,7 +20240,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00398",
+    "id": "p00609",
     "date": "2026-04-24",
     "description": "Debit Purchase 0424 5200 FORTUNA LAS VEGAS NV US",
     "amount": -380.65,
@@ -18051,7 +20251,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00399",
+    "id": "p00610",
     "date": "2026-04-24",
     "description": "Debit Purchase 0424 5200 BEIJING NOODLE LAS VEGAS NV US",
     "amount": -46.84,
@@ -18062,7 +20262,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00401",
+    "id": "p00612",
     "date": "2026-04-24",
     "description": "Debit Purchase 0424 5200 FORTUNA LAS VEGAS NV US",
     "amount": -172.99,
@@ -18073,7 +20273,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00485",
+    "id": "p00696",
     "date": "2026-04-24",
     "description": "Zelle Payment To NICOLE MONET 1BU19XCED",
     "amount": -70,
@@ -18084,7 +20284,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00486",
+    "id": "p00697",
     "date": "2026-04-24",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -25,
@@ -18095,7 +20295,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00487",
+    "id": "p00698",
     "date": "2026-04-24",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -25,
@@ -18106,7 +20306,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00488",
+    "id": "p00699",
     "date": "2026-04-24",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -50,
@@ -18117,7 +20317,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00489",
+    "id": "p00700",
     "date": "2026-04-24",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -75,
@@ -18128,7 +20328,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00490",
+    "id": "p00701",
     "date": "2026-04-24",
     "description": "ACH Withdrawal FID BKG SVC LLC MONEYLINE",
     "amount": -50,
@@ -18139,7 +20339,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00491",
+    "id": "p00702",
     "date": "2026-04-24",
     "description": "ACH Withdrawal AFFIRM.COM PAYME AFFIRM.COM",
     "amount": -48.66,
@@ -18150,7 +20350,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00492",
+    "id": "p00703",
     "date": "2026-04-24",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -155,
@@ -18161,7 +20361,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00493",
+    "id": "p00704",
     "date": "2026-04-24",
     "description": "Zelle Payment To NICOLE MONET 4BZ1QXKED",
     "amount": -150,
@@ -18172,7 +20372,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00494",
+    "id": "p00705",
     "date": "2026-04-24",
     "description": "Zelle Payment To MOM MBY1SXKED",
     "amount": -100,
@@ -18183,7 +20383,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00395",
+    "id": "p00606",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 APPIAN WAY ESSE LAS VEGAS NV US",
     "amount": -50.25,
@@ -18194,7 +20394,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00404",
+    "id": "p00615",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -23.68,
@@ -18205,7 +20405,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00405",
+    "id": "p00616",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -34.27,
@@ -18216,7 +20416,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00406",
+    "id": "p00617",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -28.67,
@@ -18227,7 +20427,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00407",
+    "id": "p00618",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -31.77,
@@ -18238,7 +20438,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00408",
+    "id": "p00619",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -35.52,
@@ -18249,7 +20449,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00409",
+    "id": "p00620",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 SICK NEW WORLD LOS ANGELES CA US",
     "amount": -24.93,
@@ -18260,7 +20460,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00410",
+    "id": "p00621",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 ALEXXA'S S LAS LAS VEGAS NV US",
     "amount": -135.62,
@@ -18271,7 +20471,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00412",
+    "id": "p00623",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 DESERT CAB LAS VEGAS NV US",
     "amount": -21.31,
@@ -18282,7 +20482,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00413",
+    "id": "p00624",
     "date": "2026-04-25",
     "description": "Debit Purchase 0425 5200 CVS/PHARMACY #1 LAS VEGAS NV US",
     "amount": -25.52,
@@ -18293,7 +20493,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00342",
+    "id": "p00553",
     "date": "2026-04-26",
     "description": "Zelle Payment From PHES LLC PBU1WX3FC",
     "amount": 315,
@@ -18304,7 +20504,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00400",
+    "id": "p00611",
     "date": "2026-04-26",
     "description": "Debit Purchase 0426 5200 APPIAN WAY ESSE LAS VEGAS NV US",
     "amount": -12.95,
@@ -18315,7 +20515,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00402",
+    "id": "p00613",
     "date": "2026-04-26",
     "description": "Debit Purchase 0426 5200 MOKBAR LAS VEGAS NV US",
     "amount": -36.63,
@@ -18326,7 +20526,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00403",
+    "id": "p00614",
     "date": "2026-04-26",
     "description": "Debit Purchase 0426 5200 TORTAZO LAS VEGAS NV US",
     "amount": -60.42,
@@ -18337,7 +20537,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00411",
+    "id": "p00622",
     "date": "2026-04-26",
     "description": "Debit Purchase 0426 5200 CURB LV TAXI DE ASTORIA NY US",
     "amount": -15.64,
@@ -18513,7 +20713,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00495",
+    "id": "p00706",
     "date": "2026-04-27",
     "description": "ACH Withdrawal APPLECARD GSBANK PAYMENT",
     "amount": -210,
@@ -18689,7 +20889,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00343",
+    "id": "p00554",
     "date": "2026-04-28",
     "description": "Zelle Payment From PHES LLC CBO1KX6GC",
     "amount": 1250,
@@ -18700,7 +20900,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00415",
+    "id": "p00626",
     "date": "2026-04-28",
     "description": "Debit Purchase 0428 5200 DOORDASH*04/28- 855-973-1040 CA US",
     "amount": -50.75,
@@ -18711,7 +20911,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00417",
+    "id": "p00628",
     "date": "2026-04-28",
     "description": "Debit Purchase 0428 5200 TST*FLAP-JACKS OAK LAWN IL US",
     "amount": -30.23,
@@ -18722,7 +20922,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00496",
+    "id": "p00707",
     "date": "2026-04-28",
     "description": "ACH Withdrawal IRS USATAXPYMT",
     "amount": -300,
@@ -18733,7 +20933,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00497",
+    "id": "p00708",
     "date": "2026-04-28",
     "description": "Zelle Payment To NICOLE MONET KBD1YX6GD",
     "amount": -500,
@@ -18876,7 +21076,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00344",
+    "id": "p00555",
     "date": "2026-04-29",
     "description": "Zelle Payment From EVINCO SERVICES IN EBS12XN6C",
     "amount": 1200,
@@ -18887,7 +21087,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00414",
+    "id": "p00625",
     "date": "2026-04-29",
     "description": "Debit Purchase 0429 5200 Natural Gas Bil Atlanta GA US",
     "amount": -150,
@@ -18898,7 +21098,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00416",
+    "id": "p00627",
     "date": "2026-04-29",
     "description": "Debit Purchase 0429 5200 APPLE CASH SENT 877-233-8552 CA US",
     "amount": -10,
@@ -18909,7 +21109,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00498",
+    "id": "p00709",
     "date": "2026-04-29",
     "description": "Zelle Payment To NICOLE MONET 7BM1GXN6D",
     "amount": -300,
@@ -19074,7 +21274,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00499",
+    "id": "p00710",
     "date": "2026-04-30",
     "description": "ACH Withdrawal AFFIRM.COM PAYME AFFIRM.COM",
     "amount": -19.88,
@@ -19228,7 +21428,7 @@ export const SEED_TRANSACTIONS = [
     "flagged": false
   },
   {
-    "id": "p00500",
+    "id": "p00711",
     "date": "2026-05-01",
     "description": "Zelle Payment To JOSE UBD1CXA7D",
     "amount": -80,
@@ -23141,6 +25341,127 @@ export const SEED_TRANSACTIONS = [
     "merchantName": "Interest Payment I-GEN126052900149144",
     "accountId": "pnc-mmkt-1972",
     "accountType": "business",
+    "flagged": false
+  },
+  {
+    "id": "p00001",
+    "date": "2026-12-30",
+    "description": "POS Credit 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
+    "amount": 94.85,
+    "categoryId": "other-income",
+    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00041",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 DD *DOORDASH OB 855-973-1040 CA US",
+    "amount": -37.14,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH OB",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00042",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 LEPAR ANIMAL HO EVERGREEN PAR IL US",
+    "amount": -94.85,
+    "categoryId": "uncategorized",
+    "merchantName": "LEPAR ANIMAL HO EVERGREEN PAR",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00043",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -11,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00044",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 FANDANGO * 866-857-5191 CA US",
+    "amount": -42.64,
+    "categoryId": "uncategorized",
+    "merchantName": "FANDANGO *",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00045",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 AMAZON.COM*8958 AMZN.COM/BILL WA",
+    "amount": -38.33,
+    "categoryId": "shopping",
+    "merchantName": "AMAZON.COM*8958 AMZN.COM/BILL WA",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00046",
+    "date": "2026-12-30",
+    "description": "Debit Purchase 1230 5200 MARAZAN LAW LLC API.AFFINIPAY TX US",
+    "amount": -250,
+    "categoryId": "uncategorized",
+    "merchantName": "MARAZAN LAW LLC API.AFFINIPAY",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00048",
+    "date": "2026-12-31",
+    "description": "Debit Purchase 1231 5200 DUNKIN' MOBILE 800-447-0013 MA US",
+    "amount": -11,
+    "categoryId": "restaurants",
+    "merchantName": "DUNKIN' MOBILE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00049",
+    "date": "2026-12-31",
+    "description": "Debit Purchase 1231 5200 AMC 2539 CHICAG CHICAGO RIDGE IL US",
+    "amount": -33.47,
+    "categoryId": "entertainment",
+    "merchantName": "AMC 2539 CHICAG CHICAGO RIDGE",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00050",
+    "date": "2026-12-31",
+    "description": "Debit Purchase 1231 5200 PRIME VIDEO *EW 888-802-3080 WA US",
+    "amount": -24.99,
+    "categoryId": "software-subscriptions",
+    "merchantName": "PRIME VIDEO *EW",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
+    "flagged": false
+  },
+  {
+    "id": "p00051",
+    "date": "2026-12-31",
+    "description": "Debit Purchase 1231 5200 DD *DOORDASH TH 6506819470 CA US",
+    "amount": -68.3,
+    "categoryId": "food-delivery",
+    "merchantName": "DD *DOORDASH TH 6506819470",
+    "accountId": "operating-account---0714",
+    "accountType": "personal",
     "flagged": false
   }
 ];

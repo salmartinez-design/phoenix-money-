@@ -86,11 +86,11 @@ function detectRecurring(transactions) {
 
 export function AppProvider({ children }) {
   const [transactions, setTransactions] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-transactions')) || SEED_TRANSACTIONS; }
+    try { const s = JSON.parse(localStorage.getItem('phoenix-transactions')); return (Array.isArray(s) && s.length) ? s : SEED_TRANSACTIONS; }
     catch { return SEED_TRANSACTIONS; }
   });
   const [rules, setRules] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-rules')) || SEED_RULES; }
+    try { const s = JSON.parse(localStorage.getItem('phoenix-rules')); return (Array.isArray(s) && s.length) ? s : SEED_RULES; }
     catch { return SEED_RULES; }
   });
   const [theme, setThemeState] = useState(() => localStorage.getItem('phoenix-theme') || 'light');
@@ -102,7 +102,7 @@ export function AppProvider({ children }) {
     catch { return {}; }
   });
   const [accounts, setAccounts] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-accounts')) || SEED_ACCOUNTS; }
+    try { const s = JSON.parse(localStorage.getItem('phoenix-accounts')); return (Array.isArray(s) && s.length) ? s : SEED_ACCOUNTS; }
     catch { return SEED_ACCOUNTS; }
   });
   const [notifPrefs, setNotifPrefs] = useState(() => {

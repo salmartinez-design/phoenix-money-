@@ -1,5 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <!-- Temporary clean monogram. Replace with the real Xentli artwork. -->
-  <rect x="28" y="8" width="8" height="48" rx="4" transform="rotate(45 32 32)" fill="#15120D"/>
-  <rect x="28" y="8" width="8" height="48" rx="4" transform="rotate(-45 32 32)" fill="#15120D"/>
+  <!-- Xentli phoenix mark: wings sweep up-left, crested head/beak upper-right, legs cross into an X. -->
+  <g fill="#15120D">
+    <!-- Wing feathers, longest at top, sweeping up to the left -->
+    <path d="M35 33 C26 27 16 25 7 27 C16 28 24 31 31 36 C33 35 34 34 35 33 Z"/>
+    <path d="M34 36 C27 32 18 31 11 34 C19 34 26 37 31 41 C32 39 33 37 34 36 Z"/>
+    <path d="M33 39 C28 37 21 37 16 40 C22 40 27 42 31 45 C31 43 32 41 33 39 Z"/>
+    <!-- Neck + crested head + beak, upper right -->
+    <path d="M33 35 C37 31 42 28 47 28 C46 26 47 24 49 23 C49 25 50 26 51 27 C53 27 55 28 56 30 C54 31 52 32 50 32 C52 33 54 33 56 34 C53 35 50 35 47 34 C43 35 39 37 36 40 C35 38 34 36 33 35 Z"/>
+    <!-- Crossed legs forming the X -->
+    <path d="M30 38 L43 58 L37 58 L26 41 Z"/>
+    <path d="M37 38 L24 58 L30 58 L41 41 Z"/>
+  </g>
 </svg>

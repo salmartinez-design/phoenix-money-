@@ -316,6 +316,48 @@ export function Settings() {
           {section === 'data' && (
             <div className="phoenix-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{lang==='es'?'Datos y Exportar':'Data & Export'}</h3>
+
+              {/* Full backup / restore — the safety net for browser-only storage */}
+              <div style={{ padding:16, background:'var(--orange-dim)', borderRadius:12, border:'1px solid var(--border-hi)', marginBottom:12 }}>
+                <p style={{ fontSize:14, fontWeight:700, color:'var(--text-primary)', margin:'0 0 4px' }}>{lang==='es'?'Copia de seguridad completa':'Full backup'}</p>
+                <p style={{ fontSize:12, color:'var(--text-muted)', margin:'0 0 12px' }}>{lang==='es'?'Tus datos solo viven en este navegador. Descarga una copia y guárdala; restáurala en cualquier dispositivo o dirección.':'Your data lives only in this browser. Download a copy and keep it safe — restore it on any device or address.'}</p>
+                <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
+                  <button className="btn-ghost" style={{ padding:'8px 16px', minHeight:36, fontSize:13 }} onClick={() => {
+                    const dump = {};
+                    for (let i = 0; i < localStorage.length; i++) {
+                      const k = localStorage.key(i);
+                      if (k && k.startsWith('phoenix-')) dump[k] = localStorage.getItem(k);
+                    }
+                    const payload = { app:'Xentli', version:1, exportedAt:new Date().toISOString(), data:dump };
+                    const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+                    const url = URL.createObjectURL(blob); const a = document.createElement('a');
+                    a.href = url; a.download = `xentli-backup-${new Date().toISOString().slice(0,10)}.json`; a.click();
+                    URL.revokeObjectURL(url);
+                  }}>⬇ {lang==='es'?'Descargar copia':'Download backup'}</button>
+                  <button className="btn-ghost" style={{ padding:'8px 16px', minHeight:36, fontSize:13 }} onClick={() => {
+                    const input = document.createElement('input');
+                    input.type = 'file'; input.accept = 'application/json,.json';
+                    input.onchange = (e) => {
+                      const file = e.target.files[0]; if (!file) return;
+                      const reader = new FileReader();
+                      reader.onload = () => {
+                        try {
+                          const parsed = JSON.parse(reader.result);
+                          const data = parsed && parsed.data ? parsed.data : parsed;
+                          const keys = Object.keys(data || {}).filter(k => k.startsWith('phoenix-'));
+                          if (!keys.length) { window.alert(lang==='es'?'No se encontraron datos de Xentli en el archivo.':'No Xentli data found in that file.'); return; }
+                          if (!window.confirm(lang==='es'?`Restaurar ${keys.length} elementos? Esto reemplazará los datos actuales.`:`Restore ${keys.length} items? This replaces current data.`)) return;
+                          keys.forEach(k => localStorage.setItem(k, data[k]));
+                          window.location.reload();
+                        } catch { window.alert(lang==='es'?'No se pudo leer el archivo de copia.':'Could not read that backup file.'); }
+                      };
+                      reader.readAsText(file);
+                    };
+                    input.click();
+                  }}>⬆ {lang==='es'?'Restaurar copia':'Restore backup'}</button>
+                </div>
+              </div>
+
               {[
                 { label: lang==='es'?'Transacciones':'Transactions', sub: `${transactions.length} ${t('transactions_count')}`, action: () => {
                   const csv = ['Date,Description,Amount,Category,Merchant,Account'].concat(transactions.map(t => `${t.date},"${t.description}",${t.amount},${t.categoryId},"${t.merchantName}",${t.accountId}`)).join('\n');

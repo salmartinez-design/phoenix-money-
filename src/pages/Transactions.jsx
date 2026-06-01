@@ -255,7 +255,7 @@ export function Transactions() {
                         {isTransfer ? '↔' : cat?.icon||'◦'}
                       </div>
                       <div>
-                        <p style={{ fontWeight:600, color: txn.flagged?'var(--amber)':'var(--text-primary)', fontSize:13, margin:0 }}>{txn.description}{txn.flagged?' 🚩':''}</p>
+                        <p style={{ fontWeight:600, color: txn.flagged?'var(--amber)':'var(--text-primary)', fontSize:13, margin:0 }}>{txn.merchantName||txn.description}{txn.flagged?' 🚩':''}</p>
                         {isTransfer && <p style={{ fontSize:11, color:'var(--text-muted)', margin:'2px 0 0' }}>{t('notCountedInTotals')}</p>}
                       </div>
                     </div>

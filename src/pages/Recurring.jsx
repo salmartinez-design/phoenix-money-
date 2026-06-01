@@ -143,7 +143,7 @@ export function Recurring() {
               return (
                 <div key={i} className="txn-row" style={{ display:'flex', alignItems:'center', gap:14, padding:'12px 16px' }}>
                   <div style={{ width:38, height:38, borderRadius:'50%', background:cat?.color ? cat.color + '18' : 'var(--border)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18, flexShrink:0 }}>
-                    {cat?.icon || '?'}
+                    {cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}
                   </div>
                   <div style={{ flex:1, minWidth:0 }}>
                     <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:3 }}>
@@ -205,7 +205,7 @@ export function Recurring() {
                   <tr key={i} className="txn-row" style={{ borderBottom:'1px solid var(--border)' }}>
                     <td style={{ padding:'13px 18px' }}>
                       <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                        <span style={{ fontSize:16, width:24, textAlign:'center', flexShrink:0 }}>{cat?.icon || '?'}</span>
+                        <span style={{ fontSize:16, width:24, textAlign:'center', flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</span>
                         <span style={{ fontSize:14, fontWeight:600, color:'var(--text-primary)' }}>{item.merchantName}</span>
                       </div>
                     </td>

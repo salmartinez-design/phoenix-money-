@@ -3,7 +3,9 @@
   "name": "xentli",
   "main": "worker/index.js",
   "compatibility_date": "2026-05-20",
-  "custom_domains": ["xentli.com", "www.xentli.com"],
+  // Custom domain (xentli.com) is attached via the Cloudflare dashboard
+  // (Workers > xentli > Domains & Routes) after the zone is added — not here,
+  // so deploys don't fail before the zone exists.
   "observability": {
     "enabled": true
   },

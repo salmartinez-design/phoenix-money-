@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Personal financial data — never push to GitHub
-src/data/transactions.js
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -25,3 +22,6 @@ src/data/transactions.js
 *.njsproj
 *.sln
 *.sw?
+
+# Recovered data backups — never push to GitHub
+xentli-*-backup.json

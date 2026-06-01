@@ -34,7 +34,7 @@ const DaysBadge = ({ days, t }) => {
     bg = 'var(--blue-dim)'; color = 'var(--blue)';
   }
   return (
-    <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background:bg, color, border:`1px solid ${color}25`, whiteSpace:'nowrap' }}>
+    <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background:bg, color, border:`1px solid ${color}25`, whiteSpace:'nowrap' }}>
       {label}
     </span>
   );
@@ -47,7 +47,7 @@ export function Recurring() {
   const [viewMode, setViewMode] = useState('monthly');
 
   useEffect(() => {
-    document.title = lang === 'es' ? 'Recurrentes — Phoenix Money' : 'Recurring — Phoenix Money';
+    document.title = lang === 'es' ? 'Recurrentes — Xentli' : 'Recurring — Xentli';
   }, [lang]);
 
   const allItems = financialData.recurringDetected || [];
@@ -81,7 +81,7 @@ export function Recurring() {
     const paidN = paidCount(items);
     const remainN = items.length - paidN;
     return (
-      <div className="phoenix-card fu1" style={{ flex:1 }}>
+      <div className="xentli-card fu1" style={{ flex:1 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:10 }}>
           <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', margin:0 }}>{label}</p>
           <span style={{ display:'inline-flex', padding:'2px 8px', borderRadius:12, fontSize:11, fontWeight:700, background:dimColor, color }}>{items.length}</span>
@@ -117,7 +117,7 @@ export function Recurring() {
               key={tab.id}
               onClick={() => setViewMode(tab.id)}
               className={`filter-chip${viewMode === tab.id ? ' active' : ''}`}
-              style={{ padding:'6px 16px', borderRadius:20, border:`1px solid ${viewMode === tab.id ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:12, fontWeight:600, background: viewMode === tab.id ? 'var(--orange-dim)' : 'transparent', color: viewMode === tab.id ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}
+              style={{ padding:'6px 16px', borderRadius:4, border:`1px solid ${viewMode === tab.id ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:12, fontWeight:600, background: viewMode === tab.id ? 'var(--orange-dim)' : 'transparent', color: viewMode === tab.id ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}
             >
               {tab.label}
             </button>
@@ -134,7 +134,7 @@ export function Recurring() {
 
       {/* Upcoming Charges */}
       {upcoming.length > 0 && (
-        <div className="phoenix-card fu2" style={{ marginBottom:16 }}>
+        <div className="xentli-card fu2" style={{ marginBottom:16 }}>
           <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{t('upcomingCharges')}</p>
           <div style={{ display:'flex', flexDirection:'column', gap:2 }}>
             {upcoming.map((item, i) => {
@@ -143,7 +143,7 @@ export function Recurring() {
               return (
                 <div key={i} className="txn-row" style={{ display:'flex', alignItems:'center', gap:14, padding:'12px 16px' }}>
                   <div style={{ width:38, height:38, borderRadius:'50%', background:cat?.color ? cat.color + '18' : 'var(--border)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18, flexShrink:0 }}>
-                    {cat?.icon || '?'}
+                    {cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}
                   </div>
                   <div style={{ flex:1, minWidth:0 }}>
                     <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:3 }}>
@@ -173,7 +173,7 @@ export function Recurring() {
       )}
 
       {/* Full Recurring Table */}
-      <div className="phoenix-card fu3" style={{ padding:0, overflow:'hidden' }}>
+      <div className="xentli-card fu3" style={{ padding:0, overflow:'hidden' }}>
         {filtered.length === 0 ? (
           <div style={{ padding:'60px 20px', textAlign:'center', color:'var(--text-muted)', fontSize:14 }}>
             {t('noRecurringFound')}
@@ -205,12 +205,12 @@ export function Recurring() {
                   <tr key={i} className="txn-row" style={{ borderBottom:'1px solid var(--border)' }}>
                     <td style={{ padding:'13px 18px' }}>
                       <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                        <span style={{ fontSize:16, width:24, textAlign:'center', flexShrink:0 }}>{cat?.icon || '?'}</span>
+                        <span style={{ fontSize:16, width:24, textAlign:'center', flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</span>
                         <span style={{ fontSize:14, fontWeight:600, color:'var(--text-primary)' }}>{item.merchantName}</span>
                       </div>
                     </td>
                     <td style={{ padding:'13px 18px' }}>
-                      <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:600, background:fColor + '18', color:fColor }}>
+                      <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:600, background:fColor + '18', color:fColor }}>
                         {freqLabel(item.frequency, t)}
                       </span>
                     </td>
@@ -224,7 +224,7 @@ export function Recurring() {
                       </div>
                     </td>
                     <td style={{ padding:'13px 18px' }}>
-                      <span className="cat-pill" style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:600, background:(cat?.color || '#64748B') + '18', color:cat?.color || 'var(--text-muted)' }}>
+                      <span className="cat-pill" style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:600, background:(cat?.color || '#9B9B9B') + '18', color:cat?.color || 'var(--text-muted)' }}>
                         {cat?.name || 'Uncategorized'}
                       </span>
                     </td>

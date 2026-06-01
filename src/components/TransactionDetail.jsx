@@ -52,7 +52,7 @@ export function TransactionDetail({ txn, onClose }) {
 
       {/* Merchant + Amount */}
       <div style={{ padding:'24px 20px', textAlign:'center', borderBottom:'1px solid var(--border)' }}>
-        <div style={{ width:56, height:56, borderRadius:14, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28, margin:'0 auto 12px' }}>{cat?.icon||'◦'}</div>
+        <div style={{ width:56, height:56, borderRadius:14, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28, margin:'0 auto 12px' }}>{cat?.icon||'◦'}</div>
         <p style={{ fontSize:28, fontWeight:800, color: isIncome ? 'var(--green)' : 'var(--text-primary)', fontFamily:"'DM Mono',monospace", letterSpacing:'-.02em', margin:'0 0 4px' }}>
           {isIncome ? '+' : ''}{$(txn.amount, 2)}
         </p>
@@ -110,9 +110,9 @@ export function TransactionDetail({ txn, onClose }) {
         <p style={{ fontSize:11, fontWeight:600, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:'.06em', marginBottom:6 }}>Tags</p>
         <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
           {(txn.tags || []).map((tag, i) => (
-            <span key={i} style={{ padding:'4px 10px', borderRadius:20, fontSize:12, fontWeight:600, background:'var(--orange-dim)', color:'var(--orange)', border:'1px solid rgba(249,115,22,0.25)' }}>{tag}</span>
+            <span key={i} style={{ padding:'4px 10px', borderRadius:4, fontSize:12, fontWeight:600, background:'var(--orange-dim)', color:'var(--orange)', border:'1px solid var(--border-hi)' }}>{tag}</span>
           ))}
-          <button className="btn-ghost" style={{ padding:'4px 10px', borderRadius:20, fontSize:12 }}>+ {lang==='es'?'Agregar':'Add'}</button>
+          <button className="btn-ghost" style={{ padding:'4px 10px', borderRadius:4, fontSize:12 }}>+ {lang==='es'?'Agregar':'Add'}</button>
         </div>
       </div>
 

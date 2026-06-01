@@ -20,7 +20,7 @@ export function Settings() {
   const [newGroupName, setNewGroupName] = useState('');
   const [showNewGroup, setShowNewGroup] = useState(false);
   const [catRefresh, setCatRefresh] = useState(0); // force re-render after adding
-  useEffect(() => { document.title = lang==='es'?'Ajustes — Phoenix Money':'Settings — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang==='es'?'Ajustes — Xentli':'Settings — Xentli'; }, [lang]);
 
   const sections = [
     { group: lang==='es'?'Cuenta':'Account', items: [
@@ -37,13 +37,13 @@ export function Settings() {
 
   const allCategories = getTopCategories();
   const ICONS = ['💰','📈','🏠','🍽','💼','🚗','🏛','🏥','👤','🛍','🎁','👶','🎓','⚡','📱','🔄','📊','🎮','✈️','🔧','💳','🏦','☕','💊','🛡','📎','📣','👥','💸','🅿️','⛽','🛒','🛵','🍔','💡','💧','🔑','🔨','👕','🪑','🖥','❤️','🎀','🧒','⚽','📚','📖','🏖'];
-  const COLORS = ['#059669','#7C3AED','#F97316','#F59E0B','#2563EB','#DC2626','#0891B2','#DB2777','#EC4899','#F472B6','#8B5CF6','#6366F1','#64748B'];
+  const COLORS = ['#0A0A0A','#3D3D3D','#5C5C5C','#737373','#909090','#A8A8A8','#BEBEBE','#1A1A1A','#4A4A4A','#6B6B6B','#838383','#A0A0A0','#C4C4C4'];
 
   const handleAddSubCategory = (parentId) => {
     if (!newCatName.trim()) return;
     const parent = getCategoryById(parentId);
     const id = newCatName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-');
-    addCategory({ id: 'custom-'+id+'-'+Date.now(), name: newCatName.trim(), parentId, color: parent?.color || '#94A3B8', icon: parent?.icon || '◦' });
+    addCategory({ id: 'custom-'+id+'-'+Date.now(), name: newCatName.trim(), parentId, color: parent?.color || '#9B9B9B', icon: parent?.icon || '◦' });
     setNewCatName('');
     setNewCatParent(null);
     setCatRefresh(n => n+1);
@@ -98,10 +98,10 @@ export function Settings() {
 
           {/* Profile */}
           {section === 'profile' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{lang==='es'?'Perfil':'Profile'}</h3>
               <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:24, padding:16, background:'var(--bg)', borderRadius:12 }}>
-                <div style={{ width:56, height:56, borderRadius:14, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:24 }}>S</div>
+                <div style={{ width:56, height:56, borderRadius:14, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:24 }}>S</div>
                 <div>
                   <p style={{ fontSize:16, fontWeight:700, color:'var(--text-primary)', margin:0 }}>Sal Martinez</p>
                   <p style={{ fontSize:13, color:'var(--text-muted)', margin:'2px 0 0' }}>PHES LLC</p>
@@ -127,7 +127,7 @@ export function Settings() {
 
           {/* Appearance */}
           {section === 'appearance' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{lang==='es'?'Apariencia':'Appearance'}</h3>
               <p style={{ fontSize:12, fontWeight:600, color:'var(--text-muted)', marginBottom:10, textTransform:'uppercase', letterSpacing:'.06em' }}>{lang==='es'?'Tema':'Theme'}</p>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, marginBottom:24 }}>
@@ -165,7 +165,7 @@ export function Settings() {
 
           {/* Notifications — grouped like Monarch */}
           {section === 'notifications' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{lang==='es'?'Notificaciones':'Notifications'}</h3>
               <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:16 }}>{lang==='es'?'Controla qué alertas recibes.':'Control which alerts you receive.'}</p>
 
@@ -205,7 +205,7 @@ export function Settings() {
 
           {/* Categories — editable like Monarch */}
           {section === 'categories' && (
-            <div className="phoenix-card fu1" key={catRefresh}>
+            <div className="xentli-card fu1" key={catRefresh}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
                 <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)' }}>{lang==='es'?'Categorías':'Categories'}</h3>
                 <button className="btn-primary" onClick={() => setShowNewGroup(true)} style={{ padding:'8px 16px', minHeight:36, fontSize:13 }}>
@@ -214,7 +214,7 @@ export function Settings() {
               </div>
               <div style={{ background:'var(--blue-dim)', border:'1px solid rgba(37,99,235,0.2)', borderRadius:10, padding:'12px 16px', marginBottom:20, marginTop:12 }}>
                 <p style={{ fontSize:13, color:'var(--blue)', lineHeight:1.5 }}>
-                  ℹ️ {lang==='es'?'Los cambios a tus categorías se aplican en toda la app. Personaliza la estructura a tu medida.':'Changes to your categories apply throughout Phoenix. Customize the structure to fit your needs.'}
+                  ℹ️ {lang==='es'?'Los cambios a tus categorías se aplican en toda la app. Personaliza la estructura a tu medida.':'Changes to your categories apply throughout Xentli. Customize the structure to fit your needs.'}
                 </p>
               </div>
 
@@ -294,7 +294,7 @@ export function Settings() {
 
           {/* Rules */}
           {section === 'rules-settings' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{lang==='es'?'Reglas de Categorización':'Categorization Rules'}</h3>
               <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:16 }}>{rules.length} {lang==='es'?'reglas activas. Edita las reglas en la página de Reglas.':'active rules. Edit rules on the Rules page.'}</p>
               <div style={{ maxHeight:500, overflowY:'auto' }}>
@@ -304,7 +304,7 @@ export function Settings() {
                     <div key={rule.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 0', borderBottom:'1px solid var(--border)' }}>
                       <code style={{ fontFamily:"'DM Mono',monospace", background:'var(--bg)', padding:'4px 10px', borderRadius:6, fontSize:12, color:'var(--text-secondary)', border:'1px solid var(--border)' }}>"{rule.match}"</code>
                       <span style={{ fontSize:12, color:'var(--text-muted)' }}>→</span>
-                      <span style={{ fontSize:12, color: cat?.color||'#94A3B8', fontWeight:600 }}>{cat?.icon} {cat?.name}</span>
+                      <span style={{ fontSize:12, color: cat?.color||'#9B9B9B', fontWeight:600 }}>{cat?.icon} {cat?.name}</span>
                     </div>
                   );
                 })}
@@ -314,15 +314,57 @@ export function Settings() {
 
           {/* Data & Export */}
           {section === 'data' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{lang==='es'?'Datos y Exportar':'Data & Export'}</h3>
+
+              {/* Full backup / restore — the safety net for browser-only storage */}
+              <div style={{ padding:16, background:'var(--orange-dim)', borderRadius:12, border:'1px solid var(--border-hi)', marginBottom:12 }}>
+                <p style={{ fontSize:14, fontWeight:700, color:'var(--text-primary)', margin:'0 0 4px' }}>{lang==='es'?'Copia de seguridad completa':'Full backup'}</p>
+                <p style={{ fontSize:12, color:'var(--text-muted)', margin:'0 0 12px' }}>{lang==='es'?'Tus datos solo viven en este navegador. Descarga una copia y guárdala; restáurala en cualquier dispositivo o dirección.':'Your data lives only in this browser. Download a copy and keep it safe — restore it on any device or address.'}</p>
+                <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
+                  <button className="btn-ghost" style={{ padding:'8px 16px', minHeight:36, fontSize:13 }} onClick={() => {
+                    const dump = {};
+                    for (let i = 0; i < localStorage.length; i++) {
+                      const k = localStorage.key(i);
+                      if (k && k.startsWith('xentli-')) dump[k] = localStorage.getItem(k);
+                    }
+                    const payload = { app:'Xentli', version:1, exportedAt:new Date().toISOString(), data:dump };
+                    const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+                    const url = URL.createObjectURL(blob); const a = document.createElement('a');
+                    a.href = url; a.download = `xentli-backup-${new Date().toISOString().slice(0,10)}.json`; a.click();
+                    URL.revokeObjectURL(url);
+                  }}>⬇ {lang==='es'?'Descargar copia':'Download backup'}</button>
+                  <button className="btn-ghost" style={{ padding:'8px 16px', minHeight:36, fontSize:13 }} onClick={() => {
+                    const input = document.createElement('input');
+                    input.type = 'file'; input.accept = 'application/json,.json';
+                    input.onchange = (e) => {
+                      const file = e.target.files[0]; if (!file) return;
+                      const reader = new FileReader();
+                      reader.onload = () => {
+                        try {
+                          const parsed = JSON.parse(reader.result);
+                          const data = parsed && parsed.data ? parsed.data : parsed;
+                          const keys = Object.keys(data || {}).filter(k => k.startsWith('xentli-'));
+                          if (!keys.length) { window.alert(lang==='es'?'No se encontraron datos de Xentli en el archivo.':'No Xentli data found in that file.'); return; }
+                          if (!window.confirm(lang==='es'?`Restaurar ${keys.length} elementos? Esto reemplazará los datos actuales.`:`Restore ${keys.length} items? This replaces current data.`)) return;
+                          keys.forEach(k => localStorage.setItem(k, data[k]));
+                          window.location.reload();
+                        } catch { window.alert(lang==='es'?'No se pudo leer el archivo de copia.':'Could not read that backup file.'); }
+                      };
+                      reader.readAsText(file);
+                    };
+                    input.click();
+                  }}>⬆ {lang==='es'?'Restaurar copia':'Restore backup'}</button>
+                </div>
+              </div>
+
               {[
                 { label: lang==='es'?'Transacciones':'Transactions', sub: `${transactions.length} ${t('transactions_count')}`, action: () => {
                   const csv = ['Date,Description,Amount,Category,Merchant,Account'].concat(transactions.map(t => `${t.date},"${t.description}",${t.amount},${t.categoryId},"${t.merchantName}",${t.accountId}`)).join('\n');
-                  const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='phoenix-transactions.csv'; a.click();
+                  const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='xentli-transactions.csv'; a.click();
                 }, btn: '⬇ CSV' },
                 { label: lang==='es'?'Reglas':'Rules', sub: `${rules.length} ${lang==='es'?'reglas':'rules'}`, action: () => {
-                  const json = JSON.stringify(rules,null,2); const blob = new Blob([json], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='phoenix-rules.json'; a.click();
+                  const json = JSON.stringify(rules,null,2); const blob = new Blob([json], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='xentli-rules.json'; a.click();
                 }, btn: '⬇ JSON' },
               ].map(item => (
                 <div key={item.label} style={{ padding:16, background:'var(--bg)', borderRadius:12, marginBottom:12, display:'flex', justifyContent:'space-between', alignItems:'center' }}>

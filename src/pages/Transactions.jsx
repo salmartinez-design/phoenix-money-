@@ -54,7 +54,7 @@ export function Transactions() {
 
   const presets = lang === 'es' ? DATE_PRESETS_ES : DATE_PRESETS_EN;
 
-  useEffect(() => { document.title = lang === 'es' ? 'Transacciones — Phoenix Money' : 'Transactions — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Transacciones — Xentli' : 'Transactions — Xentli'; }, [lang]);
   useEffect(() => { setPage(1); }, [search, catFilter, datePreset, customFrom, customTo, sortBy]);
 
   const dateRange = datePreset === 'custom' ? { from: customFrom, to: customTo } : getDateRange(datePreset);
@@ -65,7 +65,8 @@ export function Transactions() {
       const matchSearch = !q || normalize(txn.description).includes(q) || normalize(txn.merchantName||'').includes(q);
       const matchCat = catFilter === 'all' || (catFilter === 'flagged' && txn.flagged) || txn.categoryId === catFilter || getParentCategory(txn.categoryId)?.id === catFilter;
       const matchDate = (!dateRange.from || txn.date >= dateRange.from) && (!dateRange.to || txn.date <= dateRange.to);
-      return matchSearch && matchCat && matchDate;
+      const matchAccount = accountFilter === 'all' || txn.accountType === accountFilter;
+      return matchSearch && matchCat && matchDate && matchAccount;
     });
 
     // Sort
@@ -77,7 +78,7 @@ export function Transactions() {
       default: list.sort((a,b) => b.date.localeCompare(a.date)); break; // date-desc
     }
     return list;
-  }, [transactions, search, catFilter, dateRange.from, dateRange.to, sortBy]);
+  }, [transactions, search, catFilter, dateRange.from, dateRange.to, sortBy, accountFilter]);
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const paginated = filtered.slice((page-1)*PER_PAGE, page*PER_PAGE);
@@ -209,7 +210,7 @@ export function Transactions() {
 
       {/* Flagged banner */}
       {flaggedCount > 0 && catFilter === 'all' && datePreset === 'all' && (
-        <div className="fu" style={{ background:'rgba(245,158,11,0.08)', border:'1px solid rgba(245,158,11,0.25)', borderRadius:12, padding:'13px 17px', marginBottom:16, display:'flex', alignItems:'center', gap:12 }}>
+        <div className="fu" style={{ background:'rgba(10,10,10,0.08)', border:'1px solid rgba(10,10,10,0.25)', borderRadius:12, padding:'13px 17px', marginBottom:16, display:'flex', alignItems:'center', gap:12 }}>
           <span style={{ fontSize:20 }}>🚩</span>
           <div>
             <p style={{ fontWeight:700, color:'var(--amber)', fontSize:14, margin:0 }}>{flaggedCount} {lang==='es'?'transacciones necesitan tu atención':'transactions need your attention'}</p>
@@ -219,7 +220,7 @@ export function Transactions() {
       )}
 
       {/* Transaction table with daily grouping */}
-      <div className="phoenix-card" style={{ padding:0, overflow:'hidden' }}>
+      <div className="xentli-card" style={{ padding:0, overflow:'hidden' }}>
         <table style={{ width:'100%', borderCollapse:'collapse' }}>
           <thead>
             <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>
@@ -246,15 +247,15 @@ export function Transactions() {
               const cat = getCategoryById(txn.categoryId);
               const isTransfer = isTransferCategory(txn.categoryId);
               return (
-                <tr key={txn.id} className="txn-row" onClick={() => setSelectedTxn(txn)} style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(245,158,11,0.03)':'transparent', cursor:'pointer' }}>
+                <tr key={txn.id} className="txn-row" onClick={() => setSelectedTxn(txn)} style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(10,10,10,0.03)':'transparent', cursor:'pointer' }}>
                   <td style={{ padding:'11px 18px', fontSize:12, color:'var(--text-muted)', fontFamily:"'DM Mono',monospace", whiteSpace:'nowrap' }}>{formatDateShort(txn.date, lang)}</td>
                   <td style={{ padding:'11px 18px' }}>
                     <div style={{ display:'flex', alignItems:'center', gap:11 }}>
-                      <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>
+                      <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>
                         {isTransfer ? '↔' : cat?.icon||'◦'}
                       </div>
                       <div>
-                        <p style={{ fontWeight:600, color: txn.flagged?'var(--amber)':'var(--text-primary)', fontSize:13, margin:0 }}>{txn.description}{txn.flagged?' 🚩':''}</p>
+                        <p style={{ fontWeight:600, color: txn.flagged?'var(--amber)':'var(--text-primary)', fontSize:13, margin:0 }}>{txn.merchantName||txn.description}{txn.flagged?' 🚩':''}</p>
                         {isTransfer && <p style={{ fontSize:11, color:'var(--text-muted)', margin:'2px 0 0' }}>{t('notCountedInTotals')}</p>}
                       </div>
                     </div>
@@ -269,8 +270,8 @@ export function Transactions() {
                         ))}
                       </select>
                     ) : (
-                      <span className="cat-pill" onClick={() => setEditId(txn.id)} style={{ background:(cat?.color||'#94A3B8')+'18', color:cat?.color||'#94A3B8', border:`1px solid ${cat?.color||'#94A3B8'}28` }}>
-                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#94A3B8', flexShrink:0 }}/>
+                      <span className="cat-pill" onClick={() => setEditId(txn.id)} style={{ background:(cat?.color||'#9B9B9B')+'18', color:cat?.color||'#9B9B9B', border:`1px solid ${cat?.color||'#9B9B9B'}28` }}>
+                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#9B9B9B', flexShrink:0 }}/>
                         {cat?.name||'Uncategorized'}
                       </span>
                     )}

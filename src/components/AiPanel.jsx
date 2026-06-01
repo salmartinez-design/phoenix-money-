@@ -7,7 +7,7 @@ export function AiPanel({ onClose }) {
   const { lang, financialData, addRule, rules, updateCategory, transactions, accountFilter } = useApp();
   const t = useT(lang);
   const { totalIncome, totalNet, burnRate, runway, latestMonth, prevMonth } = financialData;
-  const [msgs, setMsgs] = useState([{ role: 'assistant', content: lang === 'es' ? '¡Hola! Soy tu asesor financiero IA de Phoenix. Puedo responder preguntas Y hacer cambios — crear categorías, reglas, recategorizar transacciones. ¿Qué necesitas?' : "Hey! I'm your Phoenix AI advisor. I can answer questions AND take action — create categories, set up rules, recategorize transactions. What do you need?" }]);
+  const [msgs, setMsgs] = useState([{ role: 'assistant', content: lang === 'es' ? '¡Hola! Soy tu asesor financiero IA de Xentli. Puedo responder preguntas Y hacer cambios — crear categorías, reglas, recategorizar transacciones. ¿Qué necesitas?' : "Hey! I'm your Xentli AI advisor. I can answer questions AND take action — create categories, set up rules, recategorize transactions. What do you need?" }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);
@@ -50,7 +50,7 @@ export function AiPanel({ onClose }) {
         const id = 'custom-' + action.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Date.now();
         addCategory({
           id, name: action.name, parentId: action.parentId,
-          color: parent?.color || '#F59E0B', icon: action.icon || parent?.icon || '📦',
+          color: parent?.color || '#9B9B9B', icon: action.icon || parent?.icon || '📦',
           ctx: action.ctx || 'business'
         });
         return `✅ Created category "${action.name}" under ${parent?.name || 'top level'}`;
@@ -110,11 +110,11 @@ export function AiPanel({ onClose }) {
     const rulesList = rules.slice(0, 30).map(r => `"${r.match}" → ${getCategoryById(r.categoryId)?.name}`).join(', ');
 
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/chat', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514', max_tokens: 1500,
-          system: `You are Phoenix Money's AI financial advisor for a small business owner (PHES LLC, cleaning/property services).
+          model: 'claude-sonnet-4-6', max_tokens: 1500,
+          system: `You are Xentli's AI financial advisor for a small business owner (PHES LLC, cleaning/property services).
 IMPORTANT: Respond ONLY in ${lang === 'es' ? 'Spanish (friendly, clear Latin American)' : 'English'}.
 Keep responses concise. Use plain language, no jargon. 8th grade reading level.
 
@@ -136,6 +136,10 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
         })
       });
       const d = await res.json();
+      if (!res.ok || !d.content) {
+        setMsgs([...next, { role: 'assistant', content: d?.error?.message || t('connectionError') }]);
+        setLoading(false); return;
+      }
       let reply = d.content[0].text;
 
       // Check if AI returned an action block
@@ -161,7 +165,7 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
     <div className="ai-panel" style={{ position:'fixed', right:0, top:0, bottom:0, width:420, background:'var(--surface)', borderLeft:'1px solid var(--border)', display:'flex', flexDirection:'column', zIndex:999, boxShadow:'-8px 0 40px rgba(0,0,0,0.15)' }}>
       <div style={{ padding:'16px 18px', borderBottom:'1px solid var(--border)', display:'flex', justifyContent:'space-between', alignItems:'center' }}>
         <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-          <div style={{ width:38, height:38, borderRadius:10, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18 }}>✨</div>
+          <div style={{ width:38, height:38, borderRadius:10, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18 }}>✨</div>
           <div>
             <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:15, margin:0 }}>{t('aiAdvisor')}</p>
             <p style={{ fontSize:11, color:'var(--green)', fontWeight:600, margin:0 }}>{t('onlinePowered')}</p>
@@ -172,13 +176,13 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
         {msgs.map((m, i) => (
           <div key={i} style={{ marginBottom:12, display:'flex', flexDirection: m.role === 'user' ? 'row-reverse' : 'row', gap:8 }}>
-            {m.role === 'assistant' && <div style={{ width:28, height:28, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, flexShrink:0, marginTop:2 }}>✨</div>}
-            <div style={{ maxWidth:'88%', padding:'11px 14px', borderRadius: m.role === 'user' ? '16px 4px 16px 16px' : '4px 16px 16px 16px', background: m.role === 'user' ? 'linear-gradient(135deg,#F97316,#F59E0B)' : 'var(--card)', border: m.role === 'user' ? 'none' : '1px solid var(--border)', color: m.role === 'user' ? '#fff' : 'var(--text-primary)', fontSize:13.5, lineHeight:1.65, whiteSpace:'pre-wrap' }}>
+            {m.role === 'assistant' && <div style={{ width:28, height:28, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, flexShrink:0, marginTop:2 }}>✨</div>}
+            <div style={{ maxWidth:'88%', padding:'11px 14px', borderRadius: m.role === 'user' ? '16px 4px 16px 16px' : '4px 16px 16px 16px', background: m.role === 'user' ? 'var(--orange)' : 'var(--card)', border: m.role === 'user' ? 'none' : '1px solid var(--border)', color: m.role === 'user' ? 'var(--on-accent)' : 'var(--text-primary)', fontSize:13.5, lineHeight:1.65, whiteSpace:'pre-wrap' }}>
               {m.content}
             </div>
           </div>
         ))}
-        {loading && <div style={{ display:'flex', gap:8 }}><div style={{ width:28, height:28, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12 }}>✨</div><div style={{ padding:'11px 14px', background:'var(--card)', border:'1px solid var(--border)', borderRadius:'4px 16px 16px 16px', color:'var(--text-muted)', fontSize:13 }}>{t('thinking')}</div></div>}
+        {loading && <div style={{ display:'flex', gap:8 }}><div style={{ width:28, height:28, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12 }}>✨</div><div style={{ padding:'11px 14px', background:'var(--card)', border:'1px solid var(--border)', borderRadius:'4px 16px 16px 16px', color:'var(--text-muted)', fontSize:13 }}>{t('thinking')}</div></div>}
         <div ref={endRef}/>
       </div>
 
@@ -198,7 +202,7 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
         <div style={{ padding:'0 14px 10px' }}>
           <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:8, fontWeight:700, textTransform:'uppercase', letterSpacing:'.06em' }}>{t('quickQuestions')}</p>
           <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
-            {quickQ.map(q => <button key={q} className="btn-ghost" onClick={() => send(q)} style={{ padding:'6px 12px', minHeight:36, borderRadius:20, fontSize:11 }}>{q}</button>)}
+            {quickQ.map(q => <button key={q} className="btn-ghost" onClick={() => send(q)} style={{ padding:'6px 12px', minHeight:36, borderRadius:4, fontSize:11 }}>{q}</button>)}
           </div>
         </div>
       )}

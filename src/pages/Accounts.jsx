@@ -5,7 +5,7 @@ import { useT } from '../i18n';
 import { formatCurrency } from '../utils/format';
 
 const typeColors = { cash: 'var(--green)', credit: 'var(--red)', loan: 'var(--red)' };
-const typeIcons = { cash: '#22C55E', credit: '#EF4444', loan: '#F59E0B' };
+const typeIcons = { cash: '#525252', credit: '#8A8A8A', loan: '#B5B5B5' };
 
 function MiniSpark({ data, color }) {
   const id = `ms${Math.random().toString(36).slice(2,8)}`;
@@ -43,7 +43,7 @@ export function Accounts() {
   const [filterType, setFilterType] = useState('all');
 
   useEffect(() => {
-    document.title = lang === 'es' ? 'Cuentas — Phoenix Money' : 'Accounts — Phoenix Money';
+    document.title = lang === 'es' ? 'Cuentas — Xentli' : 'Accounts — Xentli';
   }, [lang]);
 
   const { accountSummaries = {}, accountBalances = {} } = financialData;
@@ -150,7 +150,7 @@ export function Accounts() {
       </div>
 
       {/* Net Worth Hero Card */}
-      <div className="phoenix-card fu1" style={{ marginBottom: 22 }}>
+      <div className="xentli-card fu1" style={{ marginBottom: 22 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18 }}>
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 6 }}>
@@ -199,7 +199,7 @@ export function Accounts() {
 
       {/* Summary Row: Assets + Liabilities */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 22 }}>
-        <div className="phoenix-card fu1">
+        <div className="xentli-card fu1">
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 6 }}>
             {lang === 'es' ? 'Activos' : 'Assets'}
           </p>
@@ -210,7 +210,7 @@ export function Accounts() {
             {accountsWithBalances.filter(a => a.type === 'cash' && a.balance > 0).length} {lang === 'es' ? 'cuentas' : 'accounts'}
           </p>
         </div>
-        <div className="phoenix-card fu2">
+        <div className="xentli-card fu2">
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 6 }}>
             {lang === 'es' ? 'Pasivos' : 'Liabilities'}
           </p>
@@ -246,10 +246,10 @@ export function Accounts() {
                       .map(([, v]) => ({ v }))
                   : [];
                 const sparkColor = type === 'cash' ? 'var(--green)' : type === 'credit' ? 'var(--red)' : 'var(--amber)';
-                const circleColor = type === 'cash' ? '#22C55E' : type === 'credit' ? '#EF4444' : '#F59E0B';
+                const circleColor = type === 'cash' ? '#525252' : type === 'credit' ? '#8A8A8A' : '#B5B5B5';
 
                 return (
-                  <div key={acc.id} className="phoenix-card" style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 18px', transition: 'box-shadow .15s' }}>
+                  <div key={acc.id} className="xentli-card" style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 18px', transition: 'box-shadow .15s' }}>
                     {/* Icon */}
                     <div style={{
                       width: 40, height: 40, borderRadius: '50%',
@@ -308,7 +308,7 @@ export function Accounts() {
 
       {/* Empty state */}
       {filtered.length === 0 && (
-        <div className="phoenix-card" style={{ padding: '48px 24px', textAlign: 'center' }}>
+        <div className="xentli-card" style={{ padding: '48px 24px', textAlign: 'center' }}>
           <p style={{ fontSize: 16, color: 'var(--text-muted)', fontWeight: 500 }}>
             {lang === 'es' ? 'No hay cuentas para mostrar' : 'No accounts to display'}
           </p>

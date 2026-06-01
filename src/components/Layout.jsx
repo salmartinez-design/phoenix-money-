@@ -18,7 +18,7 @@ function useIsMobile(breakpoint = 768) {
 }
 
 export function Layout({ children }) {
-  const { theme, setTheme, lang, setLang, setAiOpen, financialData } = useApp();
+  const { theme, setTheme, lang, setLang, setAiOpen, financialData, accountFilter, setAccountFilter } = useApp();
   const t = useT(lang);
   const location = useLocation();
   const navigate = useNavigate();
@@ -45,12 +45,14 @@ export function Layout({ children }) {
       {/* SIDEBAR — desktop only */}
       {!isMobile && (
       <div style={{ width:230, background:'var(--surface)', borderRight:'1px solid var(--border)', display:'flex', flexDirection:'column', height:'100vh', flexShrink:0 }}>
-        <div style={{ padding:'22px 20px 16px' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-            <div style={{ width:36, height:36, borderRadius:10, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:20, boxShadow:'0 4px 14px rgba(249,115,22,0.3)' }}>P</div>
+        <div style={{ padding:'24px 20px 18px' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:46, height:46, borderRadius:13, background:'#F4F4F4', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, border:'1px solid var(--border)' }}>
+              <img src="/logo.svg" alt="Xentli" style={{ width:'74%', height:'74%', objectFit:'contain', display:'block' }}/>
+            </div>
             <div>
-              <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:17, letterSpacing:'-.02em', margin:0 }}>Phoenix</p>
-              <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>Money</p>
+              <p style={{ fontWeight:800, color:'var(--text-primary)', fontSize:22, letterSpacing:'-.035em', margin:0, lineHeight:1 }}>Xentli</p>
+              <p style={{ fontWeight:600, color:'var(--text-muted)', fontSize:10, letterSpacing:'.18em', margin:'3px 0 0', textTransform:'uppercase' }}>Finance</p>
             </div>
           </div>
         </div>
@@ -64,13 +66,13 @@ export function Layout({ children }) {
           ))}
         </div>
         <div style={{ padding:'10px 10px 20px' }}>
-          <div className="nav-item" onClick={() => setAiOpen(true)} style={{ background:'rgba(249,115,22,0.08)', border:'1px solid rgba(249,115,22,0.25)', color:'var(--orange)', fontWeight:700, marginBottom:6 }}>
+          <div className="nav-item" onClick={() => setAiOpen(true)} style={{ background:'var(--orange-dim)', border:'1px solid var(--border-hi)', color:'var(--orange)', fontWeight:700, marginBottom:6 }}>
             <span>✨</span>
             <span style={{ flex:1 }}>{t('aiAdvisor')}</span>
             <span style={{ width:7, height:7, borderRadius:'50%', background:'var(--green)', animation:'pulse 2s infinite' }}/>
           </div>
           <div style={{ display:'flex', alignItems:'center', gap:10, padding:'8px 14px' }}>
-            <div style={{ width:30, height:30, borderRadius:8, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, color:'#fff', fontSize:13 }}>S</div>
+            <div style={{ width:30, height:30, borderRadius:8, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, color:'var(--on-accent)', fontSize:13 }}>S</div>
             <div>
               <p style={{ margin:0, fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>Sal</p>
               <p style={{ margin:0, fontSize:11, color:'var(--text-muted)' }}>Business Plan</p>
@@ -85,7 +87,13 @@ export function Layout({ children }) {
 
         {/* Header */}
         <div className="app-header" style={{ background:'var(--surface)', borderBottom:'1px solid var(--border)', padding:'0 28px', display:'flex', justifyContent:'space-between', alignItems:'center', height:52, flexShrink:0 }}>
-          <div style={{ display:'flex', alignItems:'stretch', height:'100%' }}>
+          <div style={{ display:'flex', alignItems:'center', height:'100%' }}>
+            <div className="mobile-brand" onClick={() => navigate('/dashboard')}>
+              <div style={{ width:32, height:32, borderRadius:9, background:'#F4F4F4', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', border:'1px solid var(--border)' }}>
+                <img src="/logo.svg" alt="Xentli" style={{ width:'76%', height:'76%', objectFit:'contain', display:'block' }}/>
+              </div>
+              <span style={{ fontWeight:800, fontSize:19, letterSpacing:'-.035em', color:'var(--text-primary)' }}>Xentli</span>
+            </div>
             {navItems.map(item => (
               <button key={item.id} className={`tab-btn${isActive(item.id) ? ' active' : ''}`} onClick={() => navigate(`/${item.id}`)}>
                 {item.label}
@@ -93,11 +101,24 @@ export function Layout({ children }) {
             ))}
           </div>
           <div style={{ display:'flex', gap:8, alignItems:'center' }}>
+            {/* Personal / Business / All — global account scope */}
+            <div style={{ display:'flex', gap:2, padding:3, background:'var(--bg)', borderRadius:8, border:'1px solid var(--border)' }}>
+              {[
+                { id:'personal', l: lang==='es'?'Personal':'Personal' },
+                { id:'business', l: lang==='es'?'Negocio':'Business' },
+                { id:'all', l: lang==='es'?'Todo':'All' },
+              ].map(a => (
+                <button key={a.id} onClick={() => setAccountFilter(a.id)}
+                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: accountFilter === a.id ? 'var(--orange)' : 'transparent', color: accountFilter === a.id ? 'var(--on-accent)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
+                  {a.l}
+                </button>
+              ))}
+            </div>
             {/* EN / ES */}
             <div style={{ display:'flex', gap:2, padding:3, background:'var(--bg)', borderRadius:8, border:'1px solid var(--border)' }}>
               {['en','es'].map(l => (
                 <button key={l} onClick={() => setLang(l)}
-                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: lang === l ? 'var(--orange)' : 'transparent', color: lang === l ? '#fff' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
+                  style={{ padding:'4px 12px', minHeight:32, borderRadius:6, border:'none', cursor:'pointer', fontSize:12, fontWeight:700, background: lang === l ? 'var(--orange)' : 'transparent', color: lang === l ? 'var(--on-accent)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
                   {l.toUpperCase()}
                 </button>
               ))}
@@ -109,7 +130,7 @@ export function Layout({ children }) {
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
             {/* Ask AI */}
-            <button className="btn-primary" onClick={() => setAiOpen(true)} style={{ padding:'7px 16px', minHeight:36, fontSize:13, borderRadius:8, boxShadow:'0 4px 14px rgba(249,115,22,0.25)' }}>
+            <button className="btn-primary" onClick={() => setAiOpen(true)} style={{ padding:'7px 16px', minHeight:36, fontSize:13, borderRadius:8, boxShadow:'0 4px 14px var(--orange-glow)' }}>
               ✨ {t('askAI')}
             </button>
           </div>

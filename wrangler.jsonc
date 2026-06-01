@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "phoenix-money",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-05-20",
+  // Custom domain (xentli.com) is attached via the Cloudflare dashboard
+  // (Workers > xentli > Domains & Routes) after the zone is added — not here,
+  // so deploys don't fail before the zone exists.
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

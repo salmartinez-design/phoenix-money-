@@ -1,11 +1,25 @@
 import { createContext, useContext, useState, useMemo, useEffect, useCallback } from 'react';
-import { SEED_TRANSACTIONS, SEED_RULES } from '../data/seed';
+import { SEED_TRANSACTIONS, SEED_RULES, SEED_ACCOUNTS as LOADED_ACCOUNTS, DATA_VERSION } from '../data/seed';
 import { getParentCategory, isIncomeCategory, isTransferCategory, getCategoryById } from '../data/categories';
 import { safeSetLocal, normalize } from '../utils/format';
 
 const AppContext = createContext(null);
 
-const SEED_ACCOUNTS = [
+// One-time rebrand migration: copy any legacy phoenix-* localStorage keys to
+// xentli-* so existing browser data (prefs, edits) carries over. Runs once on load.
+try {
+  const legacy = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && k.startsWith('phoenix-')) legacy.push(k);
+  }
+  legacy.forEach(k => {
+    const nk = 'xentli-' + k.slice('phoenix-'.length);
+    if (localStorage.getItem(nk) === null) localStorage.setItem(nk, localStorage.getItem(k));
+  });
+} catch { /* localStorage unavailable */ }
+
+const DEFAULT_ACCOUNTS = [
   { id: 'operating-account---0714', name: 'Operating Account (...0714)', type: 'cash', institution: 'PNC', lastSynced: '2026-04-13' },
   { id: 'savings', name: 'Savings', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
   { id: 'emergency-fund---6910', name: 'Emergency Fund (...6910)', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
@@ -25,6 +39,9 @@ const SEED_ACCOUNTS = [
   { id: 'visa---5054', name: 'Visa (...5054)', type: 'credit', institution: 'Visa', lastSynced: '2026-04-13' },
   { id: 'mortgage-0067---0067', name: 'Mortgage (...0067)', type: 'loan', institution: 'Mortgage', lastSynced: '2026-04-13' },
 ];
+
+// Real account list loaded from statements when present; otherwise the default set.
+const SEED_ACCOUNTS = LOADED_ACCOUNTS.length ? LOADED_ACCOUNTS : DEFAULT_ACCOUNTS;
 
 function detectRecurring(transactions) {
   const byMerchant = {};
@@ -81,69 +98,84 @@ function detectRecurring(transactions) {
   return recurring.sort((a, b) => new Date(a.nextExpected) - new Date(b.nextExpected));
 }
 
+// When the shipped data version changes, reload it (overrides stale localStorage).
+// Once the user starts editing, freeze this by not bumping DATA_VERSION.
+const DATA_IS_FRESH = (() => {
+  try { return DATA_VERSION && localStorage.getItem('xentli-data-version') !== DATA_VERSION; }
+  catch { return false; }
+})();
+
 export function AppProvider({ children }) {
   const [transactions, setTransactions] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-transactions')) || SEED_TRANSACTIONS; }
+    if (DATA_IS_FRESH) return SEED_TRANSACTIONS;
+    try { const s = JSON.parse(localStorage.getItem('xentli-transactions')); return (Array.isArray(s) && s.length) ? s : SEED_TRANSACTIONS; }
     catch { return SEED_TRANSACTIONS; }
   });
   const [rules, setRules] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-rules')) || SEED_RULES; }
+    if (DATA_IS_FRESH) return SEED_RULES;
+    try { const s = JSON.parse(localStorage.getItem('xentli-rules')); return (Array.isArray(s) && s.length) ? s : SEED_RULES; }
     catch { return SEED_RULES; }
   });
-  const [theme, setThemeState] = useState(() => localStorage.getItem('phoenix-theme') || 'light');
-  const [lang, setLangState] = useState(() => localStorage.getItem('phoenix-lang') || 'en');
+  const [theme, setThemeState] = useState(() => localStorage.getItem('xentli-theme') || 'light');
+  const [lang, setLangState] = useState(() => localStorage.getItem('xentli-lang') || 'en');
   const [aiOpen, setAiOpen] = useState(false);
-  const [accountFilter, setAccountFilter] = useState(() => localStorage.getItem('phoenix-account-filter') || 'personal');
+  const [accountFilter, setAccountFilter] = useState(() => localStorage.getItem('xentli-account-filter') || 'personal');
   const [budgets, setBudgets] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-budgets')) || {}; }
+    try { return JSON.parse(localStorage.getItem('xentli-budgets')) || {}; }
     catch { return {}; }
   });
   const [accounts, setAccounts] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-accounts')) || SEED_ACCOUNTS; }
+    if (DATA_IS_FRESH) return SEED_ACCOUNTS;
+    try { const s = JSON.parse(localStorage.getItem('xentli-accounts')); return (Array.isArray(s) && s.length) ? s : SEED_ACCOUNTS; }
     catch { return SEED_ACCOUNTS; }
   });
   const [notifPrefs, setNotifPrefs] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-notif-prefs')); } catch {}
+    try { return JSON.parse(localStorage.getItem('xentli-notif-prefs')); } catch {}
     return { negativeBalance: true, largeTransaction: true, largeTransactionThreshold: 500, uncategorizedPileup: true, uncategorizedThreshold: 3, weeklySummary: true, monthlySummary: true };
   });
 
   const setTheme = useCallback((t) => {
     setThemeState(t);
     document.documentElement.setAttribute('data-theme', t);
-    localStorage.setItem('phoenix-theme', t);
+    localStorage.setItem('xentli-theme', t);
   }, []);
 
   const setLang = useCallback((l) => {
     setLangState(l);
-    localStorage.setItem('phoenix-lang', l);
+    localStorage.setItem('xentli-lang', l);
   }, []);
 
   const updateNotifPref = useCallback((key, value) => {
     setNotifPrefs(prev => {
       const updated = { ...prev, [key]: value };
-      safeSetLocal('phoenix-notif-prefs', updated);
+      safeSetLocal('xentli-notif-prefs', updated);
       return updated;
     });
   }, []);
 
-  useEffect(() => { safeSetLocal('phoenix-transactions', transactions); }, [transactions]);
-  useEffect(() => { safeSetLocal('phoenix-rules', rules); }, [rules]);
-  useEffect(() => { localStorage.setItem('phoenix-account-filter', accountFilter); }, [accountFilter]);
-  useEffect(() => { safeSetLocal('phoenix-budgets', budgets); }, [budgets]);
-  useEffect(() => { safeSetLocal('phoenix-accounts', accounts); }, [accounts]);
+  useEffect(() => { try { localStorage.setItem('xentli-data-version', DATA_VERSION); } catch {} }, []);
+  useEffect(() => { safeSetLocal('xentli-transactions', transactions); }, [transactions]);
+  useEffect(() => { safeSetLocal('xentli-rules', rules); }, [rules]);
+  useEffect(() => { localStorage.setItem('xentli-account-filter', accountFilter); }, [accountFilter]);
+  useEffect(() => { safeSetLocal('xentli-budgets', budgets); }, [budgets]);
+  useEffect(() => { safeSetLocal('xentli-accounts', accounts); }, [accounts]);
 
+  // Budgets are scoped per account view (personal/business/all) so Personal
+  // doesn't show business-sized targets. Key = "<accountFilter>::<monthKey>".
   const setBudget = useCallback((monthKey, categoryId, amount) => {
+    const mk = `${accountFilter}::${monthKey}`;
     setBudgets(prev => {
-      const month = { ...(prev[monthKey] || {}) };
+      const month = { ...(prev[mk] || {}) };
       if (amount === null || amount === 0) { delete month[categoryId]; }
       else { month[categoryId] = amount; }
-      return { ...prev, [monthKey]: month };
+      return { ...prev, [mk]: month };
     });
-  }, []);
+  }, [accountFilter]);
 
   const copyBudgetFromMonth = useCallback((sourceMonth, targetMonth) => {
-    setBudgets(prev => ({ ...prev, [targetMonth]: { ...(prev[sourceMonth] || {}) } }));
-  }, []);
+    const s = `${accountFilter}::${sourceMonth}`, tgt = `${accountFilter}::${targetMonth}`;
+    setBudgets(prev => ({ ...prev, [tgt]: { ...(prev[s] || {}) } }));
+  }, [accountFilter]);
 
   const applyRulesToAll = useCallback((ruleList, txnList) =>
     txnList.map(t => {
@@ -220,9 +252,9 @@ export function AppProvider({ children }) {
     const burnRate = monthly.length > 0 ? Math.round(monthly.reduce((s,m) => s + Math.abs(m.expenses), 0) / monthly.length) : 0;
     const runway = burnRate > 0 ? Math.round((totalNet / burnRate) * 12) : 0;
 
-    // Category monthly spend (for budget page)
+    // Category monthly spend (for budget page) — respect the account filter
     const categoryMonthlySpend = {};
-    operational.forEach(t => {
+    filtered.forEach(t => {
       const mk = t.date.slice(0, 7);
       if (!categoryMonthlySpend[mk]) categoryMonthlySpend[mk] = {};
       const catId = t.categoryId;
@@ -247,8 +279,8 @@ export function AppProvider({ children }) {
       accountSummaries[t.accountId].monthlyBalances[mk] += t.amount;
     });
 
-    // Recurring detection
-    const recurringDetected = detectRecurring(transactions);
+    // Recurring detection — respect the account filter
+    const recurringDetected = detectRecurring(filtered);
 
     return { monthly, totalIncome, totalExpenses, totalNet, incomeCats, expenseCats, savingsRate: totalIncome > 0 ? Math.round((totalNet / totalIncome) * 100) : 0, burnRate, runway, flaggedCount, negativeAccounts, latestMonth: monthly[monthly.length - 1], prevMonth: monthly[monthly.length - 2], allTransactions: transactions, categoryMonthlySpend, accountSummaries, accountBalances, recurringDetected };
   }, [transactions, accountFilter]);

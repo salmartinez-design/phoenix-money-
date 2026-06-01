@@ -7,11 +7,11 @@ import { getCategoryById } from '../data/categories';
 import { useNavigate } from 'react-router-dom';
 
 export function Dashboard() {
-  const { financialData, lang, budgets, accountFilter, setAccountFilter } = useApp();
+  const { financialData, lang, budgets, accountFilter } = useApp();
   const t = useT(lang);
   const navigate = useNavigate();
   const { monthly, totalIncome, totalExpenses, totalNet, savingsRate, burnRate, runway, latestMonth, prevMonth, allTransactions, flaggedCount, recurringDetected, accountBalances } = financialData;
-  useEffect(() => { document.title = lang === 'es' ? 'Panel — Phoenix Money' : 'Dashboard — Phoenix Money'; }, [lang]);
+  useEffect(() => { document.title = lang === 'es' ? 'Panel — Xentli' : 'Dashboard — Xentli'; }, [lang]);
   const $ = (n, d=0) => formatCurrency(n, lang, d);
 
   // Filter transactions by current account toggle
@@ -30,7 +30,7 @@ export function Dashboard() {
 
   // Budget data for the latest data month
   const budgetMonth = dataMonth.key;
-  const monthBudgets = budgets[budgetMonth] || {};
+  const monthBudgets = budgets[`${accountFilter}::${budgetMonth}`] || {};
   const budgetedIncome = Object.entries(monthBudgets).filter(([k]) => ['income','paychecks','business-revenue','other-income','interest'].includes(k)).reduce((s,[,v]) => s+v, 0);
   const budgetedExpenses = Object.entries(monthBudgets).filter(([k]) => !['income','paychecks','business-revenue','other-income','interest'].includes(k)).reduce((s,[,v]) => s+v, 0);
   const actualIncome = dataMonth.income || 0;
@@ -85,7 +85,7 @@ export function Dashboard() {
   monthTxns.forEach(t => {
     const cat = getCategoryById(t.categoryId);
     const key = cat?.name || 'Other';
-    if (!catSpend[key]) catSpend[key] = { name: key, icon: cat?.icon || '◦', color: cat?.color || '#94A3B8', total: 0 };
+    if (!catSpend[key]) catSpend[key] = { name: key, icon: cat?.icon || '◦', color: cat?.color || '#9B9B9B', total: 0 };
     catSpend[key].total += Math.abs(t.amount);
   });
   const topCategories = Object.values(catSpend).sort((a,b) => b.total - a.total).slice(0, 5);
@@ -100,16 +100,12 @@ export function Dashboard() {
 
   return (
     <div style={{ padding:'28px 36px' }}>
-      {/* Greeting + Toggle */}
+      {/* Greeting (account scope toggle now lives in the global header) */}
       <div className="fu" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}>
         <h2 style={{ fontSize:28, fontWeight:800, color:'var(--text-primary)', letterSpacing:'-.03em' }}>{greeting}</h2>
-        <div style={{ display:'flex', gap:6 }}>
-          {['business','personal'].map(f => (
-            <button key={f} onClick={() => setAccountFilter(f)} style={{ padding:'7px 16px', borderRadius:20, border:`1px solid ${accountFilter === f ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:13, fontWeight:600, background: accountFilter === f ? 'var(--orange-dim)' : 'transparent', color: accountFilter === f ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}>
-              {f === 'business' ? (lang==='es'?'Negocio':'Business') : (lang==='es'?'Personal':'Personal')}
-            </button>
-          ))}
-        </div>
+        <span style={{ fontSize:13, fontWeight:600, color:'var(--text-muted)', textTransform:'capitalize' }}>
+          {accountFilter === 'all' ? (lang==='es'?'Todas las cuentas':'All accounts') : accountFilter === 'business' ? (lang==='es'?'Negocio':'Business') : (lang==='es'?'Personal':'Personal')}
+        </span>
       </div>
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16 }}>
@@ -117,7 +113,7 @@ export function Dashboard() {
         <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
 
           {/* Budget Card */}
-          <div className="phoenix-card fu1" onClick={() => navigate('/budget')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu1" onClick={() => navigate('/budget')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:16 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>
                 {t('budget')} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{dataMonth.label}</span>
@@ -165,7 +161,7 @@ export function Dashboard() {
           </div>
 
           {/* Recent Transactions */}
-          <div className="phoenix-card fu2" onClick={() => navigate('/transactions')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu2" onClick={() => navigate('/transactions')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('transactions')} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{lang==='es'?'Más recientes':'Most recent'}</span></p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -175,9 +171,9 @@ export function Dashboard() {
               return (
                 <div key={txn.id} className="txn-row" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'8px 8px', borderRadius:8, margin:'1px -8px' }}>
                   <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                    <div style={{ width:30, height:30, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, flexShrink:0 }}>{cat?.icon||'◦'}</div>
+                    <div style={{ width:30, height:30, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
                     <div>
-                      <p style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)', margin:0 }}>{txn.description.slice(0,30)}{txn.description.length>30?'...':''}</p>
+                      <p style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)', margin:0 }}>{(txn.merchantName||txn.description).slice(0,30)}{(txn.merchantName||txn.description).length>30?'...':''}</p>
                       <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>{cat?.name}</p>
                     </div>
                   </div>
@@ -189,41 +185,8 @@ export function Dashboard() {
             })}
           </div>
 
-          {/* Weekly Recap — last 7 days of data */}
-          <div className="phoenix-card fu3">
-            <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:12 }}>
-              <span style={{ fontSize:18 }}>✨</span>
-              <p style={{ fontSize:15, fontWeight:700, color:'var(--orange)' }}>{t('weeklyRecap')}</p>
-              <span style={{ fontSize:13, color:'var(--text-muted)', fontWeight:400 }}>
-                {formatDateShort(weekAgoStr, lang)} — {formatDateShort(latestDate, lang)}
-              </span>
-            </div>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, marginBottom:12 }}>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--green-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('income')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color:'var(--green)' }}>{$(thisWeekIncome)}</p>
-              </div>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--red-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('expenses')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color:'var(--red)' }}>{$(thisWeekSpent)}</p>
-              </div>
-              <div style={{ textAlign:'center', padding:'10px', background:'var(--blue-dim)', borderRadius:10 }}>
-                <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:2 }}>{t('netIncome')}</p>
-                <p style={{ fontSize:16, fontWeight:800, color: (thisWeekIncome-thisWeekSpent) >= 0 ? 'var(--green)' : 'var(--red)' }}>{$(thisWeekIncome - thisWeekSpent)}</p>
-              </div>
-            </div>
-            <p style={{ fontSize:13, color:'var(--text-secondary)', lineHeight:1.6 }}>
-              {weekDiff < 0
-                ? `${lang==='es'?'Esa semana gastaste':'That week you spent'} ${Math.abs(weekDiff)}% ${t('lessLastWeek')} 🎉`
-                : weekDiff > 0
-                  ? `${lang==='es'?'Esa semana gastaste':'That week you spent'} ${weekDiff}% ${t('moreLastWeek')} 📈`
-                  : `${lang==='es'?'Gastos similares a la semana anterior':'Spending was similar to the prior week'}`
-              }
-            </p>
-          </div>
-
           {/* Net Worth */}
-          <div className="phoenix-card fu4" onClick={() => navigate('/accounts')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu4" onClick={() => navigate('/accounts')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('netWorth')}</p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -231,11 +194,16 @@ export function Dashboard() {
             <div style={{ display:'flex', alignItems:'baseline', gap:12, marginBottom:8 }}>
               <span style={{ fontSize:24, fontWeight:800, color:'var(--text-primary)', fontFamily:"'DM Mono',monospace" }}>{$(netWorth)}</span>
               {monthly.length >= 2 && (
-                <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>
+                <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>
                   {totalNet >= 0 ? '↑' : '↓'} {$(Math.abs(totalNet))}
                 </span>
               )}
             </div>
+            <p style={{ fontSize:11, color:'var(--text-muted)', margin:'-2px 0 10px', lineHeight:1.4 }}>
+              {lang==='es'
+                ? 'Cambio neto en tus cuentas conectadas este periodo — aún sin saldos iniciales, tarjetas ni préstamos.'
+                : 'Net change across your connected accounts this period — opening balances, cards & loans not included yet.'}
+            </p>
             {netWorthCum.length > 0 && (
               <ResponsiveContainer width="100%" height={100}>
                 <AreaChart data={netWorthCum} margin={{ top:4, right:4, bottom:4, left:4 }}>
@@ -245,7 +213,7 @@ export function Dashboard() {
                       <stop offset="100%" stopColor="var(--blue)" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <Area type="monotone" dataKey="value" stroke="var(--blue)" strokeWidth={2} fill="url(#nwGrad)" dot={false}/>
+                  <Area type="monotone" dataKey="value" stroke="var(--blue)" strokeWidth={1.5} fill="url(#nwGrad)" dot={false}/>
                   <XAxis dataKey="month" fontSize={10} tick={{ fill:'var(--chart-axis)' }} axisLine={false} tickLine={false}/>
                 </AreaChart>
               </ResponsiveContainer>
@@ -257,7 +225,7 @@ export function Dashboard() {
         <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
 
           {/* Spending: Latest Month vs Previous */}
-          <div className="phoenix-card fu1">
+          <div className="xentli-card fu1">
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('spending')}</p>
               <span style={{ fontSize:13, color:'var(--text-muted)' }}>{dataPrevMonth?.short || ''} vs {dataMonth.short}</span>
@@ -296,7 +264,7 @@ export function Dashboard() {
           </div>
 
           {/* Upcoming Recurring */}
-          <div className="phoenix-card fu2" onClick={() => navigate('/recurring')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu2" onClick={() => navigate('/recurring')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('recurring')}</p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -308,7 +276,7 @@ export function Dashboard() {
               return (
                 <div key={i} className="txn-row" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'9px 8px', borderRadius:8, margin:'1px -8px' }}>
                   <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                    <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>{cat?.icon||'◦'}</div>
+                    <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
                     <div>
                       <p style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)', margin:0 }}>{r.merchantName.slice(0,28)}</p>
                       <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>{lang==='es'?'Cada mes':'Every month'}</p>
@@ -324,7 +292,7 @@ export function Dashboard() {
           </div>
 
           {/* Top Spending Categories */}
-          <div className="phoenix-card fu3" onClick={() => navigate('/cash-flow')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu3" onClick={() => navigate('/cash-flow')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{lang==='es'?'Dónde se fue el dinero':'Where money went'} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{dataMonth.short}</span></p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -346,12 +314,12 @@ export function Dashboard() {
 
           {/* KPI Cards */}
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
-            <div className="phoenix-card fu3" style={{ textAlign:'center', padding:16 }}>
+            <div className="xentli-card fu3" style={{ textAlign:'center', padding:16 }}>
               <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('savingsRate')}</p>
               <p style={{ fontSize:22, fontWeight:800, color: savingsRate > 10 ? 'var(--green)' : savingsRate > 0 ? 'var(--amber)' : 'var(--red)', letterSpacing:'-.02em' }}>{savingsRate}%</p>
               <p style={{ fontSize:11, color:'var(--text-muted)' }}>{savingsRate > 20 ? (lang==='es'?'Excelente':'Excellent') : savingsRate > 5 ? (lang==='es'?'Decente':'Decent') : (lang==='es'?'Ajustado':'Tight')}</p>
             </div>
-            <div className="phoenix-card fu4" style={{ textAlign:'center', padding:16 }}>
+            <div className="xentli-card fu4" style={{ textAlign:'center', padding:16 }}>
               <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('monthlyBurn')}</p>
               <p style={{ fontSize:22, fontWeight:800, color:'var(--amber)', letterSpacing:'-.02em' }}>{$(burnRate)}</p>
               <p style={{ fontSize:11, color:'var(--text-muted)' }}>{lang==='es'?'promedio mensual':'monthly average'}</p>

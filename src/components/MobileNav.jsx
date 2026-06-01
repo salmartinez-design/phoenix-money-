@@ -30,13 +30,13 @@ export function MobileNav() {
 
   const handleTab = (id) => {
     if (id === 'more') {
-      const overlay = document.getElementById('phoenix-more-sheet');
+      const overlay = document.getElementById('xentli-more-sheet');
       if (overlay) {
         overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
       }
       return;
     }
-    const overlay = document.getElementById('phoenix-more-sheet');
+    const overlay = document.getElementById('xentli-more-sheet');
     if (overlay) overlay.style.display = 'none';
     navigate(`/${id}`);
   };
@@ -65,7 +65,7 @@ export function MobileNav() {
       </nav>
 
       <div
-        id="phoenix-more-sheet"
+        id="xentli-more-sheet"
         style={{
           display: 'none',
           position: 'fixed',
@@ -91,13 +91,13 @@ export function MobileNav() {
 
         <button
           onClick={() => {
-            document.getElementById('phoenix-more-sheet').style.display = 'none';
+            document.getElementById('xentli-more-sheet').style.display = 'none';
             setAiOpen(true);
           }}
           style={{
             display: 'flex', alignItems: 'center', gap: 14,
             padding: '14px 16px', borderRadius: 14, border: 'none', width: '100%',
-            background: 'rgba(249,115,22,0.08)', color: 'var(--orange)',
+            background: 'var(--orange-dim)', color: 'var(--orange)',
             fontWeight: 700, fontSize: 15, cursor: 'pointer', marginBottom: 8,
           }}
         >
@@ -110,13 +110,13 @@ export function MobileNav() {
           <button
             key={tab.id}
             onClick={() => {
-              document.getElementById('phoenix-more-sheet').style.display = 'none';
+              document.getElementById('xentli-more-sheet').style.display = 'none';
               navigate(`/${tab.id}`);
             }}
             style={{
               display: 'flex', alignItems: 'center', gap: 14,
               padding: '14px 16px', borderRadius: 14, border: 'none', width: '100%',
-              background: isActive(tab.id) ? 'rgba(249,115,22,0.08)' : 'transparent',
+              background: isActive(tab.id) ? 'var(--orange-dim)' : 'transparent',
               color: isActive(tab.id) ? 'var(--orange)' : 'var(--text-primary)',
               fontWeight: 600, fontSize: 15, cursor: 'pointer',
             }}

@@ -47,7 +47,7 @@ export function Layout({ children }) {
       <div style={{ width:230, background:'var(--surface)', borderRight:'1px solid var(--border)', display:'flex', flexDirection:'column', height:'100vh', flexShrink:0 }}>
         <div style={{ padding:'24px 20px 18px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:46, height:46, borderRadius:13, background:'#F1EDE3', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:'0 3px 12px rgba(40,32,20,0.16)', border:'1px solid rgba(40,32,20,0.06)' }}>
+            <div style={{ width:46, height:46, borderRadius:13, background:'#F4F4F4', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, border:'1px solid var(--border)' }}>
               <img src="/logo.svg" alt="Xentli" style={{ width:'74%', height:'74%', objectFit:'contain', display:'block' }}/>
             </div>
             <div>
@@ -89,7 +89,7 @@ export function Layout({ children }) {
         <div className="app-header" style={{ background:'var(--surface)', borderBottom:'1px solid var(--border)', padding:'0 28px', display:'flex', justifyContent:'space-between', alignItems:'center', height:52, flexShrink:0 }}>
           <div style={{ display:'flex', alignItems:'center', height:'100%' }}>
             <div className="mobile-brand" onClick={() => navigate('/dashboard')}>
-              <div style={{ width:32, height:32, borderRadius:9, background:'#F1EDE3', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', boxShadow:'0 2px 7px rgba(40,32,20,0.16)' }}>
+              <div style={{ width:32, height:32, borderRadius:9, background:'#F4F4F4', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', border:'1px solid var(--border)' }}>
                 <img src="/logo.svg" alt="Xentli" style={{ width:'76%', height:'76%', objectFit:'contain', display:'block' }}/>
               </div>
               <span style={{ fontWeight:800, fontSize:19, letterSpacing:'-.035em', color:'var(--text-primary)' }}>Xentli</span>

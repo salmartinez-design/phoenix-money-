@@ -251,7 +251,7 @@ export function Transactions() {
                   <td style={{ padding:'11px 18px', fontSize:12, color:'var(--text-muted)', fontFamily:"'DM Mono',monospace", whiteSpace:'nowrap' }}>{formatDateShort(txn.date, lang)}</td>
                   <td style={{ padding:'11px 18px' }}>
                     <div style={{ display:'flex', alignItems:'center', gap:11 }}>
-                      <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>
+                      <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>
                         {isTransfer ? '↔' : cat?.icon||'◦'}
                       </div>
                       <div>
@@ -270,8 +270,8 @@ export function Transactions() {
                         ))}
                       </select>
                     ) : (
-                      <span className="cat-pill" onClick={() => setEditId(txn.id)} style={{ background:(cat?.color||'#94A3B8')+'18', color:cat?.color||'#94A3B8', border:`1px solid ${cat?.color||'#94A3B8'}28` }}>
-                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#94A3B8', flexShrink:0 }}/>
+                      <span className="cat-pill" onClick={() => setEditId(txn.id)} style={{ background:(cat?.color||'#9B9B9B')+'18', color:cat?.color||'#9B9B9B', border:`1px solid ${cat?.color||'#9B9B9B'}28` }}>
+                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#9B9B9B', flexShrink:0 }}/>
                         {cat?.name||'Uncategorized'}
                       </span>
                     )}

@@ -37,14 +37,14 @@ export function CashFlow() {
           name = key;
           const cat = getCategoryById(tx.categoryId);
           icon = cat?.icon || '◦';
-          color = cat?.color || '#94A3B8';
+          color = cat?.color || '#9B9B9B';
         } else {
           const cat = getCategoryById(tx.categoryId);
           const parent = breakdown === 'group' ? getParentCategory(tx.categoryId) : cat;
           key = parent?.id || tx.categoryId;
           name = parent?.name || 'Other';
           icon = parent?.icon || '◦';
-          color = parent?.color || '#94A3B8';
+          color = parent?.color || '#9B9B9B';
         }
         if (!map[key]) map[key] = { key, name, icon, color, total: 0, count: 0 };
         map[key].total += Math.abs(tx.amount);

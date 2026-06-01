@@ -52,7 +52,7 @@ export function TransactionDetail({ txn, onClose }) {
 
       {/* Merchant + Amount */}
       <div style={{ padding:'24px 20px', textAlign:'center', borderBottom:'1px solid var(--border)' }}>
-        <div style={{ width:56, height:56, borderRadius:14, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28, margin:'0 auto 12px' }}>{cat?.icon||'◦'}</div>
+        <div style={{ width:56, height:56, borderRadius:14, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28, margin:'0 auto 12px' }}>{cat?.icon||'◦'}</div>
         <p style={{ fontSize:28, fontWeight:800, color: isIncome ? 'var(--green)' : 'var(--text-primary)', fontFamily:"'DM Mono',monospace", letterSpacing:'-.02em', margin:'0 0 4px' }}>
           {isIncome ? '+' : ''}{$(txn.amount, 2)}
         </p>

@@ -146,8 +146,8 @@ export function Rules() {
                     {isEdit ? (
                       <CatSelect value={editCat} onChange={setEditCat}/>
                     ) : (
-                      <span className="cat-pill" style={{ background:(cat?.color||'#94A3B8')+'18', color:cat?.color||'#94A3B8', border:`1px solid ${cat?.color||'#94A3B8'}28`, cursor:'default' }}>
-                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#94A3B8', flexShrink:0 }}/>{cat?.name}
+                      <span className="cat-pill" style={{ background:(cat?.color||'#9B9B9B')+'18', color:cat?.color||'#9B9B9B', border:`1px solid ${cat?.color||'#9B9B9B'}28`, cursor:'default' }}>
+                        <span style={{ width:5, height:5, borderRadius:'50%', background:cat?.color||'#9B9B9B', flexShrink:0 }}/>{cat?.name}
                       </span>
                     )}
                   </td>

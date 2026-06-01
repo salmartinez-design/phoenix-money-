@@ -210,7 +210,7 @@ export function Transactions() {
 
       {/* Flagged banner */}
       {flaggedCount > 0 && catFilter === 'all' && datePreset === 'all' && (
-        <div className="fu" style={{ background:'rgba(245,158,11,0.08)', border:'1px solid rgba(245,158,11,0.25)', borderRadius:12, padding:'13px 17px', marginBottom:16, display:'flex', alignItems:'center', gap:12 }}>
+        <div className="fu" style={{ background:'rgba(10,10,10,0.08)', border:'1px solid rgba(10,10,10,0.25)', borderRadius:12, padding:'13px 17px', marginBottom:16, display:'flex', alignItems:'center', gap:12 }}>
           <span style={{ fontSize:20 }}>🚩</span>
           <div>
             <p style={{ fontWeight:700, color:'var(--amber)', fontSize:14, margin:0 }}>{flaggedCount} {lang==='es'?'transacciones necesitan tu atención':'transactions need your attention'}</p>
@@ -247,7 +247,7 @@ export function Transactions() {
               const cat = getCategoryById(txn.categoryId);
               const isTransfer = isTransferCategory(txn.categoryId);
               return (
-                <tr key={txn.id} className="txn-row" onClick={() => setSelectedTxn(txn)} style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(245,158,11,0.03)':'transparent', cursor:'pointer' }}>
+                <tr key={txn.id} className="txn-row" onClick={() => setSelectedTxn(txn)} style={{ borderBottom:'1px solid var(--border)', background: txn.flagged?'rgba(10,10,10,0.03)':'transparent', cursor:'pointer' }}>
                   <td style={{ padding:'11px 18px', fontSize:12, color:'var(--text-muted)', fontFamily:"'DM Mono',monospace", whiteSpace:'nowrap' }}>{formatDateShort(txn.date, lang)}</td>
                   <td style={{ padding:'11px 18px' }}>
                     <div style={{ display:'flex', alignItems:'center', gap:11 }}>

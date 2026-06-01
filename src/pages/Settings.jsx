@@ -37,7 +37,7 @@ export function Settings() {
 
   const allCategories = getTopCategories();
   const ICONS = ['💰','📈','🏠','🍽','💼','🚗','🏛','🏥','👤','🛍','🎁','👶','🎓','⚡','📱','🔄','📊','🎮','✈️','🔧','💳','🏦','☕','💊','🛡','📎','📣','👥','💸','🅿️','⛽','🛒','🛵','🍔','💡','💧','🔑','🔨','👕','🪑','🖥','❤️','🎀','🧒','⚽','📚','📖','🏖'];
-  const COLORS = ['#059669','#7C3AED','#F97316','#F59E0B','#2563EB','#DC2626','#0891B2','#DB2777','#EC4899','#F472B6','#8B5CF6','#6366F1','#64748B'];
+  const COLORS = ['#0A0A0A','#3D3D3D','#5C5C5C','#737373','#909090','#A8A8A8','#BEBEBE','#1A1A1A','#4A4A4A','#6B6B6B','#838383','#A0A0A0','#C4C4C4'];
 
   const handleAddSubCategory = (parentId) => {
     if (!newCatName.trim()) return;
@@ -101,7 +101,7 @@ export function Settings() {
             <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{lang==='es'?'Perfil':'Profile'}</h3>
               <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:24, padding:16, background:'var(--bg)', borderRadius:12 }}>
-                <div style={{ width:56, height:56, borderRadius:14, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:24 }}>S</div>
+                <div style={{ width:56, height:56, borderRadius:14, background:'var(--orange)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:24 }}>S</div>
                 <div>
                   <p style={{ fontSize:16, fontWeight:700, color:'var(--text-primary)', margin:0 }}>Sal Martinez</p>
                   <p style={{ fontSize:13, color:'var(--text-muted)', margin:'2px 0 0' }}>PHES LLC</p>

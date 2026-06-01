@@ -34,7 +34,7 @@ const DaysBadge = ({ days, t }) => {
     bg = 'var(--blue-dim)'; color = 'var(--blue)';
   }
   return (
-    <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background:bg, color, border:`1px solid ${color}25`, whiteSpace:'nowrap' }}>
+    <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background:bg, color, border:`1px solid ${color}25`, whiteSpace:'nowrap' }}>
       {label}
     </span>
   );
@@ -117,7 +117,7 @@ export function Recurring() {
               key={tab.id}
               onClick={() => setViewMode(tab.id)}
               className={`filter-chip${viewMode === tab.id ? ' active' : ''}`}
-              style={{ padding:'6px 16px', borderRadius:20, border:`1px solid ${viewMode === tab.id ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:12, fontWeight:600, background: viewMode === tab.id ? 'var(--orange-dim)' : 'transparent', color: viewMode === tab.id ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}
+              style={{ padding:'6px 16px', borderRadius:4, border:`1px solid ${viewMode === tab.id ? 'var(--orange)' : 'var(--border)'}`, cursor:'pointer', fontSize:12, fontWeight:600, background: viewMode === tab.id ? 'var(--orange-dim)' : 'transparent', color: viewMode === tab.id ? 'var(--orange)' : 'var(--text-muted)', fontFamily:"'Outfit',sans-serif", transition:'all .15s' }}
             >
               {tab.label}
             </button>
@@ -210,7 +210,7 @@ export function Recurring() {
                       </div>
                     </td>
                     <td style={{ padding:'13px 18px' }}>
-                      <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:600, background:fColor + '18', color:fColor }}>
+                      <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:600, background:fColor + '18', color:fColor }}>
                         {freqLabel(item.frequency, t)}
                       </span>
                     </td>
@@ -224,7 +224,7 @@ export function Recurring() {
                       </div>
                     </td>
                     <td style={{ padding:'13px 18px' }}>
-                      <span className="cat-pill" style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:600, background:(cat?.color || '#64748B') + '18', color:cat?.color || 'var(--text-muted)' }}>
+                      <span className="cat-pill" style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:600, background:(cat?.color || '#9B9B9B') + '18', color:cat?.color || 'var(--text-muted)' }}>
                         {cat?.name || 'Uncategorized'}
                       </span>
                     </td>

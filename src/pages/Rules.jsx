@@ -70,7 +70,7 @@ export function Rules() {
           <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('keyword')}</p>
           <input value={match} onChange={e => { setMatch(e.target.value); setHint(null); setConflict(null); }} placeholder={t('keywordPlaceholder')} style={{ width:'100%', padding:'10px 14px', fontSize:14, marginBottom:12, minHeight:44 }}/>
           {conflict && (
-            <div style={{ background:'rgba(245,158,11,0.08)', border:'1px solid rgba(245,158,11,0.25)', borderRadius:10, padding:'10px 14px', marginBottom:12 }}>
+            <div style={{ background:'rgba(10,10,10,0.08)', border:'1px solid rgba(10,10,10,0.25)', borderRadius:10, padding:'10px 14px', marginBottom:12 }}>
               <p style={{ fontSize:12, color:'var(--amber)', fontWeight:600 }}>⚠️ {t('ruleConflict')} {getCategoryById(conflict.categoryId)?.name}{t('ruleConflictSuffix')}</p>
             </div>
           )}
@@ -96,10 +96,10 @@ export function Rules() {
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', margin:0 }}>{t('needsReview')}</p>
               <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>{t('needsReviewSub')}</p>
             </div>
-            <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background:'rgba(245,158,11,0.12)', color:'var(--amber)', border:'1px solid rgba(245,158,11,0.25)' }}>{financialData.flaggedCount} {t('pending')}</span>
+            <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background:'rgba(10,10,10,0.12)', color:'var(--amber)', border:'1px solid rgba(10,10,10,0.25)' }}>{financialData.flaggedCount} {t('pending')}</span>
           </div>
           {financialData.allTransactions.filter(x => x.flagged).slice(0,3).map(txn => (
-            <div key={txn.id} style={{ background:'rgba(245,158,11,0.05)', border:'1px solid rgba(245,158,11,0.18)', borderRadius:12, padding:'12px 14px', marginBottom:10 }}>
+            <div key={txn.id} style={{ background:'rgba(10,10,10,0.05)', border:'1px solid rgba(10,10,10,0.18)', borderRadius:12, padding:'12px 14px', marginBottom:10 }}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', gap:10 }}>
                 <div>
                   <p style={{ fontWeight:700, color:'var(--text-primary)', fontSize:13, margin:0 }}>{txn.description}</p>
@@ -119,7 +119,7 @@ export function Rules() {
             <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', margin:0 }}>{t('activeRules')}</p>
             <p style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>{rules.length} {t('rulesRunning')}</p>
           </div>
-          <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background:'var(--green-dim)', color:'var(--green)', border:'1px solid rgba(5,150,105,0.2)' }}>{rules.length} {t('active')}</span>
+          <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background:'var(--green-dim)', color:'var(--green)', border:'1px solid rgba(5,150,105,0.2)' }}>{rules.length} {t('active')}</span>
         </div>
         <table style={{ width:'100%', borderCollapse:'collapse' }}>
           <thead>

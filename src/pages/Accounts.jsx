@@ -5,7 +5,7 @@ import { useT } from '../i18n';
 import { formatCurrency } from '../utils/format';
 
 const typeColors = { cash: 'var(--green)', credit: 'var(--red)', loan: 'var(--red)' };
-const typeIcons = { cash: '#22C55E', credit: '#EF4444', loan: '#F59E0B' };
+const typeIcons = { cash: '#525252', credit: '#8A8A8A', loan: '#B5B5B5' };
 
 function MiniSpark({ data, color }) {
   const id = `ms${Math.random().toString(36).slice(2,8)}`;
@@ -246,7 +246,7 @@ export function Accounts() {
                       .map(([, v]) => ({ v }))
                   : [];
                 const sparkColor = type === 'cash' ? 'var(--green)' : type === 'credit' ? 'var(--red)' : 'var(--amber)';
-                const circleColor = type === 'cash' ? '#22C55E' : type === 'credit' ? '#EF4444' : '#F59E0B';
+                const circleColor = type === 'cash' ? '#525252' : type === 'credit' ? '#8A8A8A' : '#B5B5B5';
 
                 return (
                   <div key={acc.id} className="xentli-card" style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 18px', transition: 'box-shadow .15s' }}>

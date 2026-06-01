@@ -3,6 +3,7 @@
   "name": "xentli",
   "main": "worker/index.js",
   "compatibility_date": "2026-05-20",
+  "custom_domains": ["xentli.com", "www.xentli.com"],
   "observability": {
     "enabled": true
   },

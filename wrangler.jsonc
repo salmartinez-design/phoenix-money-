@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "xentli",
+  "name": "phoenix-money",
   "main": "worker/index.js",
   "compatibility_date": "2026-05-20",
   // Custom domain (xentli.com) is attached via the Cloudflare dashboard

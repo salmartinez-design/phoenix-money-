@@ -85,7 +85,7 @@ export function Dashboard() {
   monthTxns.forEach(t => {
     const cat = getCategoryById(t.categoryId);
     const key = cat?.name || 'Other';
-    if (!catSpend[key]) catSpend[key] = { name: key, icon: cat?.icon || '◦', color: cat?.color || '#94A3B8', total: 0 };
+    if (!catSpend[key]) catSpend[key] = { name: key, icon: cat?.icon || '◦', color: cat?.color || '#9B9B9B', total: 0 };
     catSpend[key].total += Math.abs(t.amount);
   });
   const topCategories = Object.values(catSpend).sort((a,b) => b.total - a.total).slice(0, 5);
@@ -171,7 +171,7 @@ export function Dashboard() {
               return (
                 <div key={txn.id} className="txn-row" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'8px 8px', borderRadius:8, margin:'1px -8px' }}>
                   <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                    <div style={{ width:30, height:30, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
+                    <div style={{ width:30, height:30, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
                     <div>
                       <p style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)', margin:0 }}>{(txn.merchantName||txn.description).slice(0,30)}{(txn.merchantName||txn.description).length>30?'...':''}</p>
                       <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>{cat?.name}</p>
@@ -276,7 +276,7 @@ export function Dashboard() {
               return (
                 <div key={i} className="txn-row" style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'9px 8px', borderRadius:8, margin:'1px -8px' }}>
                   <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                    <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#94A3B8')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
+                    <div style={{ width:32, height:32, borderRadius:8, background:(cat?.color||'#9B9B9B')+'18', display:'flex', alignItems:'center', justifyContent:'center', fontSize:14, flexShrink:0 }}>{cat?.icon && cat.icon!=='❓' ? cat.icon : '◦'}</div>
                     <div>
                       <p style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)', margin:0 }}>{r.merchantName.slice(0,28)}</p>
                       <p style={{ fontSize:11, color:'var(--text-muted)', margin:0 }}>{lang==='es'?'Cada mes':'Every month'}</p>

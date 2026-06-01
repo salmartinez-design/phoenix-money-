@@ -43,7 +43,7 @@ export function Settings() {
     if (!newCatName.trim()) return;
     const parent = getCategoryById(parentId);
     const id = newCatName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-');
-    addCategory({ id: 'custom-'+id+'-'+Date.now(), name: newCatName.trim(), parentId, color: parent?.color || '#94A3B8', icon: parent?.icon || '◦' });
+    addCategory({ id: 'custom-'+id+'-'+Date.now(), name: newCatName.trim(), parentId, color: parent?.color || '#9B9B9B', icon: parent?.icon || '◦' });
     setNewCatName('');
     setNewCatParent(null);
     setCatRefresh(n => n+1);
@@ -304,7 +304,7 @@ export function Settings() {
                     <div key={rule.id} style={{ display:'flex', alignItems:'center', gap:10, padding:'10px 0', borderBottom:'1px solid var(--border)' }}>
                       <code style={{ fontFamily:"'DM Mono',monospace", background:'var(--bg)', padding:'4px 10px', borderRadius:6, fontSize:12, color:'var(--text-secondary)', border:'1px solid var(--border)' }}>"{rule.match}"</code>
                       <span style={{ fontSize:12, color:'var(--text-muted)' }}>→</span>
-                      <span style={{ fontSize:12, color: cat?.color||'#94A3B8', fontWeight:600 }}>{cat?.icon} {cat?.name}</span>
+                      <span style={{ fontSize:12, color: cat?.color||'#9B9B9B', fontWeight:600 }}>{cat?.icon} {cat?.name}</span>
                     </div>
                   );
                 })}

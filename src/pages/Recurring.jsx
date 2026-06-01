@@ -81,7 +81,7 @@ export function Recurring() {
     const paidN = paidCount(items);
     const remainN = items.length - paidN;
     return (
-      <div className="phoenix-card fu1" style={{ flex:1 }}>
+      <div className="xentli-card fu1" style={{ flex:1 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:10 }}>
           <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', margin:0 }}>{label}</p>
           <span style={{ display:'inline-flex', padding:'2px 8px', borderRadius:12, fontSize:11, fontWeight:700, background:dimColor, color }}>{items.length}</span>
@@ -134,7 +134,7 @@ export function Recurring() {
 
       {/* Upcoming Charges */}
       {upcoming.length > 0 && (
-        <div className="phoenix-card fu2" style={{ marginBottom:16 }}>
+        <div className="xentli-card fu2" style={{ marginBottom:16 }}>
           <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{t('upcomingCharges')}</p>
           <div style={{ display:'flex', flexDirection:'column', gap:2 }}>
             {upcoming.map((item, i) => {
@@ -173,7 +173,7 @@ export function Recurring() {
       )}
 
       {/* Full Recurring Table */}
-      <div className="phoenix-card fu3" style={{ padding:0, overflow:'hidden' }}>
+      <div className="xentli-card fu3" style={{ padding:0, overflow:'hidden' }}>
         {filtered.length === 0 ? (
           <div style={{ padding:'60px 20px', textAlign:'center', color:'var(--text-muted)', fontSize:14 }}>
             {t('noRecurringFound')}

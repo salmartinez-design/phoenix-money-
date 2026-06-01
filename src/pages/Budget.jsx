@@ -78,7 +78,7 @@ export function Budget() {
   const hasBudgets = Object.keys(monthBudgets).length > 0;
 
   const CategorySection = ({ title, categories, isIncome }) => (
-    <div className="phoenix-card" style={{ marginBottom:16, padding:0, overflow:'hidden' }}>
+    <div className="xentli-card" style={{ marginBottom:16, padding:0, overflow:'hidden' }}>
       <div style={{ padding:'16px 20px 12px', borderBottom:'1px solid var(--border)' }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
           <p style={{ fontSize:13, fontWeight:700, letterSpacing:'.08em', textTransform:'uppercase', color:'var(--text-muted)' }}>{title}</p>
@@ -216,11 +216,11 @@ export function Budget() {
           <CategorySection title={t('expenses')} categories={expenseCategories} isIncome={false}/>
         </div>
         <div style={{ position:'sticky', top:20, alignSelf:'start' }}>
-          <div className="phoenix-card fu2" style={{ textAlign:'center', marginBottom:16 }}>
+          <div className="xentli-card fu2" style={{ textAlign:'center', marginBottom:16 }}>
             <p style={{ fontSize:12, color:'var(--text-muted)', fontWeight:600, textTransform:'uppercase', letterSpacing:'.08em', marginBottom:8 }}>{t('leftToBudget')}</p>
             <p style={{ fontSize:34, fontWeight:800, color: leftToBudget >= 0 ? 'var(--green)' : 'var(--red)', letterSpacing:'-.03em', fontFamily:"'DM Mono',monospace" }}>{$(leftToBudget)}</p>
           </div>
-          <div className="phoenix-card fu3" style={{ marginBottom:16 }}>
+          <div className="xentli-card fu3" style={{ marginBottom:16 }}>
             <div style={{ marginBottom:16 }}>
               <div style={{ display:'flex', justifyContent:'space-between', marginBottom:4 }}>
                 <span style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)' }}>{t('income')}</span>

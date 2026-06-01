@@ -98,7 +98,7 @@ export function Settings() {
 
           {/* Profile */}
           {section === 'profile' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{lang==='es'?'Perfil':'Profile'}</h3>
               <div style={{ display:'flex', alignItems:'center', gap:16, marginBottom:24, padding:16, background:'var(--bg)', borderRadius:12 }}>
                 <div style={{ width:56, height:56, borderRadius:14, background:'linear-gradient(135deg,#F97316,#F59E0B)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:900, color:'#fff', fontSize:24 }}>S</div>
@@ -127,7 +127,7 @@ export function Settings() {
 
           {/* Appearance */}
           {section === 'appearance' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{lang==='es'?'Apariencia':'Appearance'}</h3>
               <p style={{ fontSize:12, fontWeight:600, color:'var(--text-muted)', marginBottom:10, textTransform:'uppercase', letterSpacing:'.06em' }}>{lang==='es'?'Tema':'Theme'}</p>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, marginBottom:24 }}>
@@ -165,7 +165,7 @@ export function Settings() {
 
           {/* Notifications — grouped like Monarch */}
           {section === 'notifications' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{lang==='es'?'Notificaciones':'Notifications'}</h3>
               <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:16 }}>{lang==='es'?'Controla qué alertas recibes.':'Control which alerts you receive.'}</p>
 
@@ -205,7 +205,7 @@ export function Settings() {
 
           {/* Categories — editable like Monarch */}
           {section === 'categories' && (
-            <div className="phoenix-card fu1" key={catRefresh}>
+            <div className="xentli-card fu1" key={catRefresh}>
               <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
                 <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)' }}>{lang==='es'?'Categorías':'Categories'}</h3>
                 <button className="btn-primary" onClick={() => setShowNewGroup(true)} style={{ padding:'8px 16px', minHeight:36, fontSize:13 }}>
@@ -294,7 +294,7 @@ export function Settings() {
 
           {/* Rules */}
           {section === 'rules-settings' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{lang==='es'?'Reglas de Categorización':'Categorization Rules'}</h3>
               <p style={{ fontSize:13, color:'var(--text-muted)', marginBottom:16 }}>{rules.length} {lang==='es'?'reglas activas. Edita las reglas en la página de Reglas.':'active rules. Edit rules on the Rules page.'}</p>
               <div style={{ maxHeight:500, overflowY:'auto' }}>
@@ -314,7 +314,7 @@ export function Settings() {
 
           {/* Data & Export */}
           {section === 'data' && (
-            <div className="phoenix-card fu1">
+            <div className="xentli-card fu1">
               <h3 style={{ fontSize:18, fontWeight:700, color:'var(--text-primary)', marginBottom:20 }}>{lang==='es'?'Datos y Exportar':'Data & Export'}</h3>
 
               {/* Full backup / restore — the safety net for browser-only storage */}
@@ -326,7 +326,7 @@ export function Settings() {
                     const dump = {};
                     for (let i = 0; i < localStorage.length; i++) {
                       const k = localStorage.key(i);
-                      if (k && k.startsWith('phoenix-')) dump[k] = localStorage.getItem(k);
+                      if (k && k.startsWith('xentli-')) dump[k] = localStorage.getItem(k);
                     }
                     const payload = { app:'Xentli', version:1, exportedAt:new Date().toISOString(), data:dump };
                     const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
@@ -344,7 +344,7 @@ export function Settings() {
                         try {
                           const parsed = JSON.parse(reader.result);
                           const data = parsed && parsed.data ? parsed.data : parsed;
-                          const keys = Object.keys(data || {}).filter(k => k.startsWith('phoenix-'));
+                          const keys = Object.keys(data || {}).filter(k => k.startsWith('xentli-'));
                           if (!keys.length) { window.alert(lang==='es'?'No se encontraron datos de Xentli en el archivo.':'No Xentli data found in that file.'); return; }
                           if (!window.confirm(lang==='es'?`Restaurar ${keys.length} elementos? Esto reemplazará los datos actuales.`:`Restore ${keys.length} items? This replaces current data.`)) return;
                           keys.forEach(k => localStorage.setItem(k, data[k]));
@@ -361,10 +361,10 @@ export function Settings() {
               {[
                 { label: lang==='es'?'Transacciones':'Transactions', sub: `${transactions.length} ${t('transactions_count')}`, action: () => {
                   const csv = ['Date,Description,Amount,Category,Merchant,Account'].concat(transactions.map(t => `${t.date},"${t.description}",${t.amount},${t.categoryId},"${t.merchantName}",${t.accountId}`)).join('\n');
-                  const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='phoenix-transactions.csv'; a.click();
+                  const blob = new Blob([csv], {type:'text/csv'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='xentli-transactions.csv'; a.click();
                 }, btn: '⬇ CSV' },
                 { label: lang==='es'?'Reglas':'Rules', sub: `${rules.length} ${lang==='es'?'reglas':'rules'}`, action: () => {
-                  const json = JSON.stringify(rules,null,2); const blob = new Blob([json], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='phoenix-rules.json'; a.click();
+                  const json = JSON.stringify(rules,null,2); const blob = new Blob([json], {type:'application/json'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='xentli-rules.json'; a.click();
                 }, btn: '⬇ JSON' },
               ].map(item => (
                 <div key={item.label} style={{ padding:16, background:'var(--bg)', borderRadius:12, marginBottom:12, display:'flex', justifyContent:'space-between', alignItems:'center' }}>

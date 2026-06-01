@@ -167,7 +167,7 @@ export function Reports() {
           { label:t('totalExpenses'), value:$(totalExpenses), color:'var(--red)' },
           { label:t('netProfit'), value:$(totalNet), color: totalNet >= 0 ? 'var(--green)' : 'var(--red)', trend:`${savingsRate}% ${lang==='es'?'margen':'margin'}` },
         ].map((k,i) => (
-          <div key={k.label} className={`phoenix-card fu${i+1}`}>
+          <div key={k.label} className={`xentli-card fu${i+1}`}>
             <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{k.label}</p>
             <p style={{ fontSize:27, fontWeight:800, color:k.color, letterSpacing:'-.02em', lineHeight:1.1, marginBottom:4 }}>{k.value}</p>
             {k.trend && <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>{k.trend}</span>}
@@ -177,7 +177,7 @@ export function Reports() {
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1.4fr', gap:16 }}>
         {/* P&L Statement */}
-        <div className="phoenix-card fu1">
+        <div className="xentli-card fu1">
           <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:18 }}>{t('plStatement')}</p>
           <table style={{ width:'100%', borderCollapse:'collapse' }}>
             <tbody>
@@ -212,7 +212,7 @@ export function Reports() {
 
         <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
           {/* Spend by category — donut */}
-          <div className="phoenix-card fu2">
+          <div className="xentli-card fu2">
             <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{t('spendByCategory')}</p>
             <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:8 }}>{t('whereExpensesGo')}</p>
             {expenseCats.length === 0 ? <div style={{ height:185, display:'flex', alignItems:'center', justifyContent:'center', color:'var(--text-muted)' }}>📊 {t('noData')}</div> : (
@@ -244,7 +244,7 @@ export function Reports() {
           </div>
 
           {/* Net income trend */}
-          <div className="phoenix-card fu3">
+          <div className="xentli-card fu3">
             <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:4 }}>{t('spendTrend')}</p>
             <p style={{ fontSize:12, color:'var(--text-muted)', marginBottom:12 }}>{t('monthlyNetProfit')}</p>
             {monthlyFiltered.length === 0 ? <div style={{ height:115, display:'flex', alignItems:'center', justifyContent:'center', color:'var(--text-muted)' }}>📊 {t('noData')}</div> : (

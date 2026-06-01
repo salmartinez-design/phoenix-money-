@@ -220,7 +220,7 @@ export function Transactions() {
       )}
 
       {/* Transaction table with daily grouping */}
-      <div className="phoenix-card" style={{ padding:0, overflow:'hidden' }}>
+      <div className="xentli-card" style={{ padding:0, overflow:'hidden' }}>
         <table style={{ width:'100%', borderCollapse:'collapse' }}>
           <thead>
             <tr style={{ borderBottom:'1px solid var(--border)', background:'var(--bg)' }}>

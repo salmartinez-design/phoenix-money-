@@ -65,7 +65,7 @@ export function Rules() {
       </div>
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16, marginBottom:20 }}>
-        <div className="phoenix-card fu1">
+        <div className="xentli-card fu1">
           <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{t('createRule')}</p>
           <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('keyword')}</p>
           <input value={match} onChange={e => { setMatch(e.target.value); setHint(null); setConflict(null); }} placeholder={t('keywordPlaceholder')} style={{ width:'100%', padding:'10px 14px', fontSize:14, marginBottom:12, minHeight:44 }}/>
@@ -90,7 +90,7 @@ export function Rules() {
           </div>
         </div>
 
-        <div className="phoenix-card fu2">
+        <div className="xentli-card fu2">
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:16 }}>
             <div>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', margin:0 }}>{t('needsReview')}</p>
@@ -113,7 +113,7 @@ export function Rules() {
         </div>
       </div>
 
-      <div className="phoenix-card fu3">
+      <div className="xentli-card fu3">
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:16 }}>
           <div>
             <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', margin:0 }}>{t('activeRules')}</p>

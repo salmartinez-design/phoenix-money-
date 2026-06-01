@@ -30,13 +30,13 @@ export function MobileNav() {
 
   const handleTab = (id) => {
     if (id === 'more') {
-      const overlay = document.getElementById('phoenix-more-sheet');
+      const overlay = document.getElementById('xentli-more-sheet');
       if (overlay) {
         overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
       }
       return;
     }
-    const overlay = document.getElementById('phoenix-more-sheet');
+    const overlay = document.getElementById('xentli-more-sheet');
     if (overlay) overlay.style.display = 'none';
     navigate(`/${id}`);
   };
@@ -65,7 +65,7 @@ export function MobileNav() {
       </nav>
 
       <div
-        id="phoenix-more-sheet"
+        id="xentli-more-sheet"
         style={{
           display: 'none',
           position: 'fixed',
@@ -91,7 +91,7 @@ export function MobileNav() {
 
         <button
           onClick={() => {
-            document.getElementById('phoenix-more-sheet').style.display = 'none';
+            document.getElementById('xentli-more-sheet').style.display = 'none';
             setAiOpen(true);
           }}
           style={{
@@ -110,7 +110,7 @@ export function MobileNav() {
           <button
             key={tab.id}
             onClick={() => {
-              document.getElementById('phoenix-more-sheet').style.display = 'none';
+              document.getElementById('xentli-more-sheet').style.display = 'none';
               navigate(`/${tab.id}`);
             }}
             style={{

@@ -5,6 +5,20 @@ import { safeSetLocal, normalize } from '../utils/format';
 
 const AppContext = createContext(null);
 
+// One-time rebrand migration: copy any legacy phoenix-* localStorage keys to
+// xentli-* so existing browser data (prefs, edits) carries over. Runs once on load.
+try {
+  const legacy = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && k.startsWith('phoenix-')) legacy.push(k);
+  }
+  legacy.forEach(k => {
+    const nk = 'xentli-' + k.slice('phoenix-'.length);
+    if (localStorage.getItem(nk) === null) localStorage.setItem(nk, localStorage.getItem(k));
+  });
+} catch { /* localStorage unavailable */ }
+
 const DEFAULT_ACCOUNTS = [
   { id: 'operating-account---0714', name: 'Operating Account (...0714)', type: 'cash', institution: 'PNC', lastSynced: '2026-04-13' },
   { id: 'savings', name: 'Savings', type: 'cash', institution: 'Discover', lastSynced: '2026-04-13' },
@@ -87,64 +101,64 @@ function detectRecurring(transactions) {
 // When the shipped data version changes, reload it (overrides stale localStorage).
 // Once the user starts editing, freeze this by not bumping DATA_VERSION.
 const DATA_IS_FRESH = (() => {
-  try { return DATA_VERSION && localStorage.getItem('phoenix-data-version') !== DATA_VERSION; }
+  try { return DATA_VERSION && localStorage.getItem('xentli-data-version') !== DATA_VERSION; }
   catch { return false; }
 })();
 
 export function AppProvider({ children }) {
   const [transactions, setTransactions] = useState(() => {
     if (DATA_IS_FRESH) return SEED_TRANSACTIONS;
-    try { const s = JSON.parse(localStorage.getItem('phoenix-transactions')); return (Array.isArray(s) && s.length) ? s : SEED_TRANSACTIONS; }
+    try { const s = JSON.parse(localStorage.getItem('xentli-transactions')); return (Array.isArray(s) && s.length) ? s : SEED_TRANSACTIONS; }
     catch { return SEED_TRANSACTIONS; }
   });
   const [rules, setRules] = useState(() => {
     if (DATA_IS_FRESH) return SEED_RULES;
-    try { const s = JSON.parse(localStorage.getItem('phoenix-rules')); return (Array.isArray(s) && s.length) ? s : SEED_RULES; }
+    try { const s = JSON.parse(localStorage.getItem('xentli-rules')); return (Array.isArray(s) && s.length) ? s : SEED_RULES; }
     catch { return SEED_RULES; }
   });
-  const [theme, setThemeState] = useState(() => localStorage.getItem('phoenix-theme') || 'light');
-  const [lang, setLangState] = useState(() => localStorage.getItem('phoenix-lang') || 'en');
+  const [theme, setThemeState] = useState(() => localStorage.getItem('xentli-theme') || 'light');
+  const [lang, setLangState] = useState(() => localStorage.getItem('xentli-lang') || 'en');
   const [aiOpen, setAiOpen] = useState(false);
-  const [accountFilter, setAccountFilter] = useState(() => localStorage.getItem('phoenix-account-filter') || 'personal');
+  const [accountFilter, setAccountFilter] = useState(() => localStorage.getItem('xentli-account-filter') || 'personal');
   const [budgets, setBudgets] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-budgets')) || {}; }
+    try { return JSON.parse(localStorage.getItem('xentli-budgets')) || {}; }
     catch { return {}; }
   });
   const [accounts, setAccounts] = useState(() => {
     if (DATA_IS_FRESH) return SEED_ACCOUNTS;
-    try { const s = JSON.parse(localStorage.getItem('phoenix-accounts')); return (Array.isArray(s) && s.length) ? s : SEED_ACCOUNTS; }
+    try { const s = JSON.parse(localStorage.getItem('xentli-accounts')); return (Array.isArray(s) && s.length) ? s : SEED_ACCOUNTS; }
     catch { return SEED_ACCOUNTS; }
   });
   const [notifPrefs, setNotifPrefs] = useState(() => {
-    try { return JSON.parse(localStorage.getItem('phoenix-notif-prefs')); } catch {}
+    try { return JSON.parse(localStorage.getItem('xentli-notif-prefs')); } catch {}
     return { negativeBalance: true, largeTransaction: true, largeTransactionThreshold: 500, uncategorizedPileup: true, uncategorizedThreshold: 3, weeklySummary: true, monthlySummary: true };
   });
 
   const setTheme = useCallback((t) => {
     setThemeState(t);
     document.documentElement.setAttribute('data-theme', t);
-    localStorage.setItem('phoenix-theme', t);
+    localStorage.setItem('xentli-theme', t);
   }, []);
 
   const setLang = useCallback((l) => {
     setLangState(l);
-    localStorage.setItem('phoenix-lang', l);
+    localStorage.setItem('xentli-lang', l);
   }, []);
 
   const updateNotifPref = useCallback((key, value) => {
     setNotifPrefs(prev => {
       const updated = { ...prev, [key]: value };
-      safeSetLocal('phoenix-notif-prefs', updated);
+      safeSetLocal('xentli-notif-prefs', updated);
       return updated;
     });
   }, []);
 
-  useEffect(() => { try { localStorage.setItem('phoenix-data-version', DATA_VERSION); } catch {} }, []);
-  useEffect(() => { safeSetLocal('phoenix-transactions', transactions); }, [transactions]);
-  useEffect(() => { safeSetLocal('phoenix-rules', rules); }, [rules]);
-  useEffect(() => { localStorage.setItem('phoenix-account-filter', accountFilter); }, [accountFilter]);
-  useEffect(() => { safeSetLocal('phoenix-budgets', budgets); }, [budgets]);
-  useEffect(() => { safeSetLocal('phoenix-accounts', accounts); }, [accounts]);
+  useEffect(() => { try { localStorage.setItem('xentli-data-version', DATA_VERSION); } catch {} }, []);
+  useEffect(() => { safeSetLocal('xentli-transactions', transactions); }, [transactions]);
+  useEffect(() => { safeSetLocal('xentli-rules', rules); }, [rules]);
+  useEffect(() => { localStorage.setItem('xentli-account-filter', accountFilter); }, [accountFilter]);
+  useEffect(() => { safeSetLocal('xentli-budgets', budgets); }, [budgets]);
+  useEffect(() => { safeSetLocal('xentli-accounts', accounts); }, [accounts]);
 
   // Budgets are scoped per account view (personal/business/all) so Personal
   // doesn't show business-sized targets. Key = "<accountFilter>::<monthKey>".

@@ -113,7 +113,7 @@ export function Dashboard() {
         <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
 
           {/* Budget Card */}
-          <div className="phoenix-card fu1" onClick={() => navigate('/budget')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu1" onClick={() => navigate('/budget')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:16 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>
                 {t('budget')} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{dataMonth.label}</span>
@@ -161,7 +161,7 @@ export function Dashboard() {
           </div>
 
           {/* Recent Transactions */}
-          <div className="phoenix-card fu2" onClick={() => navigate('/transactions')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu2" onClick={() => navigate('/transactions')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('transactions')} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{lang==='es'?'Más recientes':'Most recent'}</span></p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -186,7 +186,7 @@ export function Dashboard() {
           </div>
 
           {/* Net Worth */}
-          <div className="phoenix-card fu4" onClick={() => navigate('/accounts')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu4" onClick={() => navigate('/accounts')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('netWorth')}</p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -225,7 +225,7 @@ export function Dashboard() {
         <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
 
           {/* Spending: Latest Month vs Previous */}
-          <div className="phoenix-card fu1">
+          <div className="xentli-card fu1">
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:4 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('spending')}</p>
               <span style={{ fontSize:13, color:'var(--text-muted)' }}>{dataPrevMonth?.short || ''} vs {dataMonth.short}</span>
@@ -264,7 +264,7 @@ export function Dashboard() {
           </div>
 
           {/* Upcoming Recurring */}
-          <div className="phoenix-card fu2" onClick={() => navigate('/recurring')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu2" onClick={() => navigate('/recurring')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{t('recurring')}</p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -292,7 +292,7 @@ export function Dashboard() {
           </div>
 
           {/* Top Spending Categories */}
-          <div className="phoenix-card fu3" onClick={() => navigate('/cash-flow')} style={{ cursor:'pointer' }}>
+          <div className="xentli-card fu3" onClick={() => navigate('/cash-flow')} style={{ cursor:'pointer' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
               <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)' }}>{lang==='es'?'Dónde se fue el dinero':'Where money went'} <span style={{ fontWeight:400, color:'var(--text-muted)', fontSize:13 }}>{dataMonth.short}</span></p>
               <span style={{ fontSize:14, color:'var(--text-muted)' }}>→</span>
@@ -314,12 +314,12 @@ export function Dashboard() {
 
           {/* KPI Cards */}
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
-            <div className="phoenix-card fu3" style={{ textAlign:'center', padding:16 }}>
+            <div className="xentli-card fu3" style={{ textAlign:'center', padding:16 }}>
               <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('savingsRate')}</p>
               <p style={{ fontSize:22, fontWeight:800, color: savingsRate > 10 ? 'var(--green)' : savingsRate > 0 ? 'var(--amber)' : 'var(--red)', letterSpacing:'-.02em' }}>{savingsRate}%</p>
               <p style={{ fontSize:11, color:'var(--text-muted)' }}>{savingsRate > 20 ? (lang==='es'?'Excelente':'Excellent') : savingsRate > 5 ? (lang==='es'?'Decente':'Decent') : (lang==='es'?'Ajustado':'Tight')}</p>
             </div>
-            <div className="phoenix-card fu4" style={{ textAlign:'center', padding:16 }}>
+            <div className="xentli-card fu4" style={{ textAlign:'center', padding:16 }}>
               <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{t('monthlyBurn')}</p>
               <p style={{ fontSize:22, fontWeight:800, color:'var(--amber)', letterSpacing:'-.02em' }}>{$(burnRate)}</p>
               <p style={{ fontSize:11, color:'var(--text-muted)' }}>{lang==='es'?'promedio mensual':'monthly average'}</p>

@@ -84,7 +84,7 @@ body {
 
 .mobile-brand { display: none; align-items: center; gap: 9px; cursor: pointer; }
 
-.phoenix-card {
+.xentli-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -92,7 +92,7 @@ body {
   box-shadow: var(--card-shadow);
   transition: border-color .2s, transform .2s, background .2s;
 }
-.phoenix-card:hover { border-color: var(--border-hi); transform: translateY(-2px); background: var(--card-hover); }
+.xentli-card:hover { border-color: var(--border-hi); transform: translateY(-2px); background: var(--card-hover); }
 
 .nav-item {
   display: flex; align-items: center; gap: 10px;
@@ -169,7 +169,7 @@ input:focus, select:focus, textarea:focus {
 @media print {
   nav, aside, .sidebar, .app-header, .btn-primary, .btn-ghost, .ai-panel, .filter-bar { display: none !important; }
   body { background: white !important; color: black !important; }
-  .phoenix-card { border: 1px solid #ccc !important; box-shadow: none !important; }
+  .xentli-card { border: 1px solid #ccc !important; box-shadow: none !important; }
   .print-only { display: block !important; }
 }
 .print-only { display: none; }

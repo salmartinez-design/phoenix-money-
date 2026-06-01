@@ -125,7 +125,7 @@ export function CashFlow() {
       </div>
 
       {/* Bar chart — monthly income/expenses/net */}
-      <div className="phoenix-card fu1" style={{ marginBottom:16 }}>
+      <div className="xentli-card fu1" style={{ marginBottom:16 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:14 }}>
           <div style={{ display:'flex', gap:14, fontSize:12, color:'var(--text-muted)' }}>
             {[{c:'var(--green)',l:t('income')},{c:'var(--red)',l:t('expenses')},{c:'var(--text-primary)',l:t('netIncome'),dot:true}].map(({c,l,dot})=>(
@@ -171,7 +171,7 @@ export function CashFlow() {
           { label:t('totalSavings'), value:$(monthData.totalSavings), color: monthData.totalSavings>=0?'var(--green)':'var(--red)' },
           { label:t('savingsRate'), value:`${monthData.savingsRate}%`, color: monthData.savingsRate>20?'var(--green)':monthData.savingsRate>5?'var(--amber)':'var(--red)' },
         ].map((k,i) => (
-          <div key={k.label} className={`phoenix-card fu${i+1}`} style={{ textAlign:'center', padding:'16px 12px' }}>
+          <div key={k.label} className={`xentli-card fu${i+1}`} style={{ textAlign:'center', padding:'16px 12px' }}>
             <p style={{ fontSize:22, fontWeight:800, color:k.color, letterSpacing:'-.02em', marginBottom:2 }}>{k.value}</p>
             <p style={{ fontSize:11, fontWeight:600, letterSpacing:'.08em', textTransform:'uppercase', color:'var(--text-muted)' }}>{k.label}</p>
           </div>
@@ -179,7 +179,7 @@ export function CashFlow() {
       </div>
 
       {/* Income breakdown */}
-      <div className="phoenix-card fu2" style={{ marginBottom:16 }}>
+      <div className="xentli-card fu2" style={{ marginBottom:16 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
           <p style={{ fontSize:17, fontWeight:700, color:'var(--text-primary)' }}>{t('income')}</p>
           <BkToggle/>
@@ -188,7 +188,7 @@ export function CashFlow() {
       </div>
 
       {/* Expenses breakdown */}
-      <div className="phoenix-card fu3" style={{ marginBottom:16 }}>
+      <div className="xentli-card fu3" style={{ marginBottom:16 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
           <p style={{ fontSize:17, fontWeight:700, color:'var(--text-primary)' }}>{t('expenses')}</p>
           <BkToggle/>
@@ -197,7 +197,7 @@ export function CashFlow() {
       </div>
 
       {/* Month-by-month table */}
-      <div className="phoenix-card fu4">
+      <div className="xentli-card fu4">
         <p style={{ fontSize:15, fontWeight:700, color:'var(--text-primary)', marginBottom:16 }}>{t('monthByMonth')}</p>
         <table style={{ width:'100%', borderCollapse:'collapse' }}>
           <thead>

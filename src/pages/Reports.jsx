@@ -170,7 +170,7 @@ export function Reports() {
           <div key={k.label} className={`xentli-card fu${i+1}`}>
             <p style={{ fontSize:11, fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:6 }}>{k.label}</p>
             <p style={{ fontSize:27, fontWeight:800, color:k.color, letterSpacing:'-.02em', lineHeight:1.1, marginBottom:4 }}>{k.value}</p>
-            {k.trend && <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>{k.trend}</span>}
+            {k.trend && <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>{k.trend}</span>}
           </div>
         ))}
       </div>
@@ -254,7 +254,7 @@ export function Reports() {
                   <XAxis dataKey="month" fontSize={11} tick={{ fill:'var(--chart-axis)' }} axisLine={false} tickLine={false}/>
                   <YAxis hide/>
                   <Tooltip content={<Tip/>}/>
-                  <Bar dataKey="net" name={t('netIncome')} radius={[5,5,0,0]}>
+                  <Bar dataKey="net" name={t('netIncome')} radius={[2,2,0,0]}>
                     {monthlyFiltered.map((m,i) => <Cell key={i} fill={m.net>1500?'var(--green)':m.net>0?'var(--blue)':'var(--red)'}/>)}
                   </Bar>
                 </BarChart>

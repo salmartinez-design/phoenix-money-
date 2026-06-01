@@ -50,7 +50,7 @@ export function AiPanel({ onClose }) {
         const id = 'custom-' + action.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + Date.now();
         addCategory({
           id, name: action.name, parentId: action.parentId,
-          color: parent?.color || '#F59E0B', icon: action.icon || parent?.icon || '📦',
+          color: parent?.color || '#9B9B9B', icon: action.icon || parent?.icon || '📦',
           ctx: action.ctx || 'business'
         });
         return `✅ Created category "${action.name}" under ${parent?.name || 'top level'}`;
@@ -202,7 +202,7 @@ Financial data: Latest month (${latestMonth?.label||'N/A'}): Income $${latestMon
         <div style={{ padding:'0 14px 10px' }}>
           <p style={{ fontSize:11, color:'var(--text-muted)', marginBottom:8, fontWeight:700, textTransform:'uppercase', letterSpacing:'.06em' }}>{t('quickQuestions')}</p>
           <div style={{ display:'flex', flexWrap:'wrap', gap:6 }}>
-            {quickQ.map(q => <button key={q} className="btn-ghost" onClick={() => send(q)} style={{ padding:'6px 12px', minHeight:36, borderRadius:20, fontSize:11 }}>{q}</button>)}
+            {quickQ.map(q => <button key={q} className="btn-ghost" onClick={() => send(q)} style={{ padding:'6px 12px', minHeight:36, borderRadius:4, fontSize:11 }}>{q}</button>)}
           </div>
         </div>
       )}

@@ -194,7 +194,7 @@ export function Dashboard() {
             <div style={{ display:'flex', alignItems:'baseline', gap:12, marginBottom:8 }}>
               <span style={{ fontSize:24, fontWeight:800, color:'var(--text-primary)', fontFamily:"'DM Mono',monospace" }}>{$(netWorth)}</span>
               {monthly.length >= 2 && (
-                <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>
+                <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background: totalNet >= 0 ? 'var(--green-dim)' : 'var(--red-dim)', color: totalNet >= 0 ? 'var(--green)' : 'var(--red)' }}>
                   {totalNet >= 0 ? '↑' : '↓'} {$(Math.abs(totalNet))}
                 </span>
               )}
@@ -213,7 +213,7 @@ export function Dashboard() {
                       <stop offset="100%" stopColor="var(--blue)" stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <Area type="monotone" dataKey="value" stroke="var(--blue)" strokeWidth={2} fill="url(#nwGrad)" dot={false}/>
+                  <Area type="monotone" dataKey="value" stroke="var(--blue)" strokeWidth={1.5} fill="url(#nwGrad)" dot={false}/>
                   <XAxis dataKey="month" fontSize={10} tick={{ fill:'var(--chart-axis)' }} axisLine={false} tickLine={false}/>
                 </AreaChart>
               </ResponsiveContainer>

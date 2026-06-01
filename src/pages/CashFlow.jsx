@@ -141,9 +141,9 @@ export function CashFlow() {
               <XAxis dataKey="short" fontSize={12} tick={{ fill:'var(--chart-axis)' }} axisLine={false} tickLine={false}/>
               <YAxis fontSize={11} tick={{ fill:'var(--chart-axis)' }} tickFormatter={v=>'$'+(v/1000).toFixed(0)+'k'} axisLine={false} tickLine={false} width={44}/>
               <Tooltip content={<Tip/>}/>
-              <Bar dataKey="income" name={t('income')} fill="var(--green)" fillOpacity={.8} radius={[5,5,0,0]}/>
-              <Bar dataKey="expenses" name={t('expenses')} fill="var(--red)" fillOpacity={.8} radius={[5,5,0,0]}/>
-              <Line type="monotone" dataKey="net" name={t('netIncome')} stroke="var(--text-primary)" strokeWidth={2} dot={{ fill:'var(--text-primary)', r:4, stroke:'var(--card)', strokeWidth:2 }}/>
+              <Bar dataKey="income" name={t('income')} fill="var(--green)" fillOpacity={1} radius={[2,2,0,0]}/>
+              <Bar dataKey="expenses" name={t('expenses')} fill="var(--red)" fillOpacity={1} radius={[2,2,0,0]}/>
+              <Line type="monotone" dataKey="net" name={t('netIncome')} stroke="var(--text-primary)" strokeWidth={1.5} dot={{ fill:'var(--text-primary)', r:4, stroke:'var(--card)', strokeWidth:2 }}/>
             </ComposedChart>
           </ResponsiveContainer>
         )}
@@ -220,7 +220,7 @@ export function CashFlow() {
                   <td style={{ textAlign:'right', padding:'13px 12px', fontSize:14, fontWeight:700, color: m.net>=0?'var(--text-primary)':'var(--red)', fontFamily:"'DM Mono',monospace" }}>{$(m.net)}</td>
                   <td style={{ textAlign:'right', padding:'13px 12px', fontSize:14, fontWeight:700, color:(sr||0)>20?'var(--green)':(sr||0)>5?'var(--amber)':'var(--red)' }}>{sr!=null?`${sr}%`:'—'}</td>
                   <td style={{ textAlign:'right', padding:'13px 12px' }}>
-                    {verdict && <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:20, fontSize:11, fontWeight:700, background:verdict.c+'1A', color:verdict.c, border:`1px solid ${verdict.c}30` }}>{verdict.l}</span>}
+                    {verdict && <span style={{ display:'inline-flex', padding:'3px 10px', borderRadius:4, fontSize:11, fontWeight:700, background:verdict.c+'1A', color:verdict.c, border:`1px solid ${verdict.c}30` }}>{verdict.l}</span>}
                   </td>
                 </tr>
               );
